@@ -1,0 +1,2 @@
+# ParadigmRebootRating
+通过OCR截图来排序查分b35+b15
