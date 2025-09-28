@@ -85,7 +85,6 @@ def scr_ocr(region_song,region_artist,region_rating):
 
     result_song_obj = ocr_region(img_path, region_song)
     if not result_song_obj or not result_song_obj.txts or not result_song_obj.txts[0].strip():
-
         if result_type == "type1":
             backup_region = region_song_mini1
         else:
@@ -104,6 +103,8 @@ def scr_ocr(region_song,region_artist,region_rating):
     result_song_ocr = ocr_optimize(result_song_obj.txts[0] if result_song_obj.txts else "")
     result_artist_ocr = ocr_optimize(result_artist_obj.txts[0] if result_artist_obj.txts else "")
     result_rating_ocr= ocr_optimize(result_rating_obj.txts[0] if result_rating_obj.txts else "")
+
+    result_rating_ocr = result_rating_ocr.lstrip('0')
 
     print(result_song_ocr)
     print(result_artist_ocr)
@@ -180,8 +181,15 @@ def save_to_json(match_result, score, result_score, filename, output_file="songs
             with open(output_file, 'r', encoding='utf-8') as f:
                 content = f.read().strip()
                 if content:  # 如果文件不为空
-                    existing_data = json.loads(content)
-                # 如果文件为空，existing_data保持为空列表
+                    data = json.loads(content)
+                    # 检查数据格式，如果是字典格式（包含b35和b15），则提取所有歌曲
+                    if isinstance(data, dict) and "b35" in data and "b15" in data:
+                        existing_data = data["b35"] + data["b15"]
+                    elif isinstance(data, list):
+                        existing_data = data
+                    else:
+                        print(f"文件格式错误，重新创建: 未知格式")
+                        existing_data = []
         except (json.JSONDecodeError, Exception) as e:
             print(f"文件格式错误，重新创建: {e}")
             existing_data = []
@@ -191,7 +199,8 @@ def save_to_json(match_result, score, result_score, filename, output_file="songs
     # 检查是否已存在相同song_level_id的记录
     found_existing = False
     for i, item in enumerate(existing_data):
-        if item.get('song_level_id') == result_data['song_level_id']:
+        # 确保item是字典
+        if isinstance(item, dict) and item.get('song_level_id') == result_data['song_level_id']:
             found_existing = True
             # 比较分数，只保存更高的分数
             existing_score = int(item.get('score', 0))
@@ -202,7 +211,7 @@ def save_to_json(match_result, score, result_score, filename, output_file="songs
                 existing_data[i] = result_data
                 print(f"更新记录: {result_data['title']} 分数 {existing_score} -> {new_score}")
             else:
-                print(f"跳过保存: {result_data['title']} 当前分数 {existing_score} 高于新分数 {new_score}")
+                print(f"跳过保存: {result_data['title']} 当前分数 {existing_score} 小于或等于新分数 {new_score}")
             break
 
     # 如果不存在相同记录，添加新数据
@@ -210,42 +219,48 @@ def save_to_json(match_result, score, result_score, filename, output_file="songs
         existing_data.append(result_data)
         print(f"添加新记录: {result_data['title']} 分数 {result_score}")
 
-
     # 保存回文件
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(existing_data, f, ensure_ascii=False, indent=2)
 
 
-def sort_songs_by_b15_and_rating(input_file="songs_results.json", output_file="sorted_songs_results.json"):
-    """
-    将歌曲数据按b15分组并按rating排序
-    """
+def best(input_file="songs_results.json"):
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
-        # 分成两组
-        b35 = [item for item in data if not item.get('b15', False)]
-        b15 = [item for item in data if item.get('b15', False)]
+        # 检查数据格式
+        if isinstance(data, dict) and "b35" in data and "b15" in data:
+            # 已经是分类格式，直接使用
+            b35 = data["b35"]
+            b15 = data["b15"]
+        elif isinstance(data, list):
+            # 是列表格式，需要分类
+            b35 = [item for item in data if not item.get('b15', False)]
+            b15 = [item for item in data if item.get('b15', False)]
+        else:
+            print(f"未知的数据格式: {type(data)}")
+            return None
 
         # 按rating降序排序
         b35_sorted = sorted(b35, key=lambda x: x['rating'], reverse=True)
         b15_sorted = sorted(b15, key=lambda x: x['rating'], reverse=True)
 
-        result = {
+        # 创建包含分类数组的结果
+        sorted_data = {
             "b35": b35_sorted,
             "b15": b15_sorted
         }
 
-        # 保存到新文件
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(result, f, ensure_ascii=False, indent=2)
+        # 保存回原文件
+        with open(input_file, 'w', encoding='utf-8') as f:
+            json.dump(sorted_data, f, ensure_ascii=False, indent=2)
 
-        print(f"分组和排序完成！")
+        print(f"排序完成！")
         print(f"b35组共有 {len(b35_sorted)} 首歌曲")
         print(f"b15组共有 {len(b15_sorted)} 首歌曲")
 
-        return result
+        return sorted_data
     except Exception as e:
         print(f"排序失败: {e}")
         return None
@@ -307,9 +322,9 @@ for filename in os.listdir(src_folder):
 
 # 处理所有图片后，对结果进行分组排序
 print("\n开始对结果进行分组排序...")
-sorted_results = sort_songs_by_b15_and_rating()
+sorted_results = best()
 
 if sorted_results:
-    print("最终排序结果已保存到 sorted_songs_results.json")
+    print("最终排序结果已保存到 songs_results.json")
 else:
     print("排序失败")
