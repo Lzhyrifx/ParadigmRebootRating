@@ -182,10 +182,8 @@ def save_to_json(match_result, score, result_score, filename, output_file="songs
                     elif isinstance(data, list):
                         existing_data = data
                     else:
-                        print(f"文件格式错误，重新创建: 未知格式")
                         existing_data = []
         except (json.JSONDecodeError, Exception) as e:
-            print(f"文件格式错误，重新创建: {e}")
             existing_data = []
     else:
         existing_data = []
@@ -228,7 +226,6 @@ def best(input_file="songs_results.json"):
             b35 = [item for item in data if not item.get('b15', False)]
             b15 = [item for item in data if item.get('b15', False)]
         else:
-            print(f"未知的数据格式: {type(data)}")
             return None
 
 
@@ -244,13 +241,8 @@ def best(input_file="songs_results.json"):
         with open(input_file, 'w', encoding='utf-8') as f:
             json.dump(sorted_data, f, ensure_ascii=False, indent=2)
 
-        print(f"排序完成！")
-        print(f"b35组共有 {len(b35_sorted)} 首歌曲")
-        print(f"b15组共有 {len(b15_sorted)} 首歌曲")
-
         return sorted_data
     except Exception as e:
-        print(f"排序失败: {e}")
         return None
 
 
