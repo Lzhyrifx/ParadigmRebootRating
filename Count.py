@@ -43,7 +43,15 @@ def get_coordinates(event, x, y, flags, param):
                         print(f"点{i + 1}: ({px}, {py}) - RGB:({r}, {g}, {b})")
 
 
-image_path = 'SCR/jd13.jpg'
+
+
+''''''
+image_path = 'SCR/n002.jpg'
+''''''
+
+
+
+
 original_image = cv2.imread(image_path)
 
 
@@ -82,7 +90,9 @@ cv2.setMouseCallback('Image', get_coordinates, param=params)
 while True:
     cv2.imshow('Image', display_img)
     key = cv2.waitKey(1) & 0xFF
-
+    # 检查窗口是否被关闭（点击右上角的×）
+    if cv2.getWindowProperty('Image', cv2.WND_PROP_VISIBLE) < 1:
+        break
     if key == ord('q'):
         break
     elif key == ord('r'):
