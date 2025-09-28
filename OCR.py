@@ -29,6 +29,28 @@ def distinguish(image_path):
     b, g, r = img[y, x]
     return "type2" if (60 <= r <= 66 and 136 <= g <= 142 and 170 <= b <= 176) else "type1"
 
+
+
+def single_rating(level: float, score: int) -> float:
+    global bounds, rewards
+    rating: float = 0
+
+    score = min(score, 1010000)
+
+    if score >= 1009000:
+        rating = level * 10 + 7 + 3 * (((score - 1009000) / 1000) ** 1.35)
+    elif score >= 1000000:
+        rating = 10 * (level + 2 * (score - 1000000) / 30000)
+    else:
+        for bound, reward in zip(bounds, rewards):
+            rating += reward if score >= bound else 0
+        rating += 10 * (level * ((score / 1000000) ** 1.5) - 0.9)
+
+    rating = max(.0, rating)
+
+    int_rating: int = int(rating * 100 + EPS)
+    return int_rating
+
 def level(image_path):
     img = cv2.imread(image_path)
     if result_type == "type1":
@@ -118,7 +140,7 @@ def method_hierarchical_match(items, song, artist, difficulty, mini_match=False)
         matched_text, match_score, index = result_match
         best_match = filtered_items[index]
         print(f"匹配成功: {best_match['title']} - {best_match['artist']} (置信度: {match_score:.1f})")
-        print("\n")
+
         return best_match, match_score
 
     return None, 0
@@ -128,7 +150,85 @@ def load_json_data(json_path):
         return json.load(f)
 
 
-json_file_path = "songs_data.json"  # 你的JSON文件路径
+def save_to_json(match_result, score, result_score, filename, output_file="songs_results.json"):
+    try:
+        # 将OCR识别的分数转换为整数
+        score_int = int(result_score)
+        # 获取歌曲等级
+        song_level = match_result.get('level', 0)
+        # 计算rating
+        rating = single_rating(song_level, score_int)
+    except (ValueError, TypeError) as e:
+        print(f"计算rating失败: {e}")
+        rating = 0
+
+    result_data = {
+        "title": match_result['title'],
+        "artist": match_result['artist'],
+        "difficulty": match_result['difficulty'],
+        "song_level_id": match_result.get('song_level_id', ''),
+        "b15": match_result.get('b15', False),
+        "level": match_result.get('level', ''),
+        "score": result_score,
+        "rating": rating / 100
+    }
+
+    # 处理文件读取
+    existing_data = []
+    if os.path.exists(output_file):
+        try:
+            with open(output_file, 'r', encoding='utf-8') as f:
+                content = f.read().strip()
+                if content:  # 如果文件不为空
+                    existing_data = json.loads(content)
+                # 如果文件为空，existing_data保持为空列表
+        except (json.JSONDecodeError, Exception) as e:
+            print(f"文件格式错误，重新创建: {e}")
+            existing_data = []
+    else:
+        existing_data = []
+
+    # 检查是否已存在相同song_level_id的记录
+    found_existing = False
+    for i, item in enumerate(existing_data):
+        if item.get('song_level_id') == result_data['song_level_id']:
+            found_existing = True
+            existing_score = int(item.get('score', 0))
+            new_score = int(result_score)
+
+            if new_score > existing_score:
+                existing_data[i] = result_data
+                print(f"{result_data['title']} 分数 {existing_score} -> {new_score}")
+            break
+
+    # 如果不存在相同记录，添加新数据
+    if not found_existing:
+        existing_data.append(result_data)
+
+        # 分组并排序
+    b15_songs = [song for song in existing_data if song.get('b15', False)]
+    b35_songs = [song for song in existing_data if not song.get('b15', False)]
+
+
+    b15_songs.sort(key=lambda x: x.get('rating', 0), reverse=True)
+    b35_songs.sort(key=lambda x: x.get('rating', 0), reverse=True)
+
+    grouped_data = {
+        "b15": b15_songs,
+        "b35": b35_songs
+    }
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(existing_data, f, ensure_ascii=False, indent=2)
+
+
+
+json_file_path = "songs_data.json"
+
+bounds = [900000, 930000, 950000, 970000, 980000, 990000]
+rewards = [3, 1, 1, 1, 1, 1]
+
+EPS = 0.00002
 
 all_songs_data = load_json_data(json_file_path)
 
@@ -152,8 +252,8 @@ for filename in os.listdir(src_folder):
         result_type = distinguish(img_path)
 
         result_level = level(img_path)
+
         if result_level == "ERROR":
-            print(f" {filename}: 无法识别难度")
             continue
         if result_type == "type1":
             final_result = scr_ocr(region_song1, region_artist1, region_rating1)
@@ -171,4 +271,10 @@ for filename in os.listdir(src_folder):
             difficulty=result_level,
             mini_match= mini_region
         )
+        if match_result:
+            save_to_json(match_result, score, result_rating, filename)
+        else:
+            print("ERROR")
+        print("\n")
+
 

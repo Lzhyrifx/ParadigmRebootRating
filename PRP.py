@@ -19,8 +19,10 @@ if __name__ == "__main__":
         simplified_song = {
             "title": song.get("title", "N/A"),
             "artist": song.get("artist", "N/A"),
+            "difficulty": song.get("difficulty", "N/A"),
             "level": song.get("level", "N/A"),
-            "difficulty": song.get("difficulty", "N/A")
+            "song_level_id": song.get("song_level_id", "N/A"),
+            "b15": song.get("b15", "N/A"),
         }
         simplified_songs.append(simplified_song)
 
