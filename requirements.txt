@@ -1,0 +1,5 @@
+onnxruntime
+rapidfuzz
+rapidocr
+opencv-python
+httpx

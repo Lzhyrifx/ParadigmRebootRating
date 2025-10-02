@@ -1,556 +1,374 @@
-import os
 import json
-import cv2
-import re
-from rapidocr import EngineType, ModelType, OCRVersion, RapidOCR
-from fuzzywuzzy import fuzz
-
-# 初始化OCR引擎
-engine = RapidOCR(
-    params={
-        "Rec.ocr_version": OCRVersion.PPOCRV5,
-        "Rec.engine_type": EngineType.ONNXRUNTIME,
-        "Rec.model_type": ModelType.MOBILE,
-    }
-)
-
-
-def load_songs_data():
-    """加载歌曲数据"""
-    try:
-        with open('songs_data.json', 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        print("songs_data.json 文件未找到，请先运行获取歌曲数据的脚本")
-        return []
-
-
-def ocr_region(image_path, region_coords):
-    """OCR识别指定区域"""
-    img = cv2.imread(image_path)
-    x1, y1, x2, y2 = region_coords
-    roi = img[y1:y2, x1:x2]
-    res = engine(roi, use_cls=False, use_det=False, use_rec=True)
-    return res
-
-
-def distinguish(image_path):
-    """识别截图类型"""
-    img = cv2.imread(image_path)
-    x, y = 27, 1934
-    b, g, r = img[y, x]
-    return "type2" if (60 <= r <= 66 and 136 <= g <= 142 and 170 <= b <= 176) else "type1"
-
-
-def get_level(image_path, result_type):
-    """获取难度等级"""
-    img = cv2.imread(image_path)
-    if result_type == "type1":
-        x, y = 1590, 441
-        b, g, r = img[y, x]
-        if 210 <= r <= 225 and 135 <= g <= 150 and 235 <= b <= 255:
-            return "Massive"
-        elif 225 <= r <= 238 and 108 <= g <= 120 and 105 <= b <= 120:
-            return "Invaded"
-        else:
-            return "Detected"
-    elif result_type == "type2":
-        x, y = 2982, 1520
-        b, g, r = img[y, x]
-        if 170 <= r <= 190 and 120 <= g <= 135 and 200 <= b <= 215:
-            return "Massive"
-        elif 195 <= r <= 210 and 110 <= g <= 120 and 105 <= b <= 120:
-            return "Invaded"
-        else:
-            return "Detected"
-    return "Unknown"
-
-
-def clean_ocr_text(text):
-    """清理OCR识别结果"""
-    return text.replace('/', '').replace('、', '').replace(',', '').strip()
-
-
-def extract_base_artist_name(artist_name):
-    """从复杂曲师名中提取基础名称"""
-    # 移除括号内容
-    base_name = re.sub(r'\([^)]*\)', '', artist_name).strip()
-    # 如果有多个部分，取最后一个部分作为基础名称
-    parts = re.split(r'[+＆&]', base_name)
-    if len(parts) > 1:
-        return parts[-1].strip()
-    return base_name
-
-
-def find_related_artists(artist_name, all_artists):
-    """查找相关的曲师变体"""
-    base_name = extract_base_artist_name(artist_name)
-    related = set()
-
-    # 直接匹配
-    related.add(artist_name)
-
-    # 匹配基础名称
-    for artist in all_artists:
-        if base_name in artist or artist in base_name:
-            related.add(artist)
-
-    # 模糊匹配相似名称
-    for artist in all_artists:
-        if fuzz.partial_ratio(base_name.lower(), artist.lower()) > 80:
-            related.add(artist)
-
-    return list(related)
-
-
-def method_partial_ratio(ocr_text, items, threshold=60, key=None):
-    """部分匹配方法"""
-    best_match = None
-    best_score = 0
-
-    ocr_clean = re.sub(r'[^\w\s]', '', ocr_text.lower().strip())
-
-    for item in items:
-        if key:
-            compare_text = item.get(key, '')
-        else:
-            compare_text = str(item)
-
-        api_clean = re.sub(r'[^\w\s]', '', compare_text.lower().strip())
-
-        ratio = fuzz.partial_ratio(ocr_clean, api_clean)
-
-        if ratio > best_score and ratio >= threshold:
-            best_score = ratio
-            best_match = item
-
-    return best_match, best_score
-
-
-def get_artists_by_difficulty(difficulty, songs_data):
-    """获取指定难度的所有曲师"""
-    artists = list(set([song.get('artist', '') for song in songs_data
-                        if song.get('difficulty', '').lower() == difficulty.lower()]))
-    return artists
-
-
-def get_songs_by_artist_and_difficulty(artist, difficulty, songs_data):
-    """获取指定曲师在指定难度下的所有歌曲"""
-    songs = [song for song in songs_data
-             if song.get('artist', '').lower() == artist.lower()
-             and song.get('difficulty', '').lower() == difficulty.lower()]
-    return songs
-
-
 import os
-import json
-import cv2
-import re
+import time
+import asyncio
+import aiofiles
+from concurrent.futures import ThreadPoolExecutor
+
+from rapidfuzz import fuzz, process
 from rapidocr import EngineType, ModelType, OCRVersion, RapidOCR
-from fuzzywuzzy import fuzz
+import cv2
+import logging
 
-# 初始化OCR引擎
-engine = RapidOCR(
-    params={
-        "Rec.ocr_version": OCRVersion.PPOCRV5,
-        "Rec.engine_type": EngineType.ONNXRUNTIME,
-        "Rec.model_type": ModelType.MOBILE,
-    }
-)
+logging.getLogger('RapidOCR').disabled = True
+
+# 全局变量
+bounds = [900000, 930000, 950000, 970000, 980000, 990000]
+rewards = [3, 1, 1, 1, 1, 1]
+EPS = 0.00002
+
+# 区域定义
+difficulty_points = {"Massive": (2687, 1780), "Invaded": (2416, 1780), "Detected": (2132, 1780)}
+region_rating1 = (559, 1180, 1319, 1323)
+region_song1 = (935, 266, 2272, 346)
+region_song_mini1 = (1435, 266, 1754, 340)
+region_artist1 = (1000, 351, 2200, 425)
+region_rating2 = (1946, 1485, 2420, 1596)
+region_song2 = (1603, 454, 3016, 535)
+region_song_mini2 = (2598, 454, 3016, 545)
+region_artist2 = (1681, 555, 3018, 624)
 
 
+class AsyncOCRProcessor:
+    def __init__(self, max_workers=None):
+        self.engine = RapidOCR(
+            params={
+                "Rec.ocr_version": OCRVersion.PPOCRV5,
+                "Rec.engine_type": EngineType.ONNXRUNTIME,
+                "Rec.model_type": ModelType.MOBILE,
+            }
+        )
+        self.thread_pool = ThreadPoolExecutor(max_workers=max_workers)
+        self.loop = asyncio.get_event_loop()
 
-def enhanced_song_matching(ocr_song, candidate_songs, threshold=60):
-    """增强版歌曲匹配算法"""
-    best_match = None
-    best_score = 0
-    best_method = ""
+    async def ocr_region(self, image_path, region_coords):
+        def _sync_ocr():
+            img = cv2.imread(image_path)
+            x1, y1, x2, y2 = region_coords
+            roi = img[y1:y2, x1:x2]
+            res = self.engine(roi, use_cls=False, use_det=False, use_rec=True)
+            return res
 
-    ocr_clean = ocr_song
-    print(f"🔍 标准化OCR歌名: '{ocr_song}' -> '{ocr_clean}'")
+        return await self.loop.run_in_executor(self.thread_pool, _sync_ocr)
 
-    for song in candidate_songs:
-        song_title = song.get('title', '')
-        song_clean =song_title
+    async def distinguish(self, image_path):
+        def _sync_distinguish():
+            img = cv2.imread(image_path)
+            x, y = 27, 1934
+            b, g, r = img[y, x]
+            return "type2" if (60 <= r <= 66 and 136 <= g <= 142 and 170 <= b <= 176) else "type1"
 
-        print(f"  对比: '{song_title}' -> '{song_clean}'")
+        return await self.loop.run_in_executor(self.thread_pool, _sync_distinguish)
 
-        # 方法1: 部分匹配（主要方法）
-        partial_score = fuzz.partial_ratio(ocr_clean, song_clean)
+    async def level(self, image_path, result_type):
+        def _sync_level():
+            img = cv2.imread(image_path)
+            if result_type == "type1":
+                x, y = 1590, 441
+                b, g, r = img[y, x]
+                if 210 <= r <= 225 and 135 <= g <= 150 and 235 <= b <= 255:
+                    return "Massive"
+                elif 225 <= r <= 238 and 108 <= g <= 120 and 105 <= b <= 120:
+                    return "Invaded"
+                elif 100 <= r <= 115 and 190 <= g <= 205 and 240 <= b <= 255:
+                    return "Detected"
+                else:
+                    return "ERROR"
+            if result_type == "type2":
+                x, y = 2982, 1520
+                b, g, r = img[y, x]
+                if 170 <= r <= 190 and 120 <= g <= 135 and 200 <= b <= 215:
+                    return "Massive"
+                elif 195 <= r <= 210 and 110 <= g <= 120 and 105 <= b <= 120:
+                    return "Invaded"
+                elif 120 <= r <= 135 and 170 <= g <= 185 and 205 <= b <= 220:
+                    return "Detected"
+                else:
+                    return "ERROR"
 
-        # 方法2: 令牌排序匹配（考虑单词顺序）
-        token_score = fuzz.token_sort_ratio(ocr_clean, song_clean)
+        return await self.loop.run_in_executor(self.thread_pool, _sync_level)
 
-        # 方法3: 简单包含检查
-        contains_score = 100 if ocr_clean in song_clean or song_clean in ocr_clean else 0
 
-        # 方法4: 关键字符匹配（特别针对 ma[xlzo 和 ma[χ]zo 这种情况）
-        key_chars_match = 0
-        if len(ocr_clean) >= 3:  # 至少有3个字符才进行关键字符匹配
-            common_chars = set(ocr_clean) & set(song_clean)
-            if len(common_chars) >= min(3, len(ocr_clean) - 1):  # 至少匹配大部分字符
-                key_chars_match = 80 + min(20, len(common_chars) * 5)
+def ocr_optimize(text):
+    return text.replace('/', '').replace('、', '').replace(',', '').replace('.', '')
 
-        # 取最高分
-        current_score = max(partial_score, token_score, contains_score, key_chars_match)
-        current_method = ""
-        if current_score == partial_score:
-            current_method = "partial_ratio"
-        elif current_score == token_score:
-            current_method = "token_sort"
-        elif current_score == contains_score:
-            current_method = "contains"
-        else:
-            current_method = "key_chars"
 
-        print(
-            f"    分数: partial={partial_score}, token={token_score}, contains={contains_score}, key_chars={key_chars_match} -> 最终: {current_score}")
+async def scr_ocr(ocr_processor, img_path, filename, region_song, region_artist, region_rating, region_song_mini,
+                  result_type):
+    mini_region = False
+    song_name = os.path.splitext(filename)[0]
 
-        if current_score > best_score and current_score >= threshold:
-            best_score = current_score
-            best_match = song
-            best_method = current_method
+    result_song_obj = await ocr_processor.ocr_region(img_path, region_song)
+    if not result_song_obj or not result_song_obj.txts or not result_song_obj.txts[0].strip():
+        backup_region = region_song_mini
+        mini_region = True
+        result_song_obj = await ocr_processor.ocr_region(img_path, backup_region)
 
-    if best_match:
-        print(f"🎯 最佳匹配: '{best_match.get('title', '')}' (分数: {best_score}, 方法: {best_method})")
+    result_artist_obj = await ocr_processor.ocr_region(img_path, region_artist)
+    result_rating_obj = await ocr_processor.ocr_region(img_path, region_rating)
+
+    # 保存结果图片（可选，如果需要可以取消注释）
+    # result_song_obj.vis("Result/" + song_name + ".jpg")
+    # result_artist_obj.vis("Result/" + song_name + "ART.jpg")
+    # result_rating_obj.vis("Result/" + song_name + "RAT.jpg")
+
+    result_song_ocr = ocr_optimize(result_song_obj.txts[0] if result_song_obj.txts else "")
+    result_artist_ocr = ocr_optimize(result_artist_obj.txts[0] if result_artist_obj.txts else "")
+    result_rating_ocr = ocr_optimize(result_rating_obj.txts[0] if result_rating_obj.txts else "")
+    result_rating_ocr = result_rating_ocr.lstrip('0')
+
+    print(f"处理 {filename}:")
+    print(f"  歌曲: {result_song_ocr}")
+    print(f"  艺术家: {result_artist_ocr}")
+    print(f"  分数: {result_rating_ocr}")
+
+    return result_song_ocr, result_artist_ocr, result_rating_ocr, mini_region
+
+
+def single_rating(level: float, score: int) -> float:
+    global bounds, rewards
+    rating: float = 0
+
+    score = min(score, 1010000)
+
+    if score >= 1009000:
+        rating = level * 10 + 7 + 3 * (((score - 1009000) / 1000) ** 1.35)
+    elif score >= 1000000:
+        rating = 10 * (level + 2 * (score - 1000000) / 30000)
     else:
-        print(f"❌ 未找到达到阈值 {threshold} 的匹配")
+        for bound, reward in zip(bounds, rewards):
+            rating += reward if score >= bound else 0
+        rating += 10 * (level * ((score / 1000000) ** 1.5) - 0.9)
 
-    return best_match, best_score
-
-
-def find_related_artists(artist_name, all_artists):
-    """查找相关的曲师变体"""
-    base_name = extract_base_artist_name(artist_name)
-    related = set()
-
-    # 直接匹配（最高优先级）
-    related.add(artist_name)
-
-    # 完全匹配检查
-    for artist in all_artists:
-        if artist_name == artist:
-            related.add(artist)
-
-    # 包含关系匹配（调整优先级）
-    for artist in all_artists:
-        if artist_name in artist or artist in artist_name:
-            related.add(artist)
-
-    # 匹配基础名称
-    for artist in all_artists:
-        if base_name in artist or artist in base_name:
-            related.add(artist)
-
-    # 模糊匹配相似名称（最低优先级）
-    for artist in all_artists:
-        if fuzz.partial_ratio(base_name.lower(), artist.lower()) > 80:
-            related.add(artist)
-
-    return list(related)
+    rating = max(.0, rating)
+    int_rating: int = int(rating * 100 + EPS)
+    return int_rating
 
 
-def method_partial_ratio_with_priority(ocr_text, items, threshold=70, key=None, original_ocr_text=None):
-    """带优先级的匹配方法"""
-    best_match = None
-    best_score = 0
-    best_priority = 0  # 优先级：完全匹配 > 包含匹配 > 部分匹配
+def method_hierarchical_match(items, song, artist, difficulty, mini_match=False):
+    if not items:
+        return None, 0
 
-    ocr_clean = re.sub(r'[^\w\s]', '', ocr_text.lower().strip())
+    filtered_items = [item for item in items if item['difficulty'] == difficulty]
 
-    for item in items:
-        if key:
-            compare_text = item.get(key, '')
-        else:
-            compare_text = str(item)
+    if not filtered_items:
+        return None, 0
 
-        api_clean = re.sub(r'[^\w\s]', '', compare_text.lower().strip())
+    if mini_match and len(song.strip()) <= 7:
+        short_title_items = [item for item in filtered_items if len(item['title']) <= 7]
+        if short_title_items:
+            filtered_items = short_title_items
 
-        # 优先级1: 完全匹配（最高优先级）
-        if ocr_clean == api_clean or (original_ocr_text and original_ocr_text.lower() == compare_text.lower()):
-            priority = 3
-            ratio = 100
-        # 优先级2: 包含关系匹配
-        elif ocr_clean in api_clean or api_clean in ocr_clean:
-            priority = 2
-            ratio = 90 + min(10, fuzz.partial_ratio(ocr_clean, api_clean) / 10)
-        # 优先级3: 部分匹配（最低优先级）
-        else:
-            priority = 1
-            ratio = fuzz.partial_ratio(ocr_clean, api_clean)
+    compare_texts = [f"{item['title']} {item['artist']}" for item in filtered_items]
+    query_text = f"{song} {artist}"
 
-        # 比较逻辑：先比较优先级，再比较分数
-        if (priority > best_priority) or (priority == best_priority and ratio > best_score):
-            if ratio >= threshold:
-                best_score = ratio
-                best_match = item
-                best_priority = priority
-
-    return best_match, best_score
-
-
-def match_difficulty_artist_song(ocr_difficulty, ocr_artist, ocr_song, songs_data,
-                                 difficulty_threshold=70, artist_threshold=70, song_threshold=60):
-    """按照难度→曲师→歌名的顺序进行匹配"""
-
-    # 第一步：匹配难度
-    print(f"\n第一步：匹配难度 '{ocr_difficulty}'")
-    all_difficulties = list(set([song.get('difficulty', '') for song in songs_data]))
-    matched_difficulty, diff_score = method_partial_ratio(ocr_difficulty, all_difficulties, difficulty_threshold)
-
-    if not matched_difficulty:
-        print(f"❌ 未找到匹配的难度")
-        return None, None, None, 0
-
-    print(f"✅ 匹配到难度: {matched_difficulty} (相似度: {diff_score}%)")
-
-    # 第二步：在匹配的难度中匹配曲师
-    print(f"\n第二步：在难度 '{matched_difficulty}' 中匹配曲师 '{ocr_artist}'")
-    difficulty_artists = get_artists_by_difficulty(matched_difficulty, songs_data)
-
-    # 查找所有相关的曲师变体
-    all_artists = list(set([song.get('artist', '') for song in songs_data]))
-    related_artists = find_related_artists(ocr_artist, all_artists)
-
-    print(f"🔍 找到 {len(related_artists)} 个相关曲师变体: {related_artists}")
-
-    # 使用带优先级的匹配方法
-    matched_artist, artist_score = method_partial_ratio_with_priority(
-        ocr_artist, related_artists, artist_threshold, original_ocr_text=ocr_artist
+    result_match = process.extractOne(
+        query_text,
+        compare_texts,
+        scorer=fuzz.partial_ratio,
+        score_cutoff=50
     )
 
-    if not matched_artist:
-        print(f"❌ 未找到匹配的曲师")
-        return matched_difficulty, None, None, 0
+    if result_match:
+        matched_text, match_score, index = result_match
+        best_match = filtered_items[index]
+        print(f"匹配成功: {best_match['title']} - {best_match['artist']} (置信度: {match_score:.1f})")
+        return best_match, match_score
 
-    print(f"✅ 匹配到曲师: {matched_artist} (相似度: {artist_score}%)")
-
-    # 第三步：在匹配的难度和曲师中匹配歌名
-    print(f"\n第三步：在难度 '{matched_difficulty}' 和曲师 '{matched_artist}' 中匹配歌名 '{ocr_song}'")
-    artist_songs = get_songs_by_artist_and_difficulty(matched_artist, matched_difficulty, songs_data)
-
-    if artist_songs:
-        print(f"曲师 '{matched_artist}' 在难度 '{matched_difficulty}' 下有 {len(artist_songs)} 首歌曲:")
-        for i, song in enumerate(artist_songs, 1):
-            print(f"  {i}. {song.get('title', 'N/A')} (等级: {song.get('level', 'N/A')})")
-
-        # 使用增强版歌曲匹配
-        matched_song, song_score = enhanced_song_matching(ocr_song, artist_songs, song_threshold)
-
-        if matched_song:
-            print(f"✅ 匹配到歌曲: {matched_song.get('title', 'N/A')} (相似度: {song_score}%)")
-            total_score = (diff_score + artist_score + song_score) / 3
-            return matched_difficulty, matched_artist, matched_song, total_score
-        else:
-            print(f"❌ 在曲师 '{matched_artist}' 的歌曲中未找到匹配的歌名")
-
-            # 备选方案：如果当前曲师没有匹配，尝试其他相关曲师
-            print(f"\n🔄 尝试其他相关曲师的歌曲...")
-            for related_artist in related_artists:
-                if related_artist == matched_artist:
-                    continue  # 跳过已经尝试过的
-
-                print(f"🔍 尝试曲师: {related_artist}")
-                related_songs = get_songs_by_artist_and_difficulty(related_artist, matched_difficulty, songs_data)
-                if related_songs:
-                    matched_song, song_score = enhanced_song_matching(ocr_song, related_songs, song_threshold)
-                    if matched_song:
-                        print(
-                            f"🎉 在曲师 '{related_artist}' 中匹配到歌曲: {matched_song.get('title', 'N/A')} (相似度: {song_score}%)")
-                        total_score = (diff_score + artist_score + song_score) / 3
-                        return matched_difficulty, related_artist, matched_song, total_score
-    else:
-        print(f"❌ 曲师 '{matched_artist}' 在难度 '{matched_difficulty}' 下没有歌曲")
-
-        # 备选方案：尝试其他相关曲师
-        print(f"\n🔄 尝试其他相关曲师的歌曲...")
-        for related_artist in related_artists:
-            if related_artist == matched_artist:
-                continue
-
-            print(f"🔍 尝试曲师: {related_artist}")
-            related_songs = get_songs_by_artist_and_difficulty(related_artist, matched_difficulty, songs_data)
-            if related_songs:
-                matched_song, song_score = enhanced_song_matching(ocr_song, related_songs, song_threshold)
-                if matched_song:
-                    print(
-                        f"🎉 在曲师 '{related_artist}' 中匹配到歌曲: {matched_song.get('title', 'N/A')} (相似度: {song_score}%)")
-                    total_score = (diff_score + artist_score + song_score) / 3
-                    return matched_difficulty, related_artist, matched_song, total_score
-
-    print(f"❌ 最终未找到匹配的歌曲")
-    return matched_difficulty, matched_artist, None, 0
+    return None, 0
 
 
-# 其他函数保持不变（load_songs_data, ocr_region, distinguish, get_level, clean_ocr_text,
-# extract_base_artist_name, find_related_artists, method_partial_ratio,
-# get_artists_by_difficulty, get_songs_by_artist_and_difficulty, process_screenshot,
-# save_results_to_json, main）
-
-# 区域坐标定义
-region_rating1 = (559, 1180, 1319, 1323)
-region_song1 = (935, 266, 2272, 346)
-region_artist1 = (1000, 351, 2200, 425)
-
-region_song2 = (1603, 454, 3016, 535)
-region_artist2 = (1681, 555, 3018, 624)
-region_rating2 = (1946, 1485, 2420, 1596)
+async def load_json_data(json_path):
+    async with aiofiles.open(json_path, 'r', encoding='utf-8') as f:
+        content = await f.read()
+        return json.loads(content)
 
 
-def process_screenshot(img_path, result_type, songs_data):
-    """处理单张截图"""
-    # OCR识别各个区域
-    if result_type == "type1":
-        song_result = ocr_region(img_path, region_song1)
-        artist_result = ocr_region(img_path, region_artist1)
-        rating_result = ocr_region(img_path, region_rating1)
-    else:  # type2
-        song_result = ocr_region(img_path, region_song2)
-        artist_result = ocr_region(img_path, region_artist2)
-        rating_result = ocr_region(img_path, region_rating2)
-
-    # 清理识别结果
-    song_name = clean_ocr_text(song_result.txts[0]) if song_result.txts else "Unknown"
-    artist = clean_ocr_text(artist_result.txts[0]) if artist_result.txts else "Unknown"
-    rating = clean_ocr_text(rating_result.txts[0]) if rating_result.txts else "Unknown"
-    level = get_level(img_path, result_type)
-
-    print(f"\n🎯 识别结果:")
-    print(f"  歌曲: {song_name}")
-    print(f"  曲师: {artist}")
-    print(f"  分数: {rating}")
-    print(f"  难度: {level}")
-
-    # 按照难度→曲师→歌名的顺序进行匹配
-    matched_difficulty, matched_artist, matched_song, total_score = match_difficulty_artist_song(
-        level, artist, song_name, songs_data)
+async def save_to_json(match_result, score, result_score, filename, output_file="songs_results.json"):
+    try:
+        score_int = int(result_score)
+        song_level = match_result.get('level', 0)
+        rating = single_rating(song_level, score_int)
+    except (ValueError, TypeError) as e:
+        rating = 0
 
     result_data = {
-        'filename': os.path.basename(img_path),
-        'ocr_results': {
-            'song': song_name,
-            'artist': artist,
-            'rating': rating,
-            'level': level
-        },
-        'match_info': {
-            'matched_difficulty': matched_difficulty,
-            'matched_artist': matched_artist,
-            'total_match_score': total_score
-        }
+        "title": match_result['title'],
+        "artist": match_result['artist'],
+        "difficulty": match_result['difficulty'],
+        "song_level_id": match_result.get('song_level_id', ''),
+        "b15": match_result.get('b15', False),
+        "level": match_result.get('level', ''),
+        "score": result_score,
+        "rating": rating / 100
     }
 
-    if matched_song:
-        print(f"\n🎉 最终匹配成功 (综合相似度: {total_score:.1f}%):")
-        print(f"  📝 歌曲: {matched_song.get('title', 'N/A')}")
-        print(f"  👤 曲师: {matched_song.get('artist', 'N/A')}")
-        print(f"  ⭐ 等级: {matched_song.get('level', 'N/A')}")
-        print(f"  🎯 难度: {matched_song.get('difficulty', 'N/A')}")
-
-        # 添加匹配的歌曲信息
-        result_data['matched_song'] = {
-            'title': matched_song.get('title', ''),
-            'artist': matched_song.get('artist', ''),
-            'level': matched_song.get('level', ''),
-            'difficulty': matched_song.get('difficulty', ''),
-            'score': rating
-        }
+    # 读取现有数据
+    existing_data = []
+    if os.path.exists(output_file):
+        try:
+            async with aiofiles.open(output_file, 'r', encoding='utf-8') as f:
+                content = await f.read()
+                if content.strip():
+                    data = json.loads(content)
+                    if isinstance(data, dict) and "b35" in data and "b15" in data:
+                        existing_data = data["b35"] + data["b15"]
+                    elif isinstance(data, list):
+                        existing_data = data
+                    else:
+                        existing_data = []
+        except (json.JSONDecodeError, Exception) as e:
+            existing_data = []
     else:
-        print(f"\n❌ 匹配失败")
-        result_data['matched_song'] = None
+        existing_data = []
 
-    print("=" * 70)
-    return result_data
+    # 更新或添加数据
+    found_existing = False
+    for i, item in enumerate(existing_data):
+        if isinstance(item, dict) and item.get('song_level_id') == result_data['song_level_id']:
+            found_existing = True
+            existing_score = int(item.get('score', 0))
+            new_score = int(result_score)
 
+            if new_score > existing_score:
+                existing_data[i] = result_data
+                print(f"更新记录: {result_data['title']} 分数 {existing_score} -> {new_score}")
+            else:
+                print(f"跳过保存: {result_data['title']} 当前分数 {existing_score} 小于或等于新分数 {new_score}")
+            break
 
-def save_results_to_json(results, output_file='songs_results.json'):
-    """按照指定格式保存结果到JSON文件"""
-    formatted_results = []
+    if not found_existing:
+        existing_data.append(result_data)
+        print(f"添加新记录: {result_data['title']} 分数 {result_score}")
 
-    for result in results:
-        if result.get('matched_song'):
-            song_data = result['matched_song'].copy()
-            # 确保level是数值类型
-            try:
-                song_data['level'] = float(song_data['level'])
-            except (ValueError, TypeError):
-                song_data['level'] = 0.0
-
-            formatted_results.append(song_data)
-
-    # 按歌曲名和艺术家分组，合并不同难度的记录
-    final_output = []
-    seen_combinations = set()
-
-    for song in formatted_results:
-        # 创建唯一标识符（歌曲+艺术家+难度）
-        combo_key = f"{song['title']}|{song['artist']}|{song['difficulty']}"
-
-        if combo_key not in seen_combinations:
-            seen_combinations.add(combo_key)
-            final_output.append({
-                "title": song['title'],
-                "artist": song['artist'],
-                "difficulty": song['difficulty'],
-                "level": song['level'],
-                "score": song['score']
-            })
-
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(final_output, f, indent=2, ensure_ascii=False)
-
-    print(f"\n💾 结果已保存到 {output_file}")
-    print(f"📊 共保存 {len(final_output)} 条记录")
-
-    # 显示统计信息
-    if final_output:
-        artists = set([song['artist'] for song in final_output])
-        songs = set([song['title'] for song in final_output])
-        difficulties = set([song['difficulty'] for song in final_output])
-        print(f"🎵 涉及 {len(artists)} 位曲师，{len(songs)} 首歌曲，{len(difficulties)} 种难度")
+    # 保存数据
+    async with aiofiles.open(output_file, 'w', encoding='utf-8') as f:
+        await f.write(json.dumps(existing_data, ensure_ascii=False, indent=2))
 
 
-# 区域坐标定义
-region_rating1 = (559, 1180, 1319, 1323)
-region_song1 = (935, 266, 2272, 346)
-region_artist1 = (1000, 351, 2200, 425)
-
-region_song2 = (1603, 454, 3016, 535)
-region_artist2 = (1681, 555, 3018, 624)
-region_rating2 = (1946, 1485, 2420, 1596)
-
-
-def main():
-    # 检查是否安装了fuzzywuzzy
+def best(input_file="songs_results.json"):
     try:
-        from fuzzywuzzy import fuzz
-    except ImportError:
-        print("请先安装fuzzywuzzy: pip install fuzzywuzzy python-Levenshtein")
-        return
+        with open(input_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        if isinstance(data, dict) and "b35" in data and "b15" in data:
+            b35 = data["b35"]
+            b15 = data["b15"]
+        elif isinstance(data, list):
+            b35 = [item for item in data if not item.get('b15', False)]
+            b15 = [item for item in data if item.get('b15', False)]
+        else:
+            return None
+
+        b35_sorted = sorted(b35, key=lambda x: x['rating'], reverse=True)
+        b15_sorted = sorted(b15, key=lambda x: x['rating'], reverse=True)
+
+        sorted_data = {
+            "b35": b35_sorted,
+            "b15": b15_sorted
+        }
+
+        with open(input_file, 'w', encoding='utf-8') as f:
+            json.dump(sorted_data, f, ensure_ascii=False, indent=2)
+
+        return sorted_data
+    except Exception as e:
+        print(f"排序错误: {e}")
+        return None
+
+
+async def process_single_image(ocr_processor, all_songs_data, filename, src_folder):
+    """处理单个图片的异步函数"""
+    img_path = os.path.join(src_folder, filename)
+
+    try:
+        # 并行执行类型检测和级别检测
+        result_type, result_level = await asyncio.gather(
+            ocr_processor.distinguish(img_path),
+            ocr_processor.level(img_path, await ocr_processor.distinguish(img_path))
+        )
+
+        if result_level == "ERROR":
+            print(f"跳过 {filename}: 无法识别级别")
+            return
+
+        # 选择区域
+        if result_type == "type1":
+            final_result = await scr_ocr(
+                ocr_processor, img_path, filename,
+                region_song1, region_artist1, region_rating1, region_song_mini1, result_type
+            )
+        elif result_type == "type2":
+            final_result = await scr_ocr(
+                ocr_processor, img_path, filename,
+                region_song2, region_artist2, region_rating2, region_song_mini2, result_type
+            )
+        else:
+            return
+
+        result_song, result_artist, result_rating, mini_region = final_result
+
+        # 匹配歌曲
+        match_result, score = method_hierarchical_match(
+            items=all_songs_data,
+            song=result_song,
+            artist=result_artist,
+            difficulty=result_level,
+            mini_match=mini_region
+        )
+
+        if match_result:
+            await save_to_json(match_result, score, result_rating, filename)
+        else:
+            print(f"ERROR: 无法匹配 {filename}")
+
+        print("\n")
+
+    except Exception as e:
+        print(f"处理 {filename} 时出错: {e}")
+
+
+async def main():
+    start_time = time.time()
+
+    # 初始化OCR处理器
+    ocr_processor = AsyncOCRProcessor(max_workers=8)  # 可以调整线程数
 
     # 加载歌曲数据
-    songs_data = load_songs_data()
-    if not songs_data:
-        return
+    json_file_path = "songs_data.json"
+    all_songs_data = await load_json_data(json_file_path)
 
     src_folder = "SCR"
-    results = []
 
-    # 处理所有截图
-    for filename in os.listdir(src_folder):
-        if filename.upper().endswith('.JPG'):
-            img_path = os.path.join(src_folder, filename)
-            print(f"\n{'=' * 80}")
-            print(f"📁 处理文件: {filename}")
-            print(f"{'=' * 80}")
+    # 获取所有图片文件
+    image_files = [f for f in os.listdir(src_folder) if f.upper().endswith('.JPG')]
 
-            result_type = distinguish(img_path)
-            result_data = process_screenshot(img_path, result_type, songs_data)
-            results.append(result_data)
+    print(f"找到 {len(image_files)} 个图片文件，开始并行处理...")
 
-    # 保存结果
-    save_results_to_json(results)
+    # 创建任务列表
+    tasks = [
+        process_single_image(ocr_processor, all_songs_data, filename, src_folder)
+        for filename in image_files
+    ]
+
+    # 限制并发数，避免资源竞争
+    semaphore = asyncio.Semaphore(5)  # 同时处理3个图片
+
+    async def bounded_task(task):
+        async with semaphore:
+            return await task
+
+    # 执行所有任务
+    await asyncio.gather(*[bounded_task(task) for task in tasks])
+
+    # 排序结果
+    best()
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"程序总执行耗时: {elapsed_time:.2f} 秒")
+    print(f"平均每个图片: {elapsed_time / len(image_files):.2f} 秒")
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

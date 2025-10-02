@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from rapidfuzz import fuzz, process
 from rapidocr import EngineType, ModelType, OCRVersion, RapidOCR
 import cv2
@@ -269,6 +270,7 @@ region_artist2 = (1681,555,3018,624)
 
 src_folder = "SCR"
 
+start_time = time.time()
 for filename in os.listdir(src_folder):
     if filename.upper().endswith('.JPG'):
         img_path = os.path.join(src_folder, filename)
@@ -300,3 +302,6 @@ for filename in os.listdir(src_folder):
             print("ERROR")
         print("\n")
 best()
+end_time = time.time()  # 程序结束时间
+elapsed_time = end_time - start_time
+print(f"程序总执行耗时: {elapsed_time:.2f} 秒")
