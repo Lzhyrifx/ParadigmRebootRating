@@ -6,7 +6,6 @@ from rapidocr import EngineType, ModelType, OCRVersion, RapidOCR
 import cv2
 import logging
 
-
 logging.getLogger('RapidOCR').disabled = True
 
 engine = RapidOCR(
@@ -302,6 +301,6 @@ for filename in os.listdir(src_folder):
             print("ERROR")
         print("\n")
 best()
-end_time = time.time()  # 程序结束时间
+end_time = time.time()
 elapsed_time = end_time - start_time
 print(f"程序总执行耗时: {elapsed_time:.2f} 秒")

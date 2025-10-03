@@ -42,10 +42,9 @@ def user_login(username, password):
                 print(f"请求耗时: {request_duration:.2f} 秒")
                 return None, request_duration
             else:
-                # 其他错误
                 print(f"登录失败: 状态码 {response.status_code}")
                 print(f"响应内容: {response.text}")
-                print(f"请求耗时: {request_duration:.2f} 秒")  # 即使失败也显示耗时
+                print(f"请求耗时: {request_duration:.2f} 秒")
                 return None, request_duration
 
     except httpx.RequestError as e:
@@ -63,10 +62,9 @@ def user_login(username, password):
 
 
 def main():
-    username = "Lzhyrifx"  # 替换为实际用户名
-    password = "Lzhyrifx042420"  # 替换为实际密码
+    username = "Lzhyrifx"
+    password = input()
 
-    # 记录程序开始时间
     program_start = time.time()
 
     # 执行登录

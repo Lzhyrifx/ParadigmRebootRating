@@ -107,10 +107,9 @@ async def scr_ocr(ocr_processor, img_path, filename, region_song, region_artist,
     result_artist_obj = await ocr_processor.ocr_region(img_path, region_artist)
     result_rating_obj = await ocr_processor.ocr_region(img_path, region_rating)
 
-    # 保存结果图片（可选，如果需要可以取消注释）
-    # result_song_obj.vis("Result/" + song_name + ".jpg")
-    # result_artist_obj.vis("Result/" + song_name + "ART.jpg")
-    # result_rating_obj.vis("Result/" + song_name + "RAT.jpg")
+    result_song_obj.vis("Result/" + song_name + ".jpg")
+    result_artist_obj.vis("Result/" + song_name + "ART.jpg")
+    result_rating_obj.vis("Result/" + song_name + "RAT.jpg")
 
     result_song_ocr = ocr_optimize(result_song_obj.txts[0] if result_song_obj.txts else "")
     result_artist_ocr = ocr_optimize(result_artist_obj.txts[0] if result_artist_obj.txts else "")
@@ -203,7 +202,6 @@ async def save_to_json(match_result, score, result_score, filename, output_file=
         "rating": rating / 100
     }
 
-    # 读取现有数据
     existing_data = []
     if os.path.exists(output_file):
         try:
@@ -222,7 +220,6 @@ async def save_to_json(match_result, score, result_score, filename, output_file=
     else:
         existing_data = []
 
-    # 更新或添加数据
     found_existing = False
     for i, item in enumerate(existing_data):
         if isinstance(item, dict) and item.get('song_level_id') == result_data['song_level_id']:
@@ -241,7 +238,6 @@ async def save_to_json(match_result, score, result_score, filename, output_file=
         existing_data.append(result_data)
         print(f"添加新记录: {result_data['title']} 分数 {result_score}")
 
-    # 保存数据
     async with aiofiles.open(output_file, 'w', encoding='utf-8') as f:
         await f.write(json.dumps(existing_data, ensure_ascii=False, indent=2))
 
@@ -278,11 +274,10 @@ def best(input_file="songs_results.json"):
 
 
 async def process_single_image(ocr_processor, all_songs_data, filename, src_folder):
-    """处理单个图片的异步函数"""
+
     img_path = os.path.join(src_folder, filename)
 
     try:
-        # 并行执行类型检测和级别检测
         result_type, result_level = await asyncio.gather(
             ocr_processor.distinguish(img_path),
             ocr_processor.level(img_path, await ocr_processor.distinguish(img_path))
@@ -292,7 +287,7 @@ async def process_single_image(ocr_processor, all_songs_data, filename, src_fold
             print(f"跳过 {filename}: 无法识别级别")
             return
 
-        # 选择区域
+
         if result_type == "type1":
             final_result = await scr_ocr(
                 ocr_processor, img_path, filename,
@@ -308,7 +303,7 @@ async def process_single_image(ocr_processor, all_songs_data, filename, src_fold
 
         result_song, result_artist, result_rating, mini_region = final_result
 
-        # 匹配歌曲
+
         match_result, score = method_hierarchical_match(
             items=all_songs_data,
             song=result_song,
@@ -331,37 +326,36 @@ async def process_single_image(ocr_processor, all_songs_data, filename, src_fold
 async def main():
     start_time = time.time()
 
-    # 初始化OCR处理器
+
     ocr_processor = AsyncOCRProcessor(max_workers=8)  # 可以调整线程数
 
-    # 加载歌曲数据
+
     json_file_path = "songs_data.json"
     all_songs_data = await load_json_data(json_file_path)
 
     src_folder = "SCR"
 
-    # 获取所有图片文件
+
     image_files = [f for f in os.listdir(src_folder) if f.upper().endswith('.JPG')]
 
     print(f"找到 {len(image_files)} 个图片文件，开始并行处理...")
 
-    # 创建任务列表
+
     tasks = [
         process_single_image(ocr_processor, all_songs_data, filename, src_folder)
         for filename in image_files
     ]
 
-    # 限制并发数，避免资源竞争
-    semaphore = asyncio.Semaphore(5)  # 同时处理3个图片
+
+    semaphore = asyncio.Semaphore(5)
 
     async def bounded_task(task):
         async with semaphore:
             return await task
 
-    # 执行所有任务
+
     await asyncio.gather(*[bounded_task(task) for task in tasks])
 
-    # 排序结果
     best()
 
     end_time = time.time()
