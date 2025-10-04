@@ -3,7 +3,7 @@
 **目前仍在持续更新**<br><br>
 查询范式：起源Rating组成成分即best50<br>
 通过OCR截图来排序best35+best15<br>(简称b35+b15合称b50)<br>
-Rating的计算详见[范式：起源wiki](https://paradigmrebootzh.miraheze.org/wiki/Rating)
+Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.miraheze.org/wiki/Rating)
 
 
 ## 导入
