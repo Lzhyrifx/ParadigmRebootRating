@@ -1,9 +1,9 @@
 # ParadigmRebootRating
-## 范式：起源Rating组成计算
+## 计算范式：起源Rating组成
 **目前仍在持续更新**<br><br>
 查询范式：起源Rating组成成分即best50<br>
 通过OCR截图来排序best35+best15<br>(简称b35+b15合称b50)<br>
-Rating的计算详见[范式：起源wiki](https://paradigmrebootzh.miraheze.org/wiki/Rating)
+Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.miraheze.org/wiki/Rating)
 
 
 ## 导入
@@ -15,7 +15,7 @@ Rating的计算详见[范式：起源wiki](https://paradigmrebootzh.miraheze.org
 使用RapidOCR进行OCR
 
 ## 匹配
-通过[Paradigm Prober](https://prp.icel.site/)的[Fastapi](https://api.prp.icel.site/songs)拉取全部歌曲数据到本地<br>
+通过[Paradigm Prober](https://prp.icel.site/)提供的API拉取全部歌曲数据到本地<br>
 匹配难度→曲师→歌曲<br>
 通过模糊匹配保存结果到本地
 
