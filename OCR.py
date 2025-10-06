@@ -6,6 +6,7 @@ from rapidocr import EngineType, ModelType, OCRVersion, RapidOCR
 import cv2
 import logging
 
+
 logging.getLogger('RapidOCR').disabled = True
 
 engine = RapidOCR(
@@ -267,11 +268,12 @@ region_song2 = (1603,454,3016,535)
 region_song_mini2 = (2598,454,3016,545)
 region_artist2 = (1681,555,3018,624)
 
-src_folder = "SCR"
+src_folder = "PRRadb/Temp"
 
 start_time = time.time()
+
 for filename in os.listdir(src_folder):
-    if filename.upper().endswith('.JPG'):
+    if filename.upper().endswith('.PNG'):
         img_path = os.path.join(src_folder, filename)
         result_type = distinguish(img_path)
 
