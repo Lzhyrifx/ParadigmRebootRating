@@ -85,16 +85,14 @@ if __name__ == "__main__":
     os.makedirs(screenshot_dir, exist_ok=True)
 
     start_time = time.time()
-    scr()
-    slide()
-    scr()
-    slide()
-    scr()
-    slide()
-    scr()
+    loop_count = 10
+    for i in range(loop_count):
+        scr()
+        if i < loop_count - 1:
+            slide()
 
 
-    elapsed_time = time.time() - start_time
+    elapsed_time = time.time - start_time
     print(f"\n" + "=" * 50)
     print(f"程序总执行耗时: {elapsed_time:.2f} 秒")
     print(f"平均每首歌耗时: {elapsed_time / (counter - 1):.2f} 秒")

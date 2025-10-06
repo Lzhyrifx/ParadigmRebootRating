@@ -247,7 +247,7 @@ def best(input_file="songs_results.json"):
         return None
 
 
-json_file_path = "songs_data.json"
+json_file_path = "Resource/songs_data.json"
 
 bounds = [900000, 930000, 950000, 970000, 980000, 990000]
 rewards = [3, 1, 1, 1, 1, 1]
@@ -268,7 +268,7 @@ region_song2 = (1603,454,3016,535)
 region_song_mini2 = (2598,454,3016,545)
 region_artist2 = (1681,555,3018,624)
 
-src_folder = "PRRadb/Temp"
+src_folder = "ADB/Temp"
 
 start_time = time.time()
 

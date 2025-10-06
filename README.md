@@ -7,7 +7,7 @@ Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.mir
 
 
 ## 导入
-- 通过adb连接手机/平板使用无障碍模式进行批量截图<br>
+- 通过adb连接手机/平板进行批量截图<br>
 - 手动截图(支持选曲界面和结算界面)
 ## OCR
 判断截图类型<br>
@@ -25,6 +25,7 @@ Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.mir
 
 ## 获取b50
 通过[Paradigm Prober](https://prp.icel.site/)获取b50图片
+
 
 ## 声明
 本软件与击弦网络及相关游戏发行、开发及分发公司无任何关系，均使用互联网公开资源，仅供学习研究用途，相关版权归相关方所有
