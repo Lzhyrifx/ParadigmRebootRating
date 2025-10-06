@@ -1,12 +1,8 @@
-# TODO: Implement b50 table generation functions
 import json
 import io
 import os
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter, ImageEnhance
-
-from backend import config as backend_config
-from ...model.schemas import PlayRecordInfo
 
 
 def image_to_byte_array(image: Image) -> bytes:
