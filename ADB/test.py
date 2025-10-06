@@ -1,74 +1,124 @@
+import uiautomator2 as u2
+import time
 import os
-import subprocess
-import imagehash
-from PIL import Image
-import pandas as pd
-import logging
-import numpy as np
-import cv2
+import threading
 
-from rapidocr import RapidOCR, OCRVersion, EngineType, ModelType
+# 歌曲坐标
+song_coords = [
+    (1172, 579),
+    (1025, 833),
+    (881, 1081),
+    (744, 1326),
+    (603, 1577),
+    (464, 1818),
+]
 
-logging.getLogger('RapidOCR').disabled = True
+screenshot_dir = "Temp/"
+counter = 1
 
-ocr = RapidOCR(
-    params={
-        "Rec.ocr_version": OCRVersion.PPOCRV5,
-        "Rec.engine_type": EngineType.ONNXRUNTIME,
-        "Rec.model_type": ModelType.MOBILE,
+
+# 滑动参数
+def init_slide_params(d):
+    w = d.info['displayWidth']
+    h = d.info['displayHeight']
+    # 基于屏幕比例计算，适应不同设备
+    return {
+        'x': w * 0.5,
+        'start_y': h * 0.85,  # 屏幕底部85%位置
+        'end_y': h * 0.45  # 屏幕底部45%位置
     }
-)
 
-# 1. ADB录屏
-subprocess.run(["adb", "shell", "screenrecord", "--bit-rate", "4M", "--fps", "5", "/sdcard/score_record.mp4"])
-subprocess.run(["adb", "pull", "/sdcard/score_record.mp4", "./score_record.mp4"])
 
-# 2. 提取帧
-os.makedirs("frames", exist_ok=True)
-subprocess.run(["ffmpeg", "-i", "score_record.mp4", "-r", "5", "frames/frame_%04d.png"])
+slide_params = None
 
-# 3. 固定区域去重
-prev_hash = None
-valid_frames = []
-for frame_path in sorted(os.listdir("frames")):
-    if not frame_path.endswith(".png"):
-        continue
-    img = Image.open(f"frames/{frame_path}")
-    # 截取右侧分数显示区（需根据实际界面调整坐标）
-    crop = img.crop((600, 100, 900, 700))
-    current_hash = imagehash.phash(crop)
-    # 若与前一帧哈希差异大，视为新歌曲
-    if prev_hash is None or abs(current_hash - prev_hash) > 3:
-        valid_frames.append(frame_path)
-        prev_hash = current_hash
 
-# 4. OCR提取数据
-data = []
-for frame_path in valid_frames:
-    img = Image.open(f"frames/{frame_path}")
+def scr(d):
+    global counter
+    for idx, (x, y) in enumerate(song_coords):
+        print(f"\n处理歌曲：{counter}")
 
-    # 转为 OpenCV 格式（RapidOCR 更推荐 numpy array）
-    img_cv = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
+        # 移除不支持的duration参数
+        d.click(x, y)  # 普通点击，不指定duration
 
-    # 分别截取歌名、曲师、分数区域（坐标需微调）
-    song_name_roi = img_cv[150:250, 700:900]      # 歌名
-    artist_roi = img_cv[260:300, 700:900]          # 曲师
-    score_roi = img_cv[650:720, 600:750]           # 分数
+        # 启动线程异步截图，不阻塞主流程
+        threading.Thread(target=take_screenshot, args=(d, str(counter))).start()
 
-    # OCR识别函数
-    def get_text_from_ocr(roi_img):
-        result = ocr(roi_img, use_cls=False, use_det=False, use_rec=True)
-        if result and result.txts:
-            return result.txts[0].strip()  # 取第一个识别结果
-        return ""
+        counter += 1
+        # 仅保留必要的等待时间，根据实际应用响应调整
+        time.sleep(0.3)
 
-    song_name = get_text_from_ocr(song_name_roi)
-    artist = get_text_from_ocr(artist_roi)
-    score = get_text_from_ocr(score_roi)
 
-    data.append({"song": song_name, "artist": artist, "score": score})
+def slide(d):
+    # 优化滑动操作，使用更高效的实现
+    d.swipe(
+        slide_params['x'],
+        slide_params['start_y'],
+        slide_params['x'],
+        slide_params['end_y'],
+        duration=0.2  # swipe方法支持duration参数
+    )
+    # 滑动后仅保留必要的等待
+    time.sleep(0.5)
 
-# 5. 保存为Excel统计
-df = pd.DataFrame(data)
-df.to_excel("score_stat.xlsx", index=False)
-print("统计完成！结果保存在score_stat.xlsx")
+
+def init_device():
+    try:
+        # 优化连接方式，使用adb连接可能更快
+        d = u2.connect()  # 可以尝试使用u2.connect_usb()直接连接USB设备
+
+        # 关闭动画以提高操作速度
+        d.shell("settings put global window_animation_scale 0.0")
+        d.shell("settings put global transition_animation_scale 0.0")
+        d.shell("settings put global animator_duration_scale 0.0")
+
+        print(f"设备连接成功：{d.device_info['model']}（Android {d.device_info['version']}）")
+        return d
+    except Exception as e:
+        print(f"设备连接失败：{str(e)}")
+        exit(1)
+
+
+def tap_coordinate(d, x, y):
+    try:
+        # 移除不支持的duration参数
+        d.click(x, y)
+        print(f"已点击坐标：({x}, {y})")
+    except Exception as e:
+        print(f"点击失败：{str(e)}")
+
+
+def take_screenshot(d, song_name):
+    local_path = os.path.join(screenshot_dir, f"{song_name}.png")
+    try:
+        # 使用压缩格式和更低质量截图（如果应用允许）
+        success = d.screenshot(local_path, quality=80)  # 降低截图质量
+        if success and os.path.exists(local_path) and os.path.getsize(local_path) > 0:
+            print(f"已保存截图：{local_path}")
+        else:
+            print(f"截图保存可能不完整：{local_path}")
+    except Exception as e:
+        print(f"截图失败：{str(e)}")
+
+
+if __name__ == "__main__":
+    d = init_device()
+    slide_params = init_slide_params(d)
+    os.makedirs(screenshot_dir, exist_ok=True)
+
+    start_time = time.time()
+    loop_count = 10
+
+    for i in range(loop_count):
+        scr(d)
+        if i < loop_count - 1:
+            slide(d)
+
+    # 等待可能还在运行的截图线程
+    time.sleep(1)
+
+    elapsed_time = time.time() - start_time
+    print(f"\n" + "=" * 50)
+    print(f"程序总执行耗时: {elapsed_time:.2f} 秒")
+    print(f"平均每首歌耗时: {elapsed_time / (counter - 1):.2f} 秒")
+    print("=" * 50)
+    print("启动OCR")
