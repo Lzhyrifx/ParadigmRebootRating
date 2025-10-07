@@ -10,9 +10,8 @@ SPECIAL_TITLE_MAP = {
     "Cipher : /2&//<|0": "Cipher"
 }
 
-def signal_handler(signal, frame):
+def signal_handler():
     print("\n正在保存已处理结果...")
-    # 加载当前数据并保存（防止内存数据丢失）
     try:
         with open("prr_songs_data.json", "r", encoding="utf-8") as f:
             current_data = json.load(f)
@@ -35,90 +34,120 @@ def save_results(songs_data):  # 接收数据参数
         json.dump(songs_data, f, ensure_ascii=False, indent=2)
 
 
-def get_cover_url(song_name):
-    wiki_title = SPECIAL_TITLE_MAP.get(song_name, song_name)
-    if song_name not in SPECIAL_TITLE_MAP:
-        wiki_title = normalize_title_for_wiki(song_name)
-
-    encoded = urllib.parse.quote(wiki_title, safe='').replace('%20', '_')
-    song_page_url = f"https://paradigmrebootzh.miraheze.org/wiki/{encoded}"
-    file_direct_url = f"https://paradigmrebootzh.miraheze.org/wiki/文件:Cover_{song_name}.png"
-
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-        "Referer": "https://paradigmrebootzh.miraheze.org/"
-    }
-
-    with httpx.Client(follow_redirects=True) as client:
+def get_cover_url(song_name, artist, max_retries=3):
+    for attempt in range(max_retries):
         try:
-            response = client.get(file_direct_url, headers=headers, timeout=15)
-            if response.status_code == 200:
-                soup = BeautifulSoup(response.text, "html.parser")
-                full_media_div = soup.find("div", class_="fullMedia")
-                if full_media_div:
-                    img_link = full_media_div.find("a")
-                    if img_link and "href" in img_link.attrs:
-                        real_url = img_link["href"]
-                        if real_url.startswith("//"):
-                            real_url = "https:" + real_url
-                        return real_url
+            wiki_title = SPECIAL_TITLE_MAP.get(song_name, song_name)
+            if song_name not in SPECIAL_TITLE_MAP:
+                wiki_title = normalize_title_for_wiki(song_name)
+
+            encoded = urllib.parse.quote(wiki_title, safe='').replace('%20', '_')
+            song_page_url = f"https://paradigmrebootzh.miraheze.org/wiki/{encoded}"
+            file_direct_url = f"https://paradigmrebootzh.miraheze.org/wiki/文件:Cover_{song_name}.png"
+
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+                "Referer": "https://paradigmrebootzh.miraheze.org/"
+            }
+
+            with httpx.Client(follow_redirects=True) as client:
+                try:
+                    response = client.get(file_direct_url, headers=headers, timeout=15)
+                    if response.status_code == 200:
+                        soup = BeautifulSoup(response.text, "html.parser")
+                        full_media_div = soup.find("div", class_="fullMedia")
+                        if full_media_div:
+                            img_link = full_media_div.find("a")
+                            if img_link and "href" in img_link.attrs:
+                                real_url = img_link["href"]
+                                if real_url.startswith("//"):
+                                    real_url = "https:" + real_url
+                                return real_url
+                except Exception as e:
+                    print(f"{song_name}: {e}")
+
+                try:
+                    song_page_response = client.get(song_page_url, headers=headers, timeout=15)
+                    if song_page_response.status_code != 200:
+                        print(f"页面 {song_page_url} 访问失败（状态码：{song_page_response.status_code}）")
+                        return None
+
+                    song_soup = BeautifulSoup(song_page_response.text, "html.parser")
+                    target_img = song_soup.find(
+                        "img",
+                        class_="mw-file-element",
+                        src=lambda x: x and "Cover_" in x
+                    )
+                    if not target_img or "src" not in target_img.attrs:
+                        print(f"页面 {song_page_url} 未找到目标img标签，尝试补充曲师")
+
+                        safe_artist = artist.replace(' ', '_')
+                        artist_wiki_title = normalize_title_for_wiki(f"{song_name} ({safe_artist})")
+
+                        artist_encoded = urllib.parse.quote(artist_wiki_title, safe='').replace('%20', '_')
+                        artist_song_page_url = f"https://paradigmrebootzh.miraheze.org/wiki/{artist_encoded}"
+                        print(f"重试带曲师页面：{artist_song_page_url}")
+
+                        try:
+                            artist_resp = client.get(artist_song_page_url, headers=headers, timeout=15)
+                            if artist_resp.status_code != 200:
+                                print(f"带曲师页面 {artist_song_page_url} 访问失败")
+                                return None
+                            artist_soup = BeautifulSoup(artist_resp.text, "html.parser")
+                            target_img = artist_soup.find("img", class_="mw-file-element", src=lambda x: x and "Cover_" in x)
+                            if not target_img or "src" not in target_img.attrs:
+                                print(f"带曲师页面 {artist_song_page_url} 仍未找到img标签")
+                                return None
+                            img_src = target_img["src"]
+                        except Exception as e:
+                            print(f"带曲师页面请求失败：{e}")
+                            return None
+
+                    img_src = target_img["src"]
+
+                    if "Cover_" not in img_src:
+                        print(f"img src {img_src} 不包含 Cover_，无法提取文件名")
+                        return None
+
+                    cover_filename = "Cover_" + img_src.split("Cover_")[1].split("?")[0].split("/")[0]
+
+                    if not cover_filename.endswith(".png"):
+                        cover_filename += ".png"
+
+                    restored_file_page_url = f"https://paradigmrebootzh.miraheze.org/wiki/文件:{cover_filename}"
+                    print(f"尝试文件页面: {restored_file_page_url}")
+
+                    file_page_response = client.get(restored_file_page_url, headers=headers, timeout=15)
+                    if file_page_response.status_code != 200:
+                        print(f"文件页 {restored_file_page_url} 访问失败（状态码：{file_page_response.status_code}）")
+                        return None
+
+                    file_page_soup = BeautifulSoup(file_page_response.text, "html.parser")
+                    full_media_div = file_page_soup.find("div", class_="fullMedia")
+                    if not full_media_div:
+                        print(f"文件页 {restored_file_page_url} 无 fullMedia 容器")
+                        return None
+
+                    final_img_link = full_media_div.find("a")
+                    if not final_img_link or "href" not in final_img_link.attrs:
+                        print(f"文件页 {restored_file_page_url} 无图片链接")
+                        return None
+
+                    final_url = final_img_link["href"]
+                    if final_url.startswith("//"):
+                        final_url = "https:" + final_url
+                    return final_url
+
+                except Exception as e:
+                    print(f"{song_name}:{str(e)}")
+                    return None
         except Exception as e:
-            print(f"{song_name}: {e}")
-
-        try:
-            song_page_response = client.get(song_page_url, headers=headers, timeout=15)
-            if song_page_response.status_code != 200:
-                print(f"页面 {song_page_url} 访问失败（状态码：{song_page_response.status_code}）")
-                return None
-
-            song_soup = BeautifulSoup(song_page_response.text, "html.parser")
-            target_img = song_soup.find(
-                "img",
-                class_="mw-file-element",
-                src=lambda x: x and "Cover_" in x
-            )
-            if not target_img or "src" not in target_img.attrs:
-                print(f"页面 {song_page_url} 未找到目标img标签")
-                return None
-
-            img_src = target_img["src"]
-
-            if "Cover_" not in img_src:
-                print(f"img src {img_src} 不包含 Cover_，无法提取文件名")
-                return None
-
-            cover_filename = "Cover_" + img_src.split("Cover_")[1].split("?")[0].split("/")[0]
-
-            if not cover_filename.endswith(".png"):
-                cover_filename += ".png"
-
-            restored_file_page_url = f"https://paradigmrebootzh.miraheze.org/wiki/文件:{cover_filename}"
-            print(f"尝试文件页面: {restored_file_page_url}")
-
-            file_page_response = client.get(restored_file_page_url, headers=headers, timeout=15)
-            if file_page_response.status_code != 200:
-                print(f"文件页 {restored_file_page_url} 访问失败（状态码：{file_page_response.status_code}）")
-                return None
-
-            file_page_soup = BeautifulSoup(file_page_response.text, "html.parser")
-            full_media_div = file_page_soup.find("div", class_="fullMedia")
-            if not full_media_div:
-                print(f"文件页 {restored_file_page_url} 无 fullMedia 容器")
-                return None
-
-            final_img_link = full_media_div.find("a")
-            if not final_img_link or "href" not in final_img_link.attrs:
-                print(f"文件页 {restored_file_page_url} 无图片链接")
-                return None
-
-            final_url = final_img_link["href"]
-            if final_url.startswith("//"):
-                final_url = "https:" + final_url
-            return final_url
-
-        except Exception as e:
-            print(f"{song_name}:{str(e)}")
-            return None
+            # 打印重试信息
+            print(f"{song_name}: 第{attempt + 1}次尝试失败 - {e}")
+            # 如果不是最后一次尝试，等待后重试
+            if attempt < max_retries - 1:
+                import time
+                time.sleep(1)  # 等待1秒后重试
 
 
 def main():
@@ -131,17 +160,17 @@ def main():
     with open("prr_songs_data.json", "r", encoding="utf-8") as f:
         songs_data = json.load(f)
 
-
     processed_titles = set()
     for song in songs_data:
         title = song.get("title")
+        artist = song.get("artist")
         cover = song.get("cover_url")
-        if title and cover and cover != "获取失败":
-            processed_titles.add(title)
+        if title and artist and cover and cover != "获取失败":
+            processed_titles.add((title, artist))
 
     unprocessed = [
         (i, song) for i, song in enumerate(songs_data)
-        if song.get("title") and song["title"] not in processed_titles
+        if (song.get("title"), song.get("artist")) not in processed_titles  # 改为元组比较
     ]
 
     total = len(unprocessed)
@@ -153,17 +182,18 @@ def main():
 
     for count, (idx, song) in enumerate(unprocessed, 1):
         title = song["title"]
-        print(f"正在处理 {count}/{total}：{title}")
+        artist = song["artist"]
+        print(f"正在处理 {count}/{total}：{title} - {artist}")
 
-        cover_url = get_cover_url(title)
+        cover_url = get_cover_url(title,artist)
 
         songs_data[idx]["cover_url"] = cover_url if cover_url else "获取失败"
 
         if count % 10 == 0 or count == total:
             save_results(songs_data)
-            print(f"已临时保存进度到 prr_songs_data.json（共 {len(songs_data)} 首）\n")
+            print(f"已临时保存进度到prr_songs_data.json（共 {len(songs_data)} 首）\n")
 
-    print(f"所有歌曲处理完成，结果已保存到 songs_data.json")
+    print(f"所有歌曲处理完成，结果已保存到prr_songs_data.json")
 
 
 if __name__ == "__main__":
