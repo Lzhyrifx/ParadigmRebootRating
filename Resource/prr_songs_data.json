@@ -1,27 +1,103 @@
 [
-    {
+  {
     "title": "LABYRINTHOX",
     "artist": "BlackYooh vs. siromaru",
-    "difficulty": "Massive",
-    "level": 16.9,
-    "song_level_id": 10086,
-    "b15": true
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_labyrinthox.png",
+    "charts": {
+      "massive": {
+        "level": 16.9,
+        "song_level_id": 11111
+      },
+      "invaded": {
+        "level": 14.1,
+        "song_level_id": 11111
+      },
+      "detected": {
+        "level": 8.0,
+        "song_level_id": 11111
+      }
+    }
   },
   {
     "title": "ANOVA",
     "artist": "cybermiso",
-    "difficulty": "Massive",
-    "level": 14.1,
-    "song_level_id": 10001,
-    "b15": true
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_anova.png",
+    "charts": {
+      "massive": {
+        "level": 16.8,
+        "song_level_id": 11111
+      },
+      "invaded": {
+        "level": 13.8,
+        "song_level_id": 11111
+      },
+      "detected": {
+        "level": 8.0,
+        "song_level_id": 11111
+      }
+    }
   },
   {
     "title": "Argonovice",
     "artist": "Knighthood",
-    "difficulty": "Massive",
-    "level": 16.5,
-    "song_level_id": 2233,
-    "b15": true
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/20/Cover_argonovice.png",
+    "charts": {
+      "massive": {
+        "level": 16.5,
+        "song_level_id": 11111
+      },
+      "invaded": {
+        "level": 13.3,
+        "song_level_id": 11111
+      },
+      "detected": {
+        "level": 7.0,
+        "song_level_id": 11111
+      }
+    }
+  },
+  {
+    "title": "Field Transistor Effect",
+    "artist": "Sephid",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7b/Cover_fieldtransistoreffect.png",
+    "charts": {
+      "massive": {
+        "level": 16.4,
+        "song_level_id": 11111
+      },
+      "invaded": {
+        "level": 13.3,
+        "song_level_id": 11111
+      },
+      "detected": {
+        "level": 6.0,
+        "song_level_id": 11111
+      }
+    }
+  },
+  {
+    "title": "Take On The H.E.A.T!!!",
+    "artist": "Supa7onyz",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1a/Cover_takeontheheat.png",
+    "charts": {
+      "massive": {
+        "level": 15.0,
+        "song_level_id": 11111
+      },
+      "invaded": {
+        "level": 11.0,
+        "song_level_id": 11111
+      },
+      "detected": {
+        "level": 5.0,
+        "song_level_id": 11111
+      }
+    }
   },
   {
     "title": "名無しの宣教師",
@@ -427,7 +503,7 @@
     "title": "INITIALIZE",
     "artist": "Rhukia",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2e/Cover_initialize.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -447,7 +523,7 @@
     "title": "Respawn",
     "artist": "Hidra-Xjeil",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_respawn.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -467,7 +543,7 @@
     "title": "Memory of Azure",
     "artist": "tsuki",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/74/Cover_memoryofazure.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -487,7 +563,7 @@
     "title": "SLASH",
     "artist": "Yuta Imai",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/02/Cover_slash.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -507,7 +583,7 @@
     "title": "明鏡烈火",
     "artist": "M-UE vs Reku Mochizuki",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ef/Cover_meikyourekka.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -527,7 +603,7 @@
     "title": "鵺",
     "artist": "仇%ADA",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f0/Cover_nue.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -547,7 +623,7 @@
     "title": "Intoxicated Dance",
     "artist": "影虎。",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5c/Cover_intoxicateddance.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -567,7 +643,7 @@
     "title": "Traxxendenza",
     "artist": "CS4W",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/81/Cover_traxxendenza.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -587,7 +663,7 @@
     "title": "Finixtahv",
     "artist": "Link\"0",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9c/Cover_finixtahv.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -607,7 +683,7 @@
     "title": "OMG",
     "artist": "Dopam!ne vs zEnsEn",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/76/Cover_omg.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -627,7 +703,7 @@
     "title": "RESISTANCE",
     "artist": "Yo-SK",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/43/Cover_resistance.png",
     "charts": {
       "massive": {
         "level": 14.2,
@@ -647,7 +723,7 @@
     "title": "Emancipator",
     "artist": "Junk",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/df/Cover_emancipator.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -667,7 +743,7 @@
     "title": "INFINITE HYPERDRIVE",
     "artist": "Srav3R & Kobaryo",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/63/Cover_infinitehyperdrive.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -687,7 +763,7 @@
     "title": "CLOUDBUSTER",
     "artist": "Skybreak",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/54/Cover_cloudbuster.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -707,7 +783,7 @@
     "title": "マリオネット feat. 梓川",
     "artist": "lapix",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/54/Cover_marionette.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -727,7 +803,7 @@
     "title": "Astronomical Optical Interferometry",
     "artist": "poplavor & Zekk",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/07/Cover_astroopt.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -747,7 +823,7 @@
     "title": "Find my dream",
     "artist": "rejection & Mameyudoufu × 棗いつき",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/90/Cover_findmydream.png",
     "charts": {
       "massive": {
         "level": 14.0,
@@ -767,7 +843,7 @@
     "title": "Sweet Dream (feat. 奈良ひより)",
     "artist": "Mysteka",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6d/Cover_sweetdream.png",
     "charts": {
       "massive": {
         "level": 13.8,
@@ -787,7 +863,7 @@
     "title": "SHIFT (・ω・)",
     "artist": "Blacklolita",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/95/Cover_shift.png",
     "charts": {
       "massive": {
         "level": 16.4,
@@ -807,7 +883,7 @@
     "title": "DAWN",
     "artist": "Mylta",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1f/Cover_dawn.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -827,7 +903,7 @@
     "title": "ルナティッククレイジー feat. PANXI",
     "artist": "lapix & Zekk",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/69/Cover_lunaticcrazy.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -847,7 +923,7 @@
     "title": "シャーデンフロイデ",
     "artist": "poplavor × PANXI",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e3/Cover_schadenfreude.png",
     "charts": {
       "massive": {
         "level": 14.2,
@@ -867,7 +943,7 @@
     "title": "ぽちっとりせっと (feat. 中村さんそ)",
     "artist": "KOUKIISH & YUKIYANAGI",
     "b15": true,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9e/Cover_pochittoreset.png",
     "charts": {
       "massive": {
         "level": 13.6,
@@ -887,7 +963,7 @@
     "title": "Dark Falchion",
     "artist": "MASAKI(ZUNTATA)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b1/Cover_darkfalchion.png",
     "charts": {
       "massive": {
         "level": 16.6,
@@ -907,7 +983,7 @@
     "title": "Hells Gate",
     "artist": "Juggernaut.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/11/Cover_hellsgate.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -927,7 +1003,7 @@
     "title": "MUSIC DIVE!!",
     "artist": "レイラ(cv.加隈亜衣) with MASAKI(ZUNTATA)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_musicdive.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -947,7 +1023,7 @@
     "title": "Shuffle Paradise 99",
     "artist": "SO87",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ad/Cover_shuffleparadise99.png",
     "charts": {
       "massive": {
         "level": 14.7,
@@ -967,7 +1043,7 @@
     "title": "sense of wonder",
     "artist": "Yu_Asahina",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/65/Cover_senseofwonder.png",
     "charts": {
       "massive": {
         "level": 16.8,
@@ -987,7 +1063,7 @@
     "title": "GALDЯ",
     "artist": "Nego_tiator",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/39/Cover_galdr.png",
     "charts": {
       "massive": {
         "level": 16.4,
@@ -1007,7 +1083,7 @@
     "title": "sacred sacrifices",
     "artist": "ak+q",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_sacredsacrifices.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -1027,7 +1103,7 @@
     "title": "Overflow",
     "artist": "effe",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c4/Cover_overflow.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -1047,7 +1123,7 @@
     "title": "The King's Return",
     "artist": "Zekk",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ac/Cover_thekingsreturn.png",
     "charts": {
       "massive": {
         "level": 16.4,
@@ -1067,7 +1143,7 @@
     "title": "Metheus",
     "artist": "ARForest",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b5/Cover_metheus.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -1087,7 +1163,7 @@
     "title": "Starchild",
     "artist": "yusi.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f0/Cover_starchild.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -1107,7 +1183,7 @@
     "title": "Re:Time-Leap at Saturday 10:00 PM",
     "artist": "litmus*",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retimeleap.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -1127,7 +1203,7 @@
     "title": "神話",
     "artist": "Pica & M2U",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f8/Cover_shinwa.png",
     "charts": {
       "massive": {
         "level": 13.9,
@@ -1147,7 +1223,7 @@
     "title": "C-U-NRG",
     "artist": "Halv",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8a/Cover_cunrg.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -1167,7 +1243,7 @@
     "title": "HYSTERIA",
     "artist": "Yuta Imai",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/ba/Cover_hysteria.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -1187,7 +1263,7 @@
     "title": "Mystical Observer",
     "artist": "DJ Myosuke",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9d/Cover_mysticalobserver.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -1207,7 +1283,7 @@
     "title": "ma[χ]zo",
     "artist": "t+pazolite",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e1/Cover_makaizo.png",
     "charts": {
       "massive": {
         "level": 16.8,
@@ -1227,7 +1303,7 @@
     "title": "with U",
     "artist": "t+pazolite & Massive New Krew feat. リリィ (CV:青木志貴)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3f/Cover_withu.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -1247,7 +1323,7 @@
     "title": "elegante",
     "artist": "Junk",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/12/Cover_elegante.png",
     "charts": {
       "massive": {
         "level": 13.5,
@@ -1267,7 +1343,7 @@
     "title": "Artificial Intelligence",
     "artist": "Street",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_artificialintelligence.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -1287,7 +1363,7 @@
     "title": "The Mountain Eater",
     "artist": "Paul Bazooka",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ee/Cover_themountaineater.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -1307,7 +1383,7 @@
     "title": "Untrodden Morn",
     "artist": "Silentroom",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4f/Cover_untroddenmorn.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -1327,7 +1403,7 @@
     "title": "夜桜舞う時から",
     "artist": "S9ryne feat. 幽舞越山+祈Inory",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/fc/Cover_yozakuramautokikara.png",
     "charts": {
       "massive": {
         "level": 13.1,
@@ -1347,7 +1423,7 @@
     "title": "Silentphobia",
     "artist": "t+pazolite vs. 削除",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/31/Cover_silentphobia.png",
     "charts": {
       "massive": {
         "level": 16.7,
@@ -1367,7 +1443,7 @@
     "title": "DANGEROOOOUS JUNGLE",
     "artist": "Laur",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3e/Cover_dangerousjungle.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -1387,7 +1463,7 @@
     "title": "DUAL BREAKER XX",
     "artist": "Srav3R vs. Getty",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_dualbreakerxx.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -1407,7 +1483,7 @@
     "title": "ADAM",
     "artist": "P*Light",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_adam.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -1427,7 +1503,7 @@
     "title": "驟雨の狭間",
     "artist": "Silentroom",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/ba/Cover_rainshower.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -1447,7 +1523,7 @@
     "title": "Sense",
     "artist": "BilliumMoto × Silentroom",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c6/Cover_sense.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -1467,7 +1543,7 @@
     "title": "Owari to Hajimari no Oto",
     "artist": "梅干茶漬け",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/98/Cover_owaritohajimarinooto.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -1487,7 +1563,7 @@
     "title": "Time Phase Pt.1",
     "artist": "Ayatsugu_Otowa",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5e/Cover_timephasept1.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -1507,7 +1583,7 @@
     "title": "Tougenkyou",
     "artist": "MYTK",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/29/Cover_tougenkyou.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -1527,7 +1603,7 @@
     "title": "Flame Dark",
     "artist": "KIVΛ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7c/Cover_flamedark.png",
     "charts": {
       "massive": {
         "level": 14.7,
@@ -1547,7 +1623,7 @@
     "title": "Kokoro",
     "artist": "Euchaeta",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/af/Cover_kokoro.png",
     "charts": {
       "massive": {
         "level": 13.6,
@@ -1567,7 +1643,7 @@
     "title": "Incyde",
     "artist": "YbeLL",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8b/Cover_incyde.png",
     "charts": {
       "massive": {
         "level": 16.6,
@@ -1587,7 +1663,7 @@
     "title": "Alexandrite",
     "artist": "onoken",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c8/Cover_alexandrite.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -1607,7 +1683,7 @@
     "title": "Chrome VOX",
     "artist": "t+pazolite",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d3/Cover_chromevox.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -1627,7 +1703,7 @@
     "title": "I can avoid it.#φωφ",
     "artist": "Feryquitous",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0e/Cover_icanavoidit.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -1647,7 +1723,7 @@
     "title": "漂流",
     "artist": "THE SxPLAY & KIVΛ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f7/Cover_hyouryuu.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -1667,7 +1743,7 @@
     "title": "Kirakira Noel Story!!",
     "artist": "Reku Mochizuki",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/56/Cover_kirakiranoelstory.png",
     "charts": {
       "massive": {
         "level": 13.7,
@@ -1687,7 +1763,7 @@
     "title": "Noël",
     "artist": "モリモリあつし vs. uma",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/41/Cover_noel.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -1707,7 +1783,7 @@
     "title": "PrayStation",
     "artist": "Ras",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/40/Cover_praystation.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -1727,7 +1803,7 @@
     "title": "Platinum",
     "artist": "jioyi",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6f/Cover_platinum.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -1747,7 +1823,7 @@
     "title": "Kimi to mita sora no uta",
     "artist": "TAKU1175+菊池亮太",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/14/Cover_kimitomitasoranouta.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -1767,7 +1843,7 @@
     "title": "Wilt",
     "artist": "VerseQuence (MJQ・Eri)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/56/Cover_wilt.png",
     "charts": {
       "massive": {
         "level": 13.3,
@@ -1787,7 +1863,7 @@
     "title": "Hydra",
     "artist": "James Landino X Akira Complex",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c4/Cover_hydra.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -1807,7 +1883,7 @@
     "title": "Maboroshi",
     "artist": "かめりあ(EDP)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/89/Cover_maboroshi.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -1827,7 +1903,7 @@
     "title": "Prayers for the Colourless",
     "artist": "Supa7onyz vs. SIHanatsuka",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4a/Cover_prayersforthecolourless.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -1847,7 +1923,7 @@
     "title": "New Quest",
     "artist": "3R2",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_newquest.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -1867,7 +1943,7 @@
     "title": "The Whole Rest",
     "artist": "KIVΛ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_thewholerest.png",
     "charts": {
       "massive": {
         "level": 14.1,
@@ -1887,7 +1963,7 @@
     "title": "Paradigm la noche",
     "artist": "onoken feat. b",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8d/Cover_paradigmlanoche.png",
     "charts": {
       "massive": {
         "level": 13.2,
@@ -1907,7 +1983,7 @@
     "title": "Abyssgazer",
     "artist": "xi VS Sakuzyo",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/81/Cover_abyssgazer.png",
     "charts": {
       "massive": {
         "level": 17.4,
@@ -1927,7 +2003,7 @@
     "title": "olvido",
     "artist": "ADA feat. AKA",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/20/Cover_olvido.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -1947,7 +2023,7 @@
     "title": "Pourqaa",
     "artist": "Sound piercer",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_pourqaa.png",
     "charts": {
       "massive": {
         "level": 13.5,
@@ -1967,7 +2043,7 @@
     "title": "✧･ﾟ•.sweet dreams+-｡-✧",
     "artist": "kuro",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c3/Cover_sweetdreams.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -1987,7 +2063,7 @@
     "title": "Orfevre",
     "artist": "SHIKI",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_orfevre.png",
     "charts": {
       "massive": {
         "level": 13.7,
@@ -2007,7 +2083,7 @@
     "title": "Damped Fall",
     "artist": "Supa7onyz",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8c/Cover_dampedfall.png",
     "charts": {
       "massive": {
         "level": 13.3,
@@ -2027,7 +2103,7 @@
     "title": "祈雨の菖蒲",
     "artist": "Nego_tiator",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_kiunoayame.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -2047,7 +2123,7 @@
     "title": "Akasagarbha -reincarnate-",
     "artist": "wa. vs ETIA.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_akasagarbha.png",
     "charts": {
       "massive": {
         "level": 14.7,
@@ -2067,7 +2143,7 @@
     "title": "浮世絵横丁",
     "artist": "魔界都市ニイガタ(黄泉路テヂーモ×dawn-system×かゆき)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0b/Cover_ukiyoeyokochou.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -2087,7 +2163,7 @@
     "title": "И00.",
     "artist": "Se-U-Ra",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/92/Cover_n00.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -2107,7 +2183,7 @@
     "title": "Observatory",
     "artist": "かめりあ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/cf/Cover_observatory.png",
     "charts": {
       "massive": {
         "level": 16.9,
@@ -2127,7 +2203,7 @@
     "title": "Awakening of Civilization",
     "artist": "黒魔",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/47/Cover_awakeningofcivilization.png",
     "charts": {
       "massive": {
         "level": 16.4,
@@ -2147,7 +2223,7 @@
     "title": "Downfall",
     "artist": "くるぶっこちゃん",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d7/Cover_downfall.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -2167,7 +2243,7 @@
     "title": "Iridescence",
     "artist": "Lidelle",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_iridescence.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -2187,7 +2263,7 @@
     "title": "Magdalena",
     "artist": "Iris",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_magdalena.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -2207,7 +2283,7 @@
     "title": "verite",
     "artist": "ユアミトス",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5e/Cover_verite.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -2227,7 +2303,7 @@
     "title": "grandnebula",
     "artist": "Aoi",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/df/Cover_grandnebula.png",
     "charts": {
       "massive": {
         "level": 16.7,
@@ -2247,7 +2323,7 @@
     "title": "Radial Raylights",
     "artist": "aran",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_radialraylights.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -2267,7 +2343,7 @@
     "title": "Astral Injection",
     "artist": "Xacla",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/58/Cover_astralinjection.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -2287,7 +2363,7 @@
     "title": "Blue Sphere",
     "artist": "satella",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a3/Cover_bluesphere.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -2307,7 +2383,7 @@
     "title": "Spell of chaoS",
     "artist": "Halv",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e9/Cover_spellofchaos.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -2327,7 +2403,7 @@
     "title": "PUPA (GRG REMIX)",
     "artist": "モリモリあつし Remixed by ガリガリさむし",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e5/Cover_pupagrgremix.png",
     "charts": {
       "massive": {
         "level": 16.6,
@@ -2347,7 +2423,7 @@
     "title": "PUPA (uma Remix)",
     "artist": "モリモリあつし Remixed by uma",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a5/Cover_pupaumaremix.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -2367,7 +2443,7 @@
     "title": "PUPA",
     "artist": "モリモリあつし",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_pupa.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -2387,7 +2463,7 @@
     "title": "翠杜",
     "artist": "隣の庭は青い (庭師+Aoi)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/ca/Cover_suito.png",
     "charts": {
       "massive": {
         "level": 16.6,
@@ -2407,7 +2483,7 @@
     "title": "Secret Illumination",
     "artist": "Yooh",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4c/Cover_secretillumination.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -2427,7 +2503,7 @@
     "title": "Looking for Stella",
     "artist": "Junk",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_lookingforstella.png",
     "charts": {
       "massive": {
         "level": 15.0,
@@ -2447,7 +2523,7 @@
     "title": "The Promised Land",
     "artist": "Iris feat. LynH",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/23/Cover_thepromisedland.png",
     "charts": {
       "massive": {
         "level": 13.6,
@@ -2467,7 +2543,7 @@
     "title": "GALACTIC WARZONE",
     "artist": "Akira Complex",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c3/Cover_galacticwarzone.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -2487,7 +2563,7 @@
     "title": "Spinel",
     "artist": "ぺのれり",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/12/Cover_spinel.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -2507,7 +2583,7 @@
     "title": "Heaven's Cage",
     "artist": "ETIA.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/58/Cover_heavenscage.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -2527,7 +2603,7 @@
     "title": "無彩色のディストピア",
     "artist": "HyuN feat. ウォルピスカーター",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9e/Cover_achromaticdystopia.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -2547,7 +2623,7 @@
     "title": "Traveler ~Stand Aloof~",
     "artist": "Se-U-Ra",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8a/Cover_travelerstandaloof.png",
     "charts": {
       "massive": {
         "level": 16.6,
@@ -2567,7 +2643,7 @@
     "title": "DataErr0r",
     "artist": "Cosmograph",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/28/Cover_dataerror.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -2587,7 +2663,7 @@
     "title": "Halcyon",
     "artist": "xi",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/50/Cover_halcyon.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -2607,7 +2683,7 @@
     "title": "Aleph-0",
     "artist": "LeaF",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/23/Cover_aleph0.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -2627,7 +2703,7 @@
     "title": "夢/あるいは在りし日の",
     "artist": "Nego_tiator",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7a/Cover_yumearuiwa.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -2647,7 +2723,7 @@
     "title": "Infomorph",
     "artist": "ETIA. feat. Jenga",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a8/Cover_infomorph.png",
     "charts": {
       "massive": {
         "level": 14.0,
@@ -2667,7 +2743,7 @@
     "title": "Final Farewell",
     "artist": "TAG",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a7/Cover_finalfarewell.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -2687,7 +2763,7 @@
     "title": "Zephyrs",
     "artist": "Frums",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_zephyrs.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -2707,7 +2783,7 @@
     "title": "Meteorite Lotus",
     "artist": "wa.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c5/Cover_meteoritelotus.png",
     "charts": {
       "massive": {
         "level": 16.8,
@@ -2727,7 +2803,7 @@
     "title": "Wolves Standing Towards Enemies",
     "artist": "かめりあ(EDP)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/fc/Cover_wolvesstanding.png",
     "charts": {
       "massive": {
         "level": 16.7,
@@ -2747,7 +2823,7 @@
     "title": "cyanine",
     "artist": "jioyi",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ae/Cover_cyanine.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -2767,7 +2843,7 @@
     "title": "Rainmaker",
     "artist": "kamome sano",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8d/Cover_rainmaker.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -2787,7 +2863,7 @@
     "title": "Androgynos",
     "artist": "WAiKURO",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a0/Cover_androgynos.png",
     "charts": {
       "massive": {
         "level": 14.7,
@@ -2807,7 +2883,7 @@
     "title": "Stasis",
     "artist": "Maozon",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/15/Cover_stasis.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -2827,7 +2903,7 @@
     "title": "Frey's Philosophy",
     "artist": "Powerless",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_freysphilosophy.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -2847,7 +2923,7 @@
     "title": "Protoflicker",
     "artist": "Silentroom",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4b/Cover_protoflicker.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -2867,7 +2943,7 @@
     "title": "Song for Sprites",
     "artist": "Sta",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d9/Cover_songforsprites.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -2887,7 +2963,7 @@
     "title": "Cross†Soul",
     "artist": "HyuN feat. Syepias",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dd/Cover_crosssoul.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -2907,7 +2983,7 @@
     "title": "WHIRLWIND",
     "artist": "Linne X SCTL",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/03/Cover_whirlwind.png",
     "charts": {
       "massive": {
         "level": 14.5,
@@ -2927,7 +3003,7 @@
     "title": "NightTheater",
     "artist": "わかどり",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0c/Cover_nighttheater.png",
     "charts": {
       "massive": {
         "level": 13.9,
@@ -2947,7 +3023,7 @@
     "title": "Intellectual Breeze",
     "artist": "siromaru",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1a/Cover_intellectualbreeze.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -2967,7 +3043,7 @@
     "title": "星屑物語",
     "artist": "打打だいず",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_hoshikuzumonogatari.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -2987,7 +3063,7 @@
     "title": "Stormy Rage",
     "artist": "打打だいず vs. siromaru",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/08/Cover_stormyrage.png",
     "charts": {
       "massive": {
         "level": 16.9,
@@ -3007,7 +3083,7 @@
     "title": "Don't Hurt Me",
     "artist": "litmus* ft. Risa Yuzuki",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/bd/Cover_donthurtme.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -3027,7 +3103,7 @@
     "title": "ドラスティックジェネレイト (feat. mami)",
     "artist": "lapix",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_drasticgenerate.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -3047,7 +3123,7 @@
     "title": "Mr.Midnight",
     "artist": "AXURA ft. PANXI",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1e/Cover_mrmidnight.png",
     "charts": {
       "massive": {
         "level": 16.0,
@@ -3067,7 +3143,7 @@
     "title": "Signal (feat. Such)",
     "artist": "rejection",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/55/Cover_signal.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -3087,7 +3163,7 @@
     "title": "Flamenco House",
     "artist": "lapix",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b1/Cover_flamencohouse.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -3107,7 +3183,7 @@
     "title": "One Step Closer",
     "artist": "Mameyudoufu × 藍月なくる",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_onestepcloser.png",
     "charts": {
       "massive": {
         "level": 13.9,
@@ -3127,7 +3203,7 @@
     "title": "Complex Mind",
     "artist": "YUKIYANAGI",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/16/Cover_complexmind.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -3147,7 +3223,7 @@
     "title": "fatalist",
     "artist": "rejection ft. AZK",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7c/Cover_fatalist.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -3167,7 +3243,7 @@
     "title": "幽霊 (feat. カミるれ)",
     "artist": "VOLTA",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2b/Cover_yuurei.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -3187,7 +3263,7 @@
     "title": "Gloomy Flash (feat. mami)",
     "artist": "Zekk & poplavor",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/42/Cover_gloomyflash.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -3207,7 +3283,7 @@
     "title": "Permutation",
     "artist": "Prower",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1e/Cover_permutation.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -3227,7 +3303,7 @@
     "title": "Life is PIANO",
     "artist": "Junk",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/57/Cover_lifeispiano.png",
     "charts": {
       "massive": {
         "level": 14.2,
@@ -3247,7 +3323,7 @@
     "title": "Never Escape",
     "artist": "void (Mournfinale) feat. Gt.HAKKYOU-KUN",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_neverescape.png",
     "charts": {
       "massive": {
         "level": 16.4,
@@ -3267,7 +3343,7 @@
     "title": "Name of oath",
     "artist": "void (Mournfinale) feat. コツキミヤ (Gt. えば)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_nameofoath.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -3287,7 +3363,7 @@
     "title": "Act Beloved",
     "artist": "void (Mournfinale) feat. Salita",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_actbeloved.png",
     "charts": {
       "massive": {
         "level": 14.1,
@@ -3307,7 +3383,7 @@
     "title": "When the rain",
     "artist": "void (Mournfinale)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_whentherain.png",
     "charts": {
       "massive": {
         "level": 13.6,
@@ -3327,7 +3403,7 @@
     "title": "Disorder",
     "artist": "HyuN feat. YURI",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/16/Cover_disorder.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -3347,7 +3423,7 @@
     "title": "Grin",
     "artist": "HyuN",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/68/Cover_grin.png",
     "charts": {
       "massive": {
         "level": 14.5,
@@ -3367,7 +3443,7 @@
     "title": "Distorted Fate",
     "artist": "Sakuzyo",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d8/Cover_distortedfate.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -3387,7 +3463,7 @@
     "title": "Retribution",
     "artist": "nm-y & Kry.exe",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retribution.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -3407,7 +3483,7 @@
     "title": "Luminescence",
     "artist": "米虾Fomiki & 初云CLoudie",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_luminescence.png",
     "charts": {
       "massive": {
         "level": 14.5,
@@ -3427,7 +3503,7 @@
     "title": "DESTRUCTION 3,2,1",
     "artist": "Normal1zer vs. Broken Nerdz",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e0/Cover_destruction321.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -3447,7 +3523,7 @@
     "title": "Re: End of a Dream",
     "artist": "uma vs. モリモリあつし",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5a/Cover_reendofadream.png",
     "charts": {
       "massive": {
         "level": 16.5,
@@ -3467,7 +3543,7 @@
     "title": "CO5M1C R4ILR0AD",
     "artist": "kanone",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/00/Cover_cosmicrailroad.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -3487,7 +3563,7 @@
     "title": "c.s.q.n.",
     "artist": "Aoi",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0f/Cover_csqn.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -3507,7 +3583,7 @@
     "title": "Destr0yer",
     "artist": "削除 feat. Nikki Simmons",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/27/Cover_destroyer.png",
     "charts": {
       "massive": {
         "level": 16.0,
@@ -3527,7 +3603,7 @@
     "title": "Anökumene",
     "artist": "Jun Kuroda",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_anokumene.png",
     "charts": {
       "massive": {
         "level": 13.4,
@@ -3547,7 +3623,7 @@
     "title": "Chronostasis",
     "artist": "黒皇帝",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d3/Cover_chronostasis.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -3567,7 +3643,7 @@
     "title": "Selenotaxis",
     "artist": "Est",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/71/Cover_selenotaxis.png",
     "charts": {
       "massive": {
         "level": 11.5,
@@ -3587,7 +3663,7 @@
     "title": "Pulsar",
     "artist": "Daison",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6b/Cover_pulsar.png",
     "charts": {
       "massive": {
         "level": 12.5,
@@ -3607,7 +3683,7 @@
     "title": "Etude -Sunset-",
     "artist": "Polymath9",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d7/Cover_etudesunset.png",
     "charts": {
       "massive": {
         "level": 14.0,
@@ -3627,7 +3703,7 @@
     "title": "EVERYTHING",
     "artist": "Tatsh feat. 小田ユウ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_everything.png",
     "charts": {
       "massive": {
         "level": 14.1,
@@ -3647,7 +3723,7 @@
     "title": "Cross†Ray",
     "artist": "HyuN feat. 月下Lia",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/01/Cover_crossray.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -3667,7 +3743,7 @@
     "title": "キミとボクへの葬送歌",
     "artist": "ROKINA",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_sousouka.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -3687,7 +3763,7 @@
     "title": "VEZZELiX",
     "artist": "Reku Mochizuki",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a3/Cover_vezzelix.png",
     "charts": {
       "massive": {
         "level": 14.0,
@@ -3707,7 +3783,7 @@
     "title": "Cereris",
     "artist": "SunsetRay vs. NceS",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/89/Cover_cereris.png",
     "charts": {
       "massive": {
         "level": 13.2,
@@ -3727,7 +3803,7 @@
     "title": "Burn",
     "artist": "NceS",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2e/Cover_burn.png",
     "charts": {
       "massive": {
         "level": 11.0,
@@ -3747,7 +3823,7 @@
     "title": "Vault of Sky",
     "artist": "神尾光临",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b4/Cover_vaultofsky.png",
     "charts": {
       "massive": {
         "level": 13.3,
@@ -3767,7 +3843,7 @@
     "title": "Cipher : /2&//<|0",
     "artist": "Tetrajectory feat. Ctymax",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b6/Cover_cipher.png",
     "charts": {
       "massive": {
         "level": 14.5,
@@ -3787,7 +3863,7 @@
     "title": "Winter ↑cube↓",
     "artist": "Ctymax",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ef/Cover_wintercube.png",
     "charts": {
       "massive": {
         "level": 11.0,
@@ -3807,7 +3883,7 @@
     "title": "Class Memories",
     "artist": "Antistar/Ctymax",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dc/Cover_classmemories.png",
     "charts": {
       "massive": {
         "level": 12.0,
@@ -3827,7 +3903,7 @@
     "title": "Alexandrite",
     "artist": "WAiKURO",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c8/Cover_alexandrite.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -3847,7 +3923,7 @@
     "title": "Disintegrate of Eden",
     "artist": "seatrus",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e3/Cover_disintegrateofeden.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -3867,7 +3943,7 @@
     "title": "庚子桜天國",
     "artist": "IanMirror aka Utsuro",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2c/Cover_kanoenesakuratengoku.png",
     "charts": {
       "massive": {
         "level": 12.0,
@@ -3887,7 +3963,7 @@
     "title": "月下桜天國",
     "artist": "Zuxin with Utsuro",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/24/Cover_gekkasakuratengoku.png",
     "charts": {
       "massive": {
         "level": 12.5,
@@ -3907,7 +3983,7 @@
     "title": "カラッポ・ノンフィクション",
     "artist": "Ino(chronoize) feat. 柳瀬マサキ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/78/Cover_karappononfiction.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -3927,7 +4003,7 @@
     "title": "Midnight Fairy Tale",
     "artist": "しーけー",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/88/Cover_midnightfairytale.png",
     "charts": {
       "massive": {
         "level": 14.1,
@@ -3947,7 +4023,7 @@
     "title": "RE; Boot",
     "artist": "溝口ゆうま feat. 柚木つばめ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e3/Cover_reboot.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -3967,7 +4043,7 @@
     "title": "Unpredictable Nascent Invasion",
     "artist": "硝酸生菜",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/15/Cover_unprenas.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -3987,7 +4063,7 @@
     "title": "Fracture Temporelle",
     "artist": "黒皇帝",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c0/Cover_fracturetemporelle.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -4007,7 +4083,7 @@
     "title": "TOT",
     "artist": "seatrus",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2e/Cover_tot.png",
     "charts": {
       "massive": {
         "level": 15.0,
@@ -4027,7 +4103,7 @@
     "title": "felys -final remix-",
     "artist": "onoken",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/32/Cover_felysfinalremix.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -4047,7 +4123,7 @@
     "title": "Artificial Existence",
     "artist": "Jun Kuroda",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2a/Cover_artificialexistence.png",
     "charts": {
       "massive": {
         "level": 14.2,
@@ -4067,7 +4143,7 @@
     "title": "Pantomime",
     "artist": "Halv",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/87/Cover_pantomime.png",
     "charts": {
       "massive": {
         "level": 15.0,
@@ -4087,7 +4163,7 @@
     "title": "Divergence",
     "artist": "Nego_tiator",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/96/Cover_divergence.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -4107,7 +4183,7 @@
     "title": "Grilled Cheese Burger",
     "artist": "UN1C0DE",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c7/Cover_grilledcheeseburger.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -4127,7 +4203,7 @@
     "title": "Xenolith",
     "artist": "Tatsh",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1f/Cover_xenolith.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -4147,7 +4223,7 @@
     "title": "White：Revolve",
     "artist": "adaptor",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/13/Cover_whiterevolve.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -4167,7 +4243,7 @@
     "title": "Gray：MachineGang",
     "artist": "adaptor",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/af/Cover_graymachinegang.png",
     "charts": {
       "massive": {
         "level": 14.1,
@@ -4187,7 +4263,7 @@
     "title": "The Night City",
     "artist": "system [Σ]",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b4/Cover_thenightcity.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -4207,7 +4283,7 @@
     "title": "IKAROS",
     "artist": "ETIA. feat. Jenga",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/70/Cover_ikaros.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -4227,7 +4303,7 @@
     "title": "On And On!!",
     "artist": "ETIA. feat. Jenga",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1b/Cover_onandon.png",
     "charts": {
       "massive": {
         "level": 14.2,
@@ -4247,7 +4323,7 @@
     "title": "resoLve",
     "artist": "Halv",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d7/Cover_resolve.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -4267,7 +4343,7 @@
     "title": "Encore",
     "artist": "ZxNX & Hiryur",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/01/Cover_encore.png",
     "charts": {
       "massive": {
         "level": 12.5,
@@ -4287,7 +4363,7 @@
     "title": "Subterranean Blastoff",
     "artist": "Sephid",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_subterraneanblastoff.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -4307,7 +4383,7 @@
     "title": "Ouvertüre",
     "artist": "USAO & DJ Genki feat. ルーン (CV:河瀬茉希)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6a/Cover_ouverture.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -4327,7 +4403,7 @@
     "title": "Let you DIVE!",
     "artist": "HARDCORE TANO*C & エリザベス (CV:大西沙織)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/81/Cover_letyoudive.png",
     "charts": {
       "massive": {
         "level": 14.5,
@@ -4347,7 +4423,7 @@
     "title": "恶修女——永火熔铸 (feat. 黑泽诺亚NOIR)",
     "artist": "负离子SYNTHETIC",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/40/Cover_exiunyu.png",
     "charts": {
       "massive": {
         "level": 13.8,
@@ -4367,7 +4443,7 @@
     "title": "甜涩之梦 (feat. 早稻叽)",
     "artist": "YUC'e",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/21/Cover_tiansezhimeng.png",
     "charts": {
       "massive": {
         "level": 13.3,
@@ -4387,7 +4463,7 @@
     "title": "爱上想象的你 (feat. 穆小泠)",
     "artist": "KOTONOHOUSE",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ee/Cover_aishangxiangxiangdeni.png",
     "charts": {
       "massive": {
         "level": 12.5,
@@ -4407,7 +4483,7 @@
     "title": "今天不是明天 (feat. 兰音Reine)",
     "artist": "PIKASONIC",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_jintianbushimingtian.png",
     "charts": {
       "massive": {
         "level": 12.5,
@@ -4427,7 +4503,7 @@
     "title": "WORLDCALL",
     "artist": "Blacklolita",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b1/Cover_worldcall.png",
     "charts": {
       "massive": {
         "level": 15.0,
@@ -4447,7 +4523,7 @@
     "title": "MilK",
     "artist": "モリモリあつし",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f9/Cover_milk.png",
     "charts": {
       "massive": {
         "level": 13.6,
@@ -4467,7 +4543,7 @@
     "title": "Avantgarde",
     "artist": "Raimukun",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_avantgarde.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -4487,7 +4563,7 @@
     "title": "Kronos",
     "artist": "削除",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/53/Cover_kronos.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -4507,7 +4583,7 @@
     "title": "conflict",
     "artist": "siromaru + cranky",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/71/Cover_conflict.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -4527,7 +4603,7 @@
     "title": "アイム・マイヒーロー",
     "artist": "Ino(chronoize) feat. 柳瀬マサキ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dd/Cover_immyhero.png",
     "charts": {
       "massive": {
         "level": 13.8,
@@ -4547,7 +4623,7 @@
     "title": "Fading Star",
     "artist": "ginkiha",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/38/Cover_fadingstar.png",
     "charts": {
       "massive": {
         "level": 14.2,
@@ -4567,7 +4643,7 @@
     "title": "Paradigm Shift",
     "artist": "モリモリあつし",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/29/Cover_paradigmshift.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -4587,7 +4663,7 @@
     "title": "Houkago OVERDRIVE!!!!!",
     "artist": "Rukadesu",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_houkagooverdrive.png",
     "charts": {
       "massive": {
         "level": 14.3,
@@ -4607,7 +4683,7 @@
     "title": "Oriens",
     "artist": "ginkiha",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d6/Cover_oriens.png",
     "charts": {
       "massive": {
         "level": 14.4,
@@ -4627,7 +4703,7 @@
     "title": "OMG",
     "artist": "Halv",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/76/Cover_omg.png",
     "charts": {
       "massive": {
         "level": 14.5,
@@ -4647,7 +4723,7 @@
     "title": "REDASH",
     "artist": "Lax1u57",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/94/Cover_redash.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -4667,7 +4743,7 @@
     "title": "Inner Norm",
     "artist": "Zris",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e1/Cover_innernorm.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -4687,7 +4763,7 @@
     "title": "BPM=RT",
     "artist": "t+pazolite",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/29/Cover_bpmrt.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -4707,7 +4783,7 @@
     "title": "Dogbite",
     "artist": "t+pazolite",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e1/Cover_dogbite.png",
     "charts": {
       "massive": {
         "level": 13.0,
@@ -4727,7 +4803,7 @@
     "title": "Chartreuse Green",
     "artist": "t+pazolite",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/bd/Cover_chartreusegreen.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -4747,7 +4823,7 @@
     "title": "Psyched Fevereiro",
     "artist": "t+pazolite",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_psychedfevereiro.png",
     "charts": {
       "massive": {
         "level": 13.2,
@@ -4767,7 +4843,7 @@
     "title": "Rrhar'il",
     "artist": "Team Grimoire",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_rrharil.png",
     "charts": {
       "massive": {
         "level": 16.7,
@@ -4787,7 +4863,7 @@
     "title": "Black：Magnam",
     "artist": "adaptor",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d9/Cover_blackmagnam.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -4807,7 +4883,7 @@
     "title": "Can't it be true",
     "artist": "Zris feat. Kri",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/73/Cover_cantitbetrue.png",
     "charts": {
       "massive": {
         "level": 13.1,
@@ -4827,7 +4903,7 @@
     "title": "Yorixiro",
     "artist": "Reku Mochizuki",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/74/Cover_yorixiro.png",
     "charts": {
       "massive": {
         "level": 13.4,
@@ -4847,7 +4923,7 @@
     "title": "Save And Continue",
     "artist": "Liq_mmry",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5a/Cover_saveandcontinue.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -4867,7 +4943,7 @@
     "title": "席替えやったー！",
     "artist": "天々まる (prod. 立秋)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/ce/Cover_sekigaeyatta.png",
     "charts": {
       "massive": {
         "level": 16.0,
@@ -4887,7 +4963,7 @@
     "title": "天Q.",
     "artist": "天々まる (prod. Ponchi♪)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_tenq.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -4907,7 +4983,7 @@
     "title": "devil¿la6ue",
     "artist": "天々まる (prod. U-ske)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_devilangel.png",
     "charts": {
       "massive": {
         "level": 14.1,
@@ -4927,7 +5003,7 @@
     "title": "Paradial Resonator",
     "artist": "Reku Mochizuki",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/bd/Cover_paradialresonator.png",
     "charts": {
       "massive": {
         "level": 15.0,
@@ -4947,7 +5023,7 @@
     "title": "macro.wav",
     "artist": "dandeless",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9e/Cover_macrowav.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -4967,7 +5043,7 @@
     "title": "Clock Paradox",
     "artist": "WyvernP",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/da/Cover_clockparadox.png",
     "charts": {
       "massive": {
         "level": 13.4,
@@ -4987,7 +5063,7 @@
     "title": "Skyscape",
     "artist": "Plum",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/16/Cover_skyscape.png",
     "charts": {
       "massive": {
         "level": 12.5,
@@ -5007,7 +5083,7 @@
     "title": "Equality of Equites",
     "artist": "MYUKKE.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/14/Cover_equalityofequites.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -5027,7 +5103,7 @@
     "title": "Hiyaiya!",
     "artist": "MYUKKE.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/70/Cover_hiyaiya.png",
     "charts": {
       "massive": {
         "level": 12.5,
@@ -5047,7 +5123,7 @@
     "title": "SUTTA MONDAY",
     "artist": "MYUKKE.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/52/Cover_suttamonday.png",
     "charts": {
       "massive": {
         "level": 14.6,
@@ -5067,7 +5143,7 @@
     "title": "OCCHOCO-REST-LESS",
     "artist": "MYUKKE.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_occhocorestless.png",
     "charts": {
       "massive": {
         "level": 13.6,
@@ -5087,7 +5163,7 @@
     "title": "Secret Maneuvers",
     "artist": "seatrus",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f5/Cover_secretmaneuvers.png",
     "charts": {
       "massive": {
         "level": 16.4,
@@ -5107,7 +5183,7 @@
     "title": "Reversed Zenith",
     "artist": "硝酸生菜",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/08/Cover_reversedzenith.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -5127,7 +5203,7 @@
     "title": "Protection",
     "artist": "Tatsh feat.みぃ (GET IN THE RING)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ee/Cover_protection.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -5147,7 +5223,7 @@
     "title": "Turning POINT",
     "artist": "Junk",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/52/Cover_turningpoint.png",
     "charts": {
       "massive": {
         "level": 14.3,
@@ -5167,7 +5243,7 @@
     "title": "Indelible Scar",
     "artist": "Noah",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/40/Cover_indeliblescar.png",
     "charts": {
       "massive": {
         "level": 16.1,
@@ -5187,7 +5263,7 @@
     "title": "REDRAVE",
     "artist": "Tatsh & NAOKI feat. Kent Alexander",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3f/Cover_redrave.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -5207,7 +5283,7 @@
     "title": "Marsh Winds",
     "artist": "ETIA.",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7a/Cover_marshwinds.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -5227,7 +5303,7 @@
     "title": "Tequila Sunrise And Planter's Punch",
     "artist": "Nirotiy",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/93/Cover_tequilasunrise.png",
     "charts": {
       "massive": {
         "level": 14.7,
@@ -5247,7 +5323,7 @@
     "title": "Viyella's Melancholy",
     "artist": "Laur",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_viyellasmelancholy.png",
     "charts": {
       "massive": {
         "level": 16.6,
@@ -5267,7 +5343,7 @@
     "title": "Yokyuumi",
     "artist": "Knighthood",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_yokyuumi.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -5287,7 +5363,7 @@
     "title": "Rebooted Mind",
     "artist": "Reku Mochizuki",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c5/Cover_rebootedmind.png",
     "charts": {
       "massive": {
         "level": 15.3,
@@ -5307,7 +5383,7 @@
     "title": "#D3D3D3 (Blank Universe)",
     "artist": "Supa7onyz",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/99/Cover_d3d3d3.png",
     "charts": {
       "massive": {
         "level": 14.2,
@@ -5327,7 +5403,7 @@
     "title": "夏色の思い出",
     "artist": "Yesod (Rabbit House + litmus* + A. Ki)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/23/Cover_summermemories.png",
     "charts": {
       "massive": {
         "level": 16.1,
@@ -5347,7 +5423,7 @@
     "title": "Veil of Summer",
     "artist": "Maozon",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5f/Cover_veilofsummer.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -5367,7 +5443,7 @@
     "title": "Heartpoint",
     "artist": "HyuN feat. 駄々子",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/90/Cover_heartpoint.png",
     "charts": {
       "massive": {
         "level": 14.3,
@@ -5387,7 +5463,7 @@
     "title": "Mint Choco",
     "artist": "超威蓝猫",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/82/Cover_mintchoco.png",
     "charts": {
       "massive": {
         "level": 13.1,
@@ -5407,7 +5483,7 @@
     "title": "Hemisphere",
     "artist": "ARForest",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_hemisphere.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -5427,7 +5503,7 @@
     "title": "Kokytos",
     "artist": "しーけー",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d3/Cover_kokytos.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -5447,7 +5523,7 @@
     "title": "Last farewell",
     "artist": "Un vs. らせん",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2c/Cover_lastfarewell.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -5467,7 +5543,7 @@
     "title": "Heart Eyes",
     "artist": "M-O-T-U",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ac/Cover_hearteyes.png",
     "charts": {
       "massive": {
         "level": 13.9,
@@ -5487,7 +5563,7 @@
     "title": "ほしぞらトラベル",
     "artist": "奏音",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0c/Cover_hoshizoratravel.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -5507,7 +5583,7 @@
     "title": "Ashes",
     "artist": "Zekk",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/79/Cover_ashes.png",
     "charts": {
       "massive": {
         "level": 16.0,
@@ -5527,7 +5603,7 @@
     "title": "Invaded",
     "artist": "Spyro Kong",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f1/Cover_invaded.png",
     "charts": {
       "massive": {
         "level": 14.7,
@@ -5547,7 +5623,7 @@
     "title": "Little Boy",
     "artist": "mmry",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/94/Cover_littleboy.png",
     "charts": {
       "massive": {
         "level": 14.0,
@@ -5567,7 +5643,7 @@
     "title": "クリムゾン帝王",
     "artist": "REDALiCE",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_crimsonemperor.png",
     "charts": {
       "massive": {
         "level": 16.4,
@@ -5587,7 +5663,7 @@
     "title": "Dimension Hacker",
     "artist": "Kobaryo",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/cb/Cover_dimensionhacker.png",
     "charts": {
       "massive": {
         "level": 16.1,
@@ -5607,7 +5683,7 @@
     "title": "Chariot",
     "artist": "USAO",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a4/Cover_chariot.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -5627,7 +5703,7 @@
     "title": "EPHMR",
     "artist": "aran",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3a/Cover_ephmr.png",
     "charts": {
       "massive": {
         "level": 14.8,
@@ -5647,7 +5723,7 @@
     "title": "天使光輪",
     "artist": "REDALiCE & cosMo@暴走P",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5c/Cover_angelhalo.png",
     "charts": {
       "massive": {
         "level": 16.3,
@@ -5667,7 +5743,7 @@
     "title": "ARTEMiS",
     "artist": "BlackY",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/03/Cover_artemis.png",
     "charts": {
       "massive": {
         "level": 15.9,
@@ -5687,7 +5763,7 @@
     "title": "猫娘",
     "artist": "かねこちはる",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7c/Cover_nekomusume.png",
     "charts": {
       "massive": {
         "level": 15.2,
@@ -5707,7 +5783,7 @@
     "title": "Knight Rider",
     "artist": "USAO",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b4/Cover_knightrider.png",
     "charts": {
       "massive": {
         "level": 15.0,
@@ -5727,7 +5803,7 @@
     "title": "桜花怨雷",
     "artist": "溝口ゆうま feat. 大瀬良あい",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/91/Cover_oukaonrai.png",
     "charts": {
       "massive": {
         "level": 16.2,
@@ -5747,7 +5823,7 @@
     "title": "Kakuriyo",
     "artist": "polysha",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/05/Cover_kakuriyo.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -5767,7 +5843,7 @@
     "title": "胡蝶乃舞",
     "artist": "Srav3R",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/95/Cover_kochounomai.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -5787,7 +5863,7 @@
     "title": "緋星",
     "artist": "モリモリあつし",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_hisei.png",
     "charts": {
       "massive": {
         "level": 13.7,
@@ -5807,7 +5883,7 @@
     "title": "Cybernetic Vampire",
     "artist": "void (Mournfinale)",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/32/Cover_cyberneticvampire.png",
     "charts": {
       "massive": {
         "level": 16.7,
@@ -5827,7 +5903,7 @@
     "title": "Echoes of the Forest",
     "artist": "DJ Noriken",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/90/Cover_echoesoftheforest.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -5847,7 +5923,7 @@
     "title": "The Grand F-STAR",
     "artist": "AiSS",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/db/Cover_thegrandfstar.png",
     "charts": {
       "massive": {
         "level": 15.5,
@@ -5867,7 +5943,7 @@
     "title": "Blessed Bleath",
     "artist": "Metalliz",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f0/Cover_blessedbleath.png",
     "charts": {
       "massive": {
         "level": 15.0,
@@ -5887,7 +5963,7 @@
     "title": "Incineraxion",
     "artist": "Ra vs. SunsetRay",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/65/Cover_incineraxion.png",
     "charts": {
       "massive": {
         "level": 14.7,
@@ -5907,7 +5983,7 @@
     "title": "静寂に憂う",
     "artist": "Reku Mochizuki feat. せやかて硝酸太郎",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6c/Cover_shijimaniureu.png",
     "charts": {
       "massive": {
         "level": 13.0,
@@ -5927,7 +6003,7 @@
     "title": "Only One Light",
     "artist": "Tatsh feat.MAYUMI MORINAGA",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0d/Cover_onlyonelight.png",
     "charts": {
       "massive": {
         "level": 13.5,
@@ -5947,7 +6023,7 @@
     "title": "[NWAD]",
     "artist": "Knighthood",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dc/Cover_nwad.png",
     "charts": {
       "massive": {
         "level": 16.1,
@@ -5967,7 +6043,7 @@
     "title": "[PRAW]",
     "artist": "Knighthood",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ea/Cover_praw.png",
     "charts": {
       "massive": {
         "level": 15.4,
@@ -5987,7 +6063,7 @@
     "title": "爆裂魔法",
     "artist": "Spyro Kong vs. Daison",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/aa/Cover_baoliemofa.png",
     "charts": {
       "massive": {
         "level": 15.8,
@@ -6007,7 +6083,7 @@
     "title": "零號車輛",
     "artist": "seatrus",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_linghaocheliang.png",
     "charts": {
       "massive": {
         "level": 15.1,
@@ -6027,7 +6103,7 @@
     "title": "FATE FIRE",
     "artist": "Liquart",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/60/Cover_fatefire.png",
     "charts": {
       "massive": {
         "level": 14.9,
@@ -6047,7 +6123,7 @@
     "title": "Forgotten Asteroid",
     "artist": "seatrus",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/02/Cover_forgottenasteroid.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -6067,7 +6143,7 @@
     "title": "Rondo of the 3ND",
     "artist": "Sephid",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/63/Cover_rondooftheend.png",
     "charts": {
       "massive": {
         "level": 16.0,
@@ -6087,7 +6163,7 @@
     "title": "Verreta",
     "artist": "Se-U-Ra",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_verreta.png",
     "charts": {
       "massive": {
         "level": 15.7,
@@ -6107,7 +6183,7 @@
     "title": "Time's Up",
     "artist": "rareguy",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/ce/Cover_timesup.png",
     "charts": {
       "massive": {
         "level": 12.0,
@@ -6127,7 +6203,7 @@
     "title": "Lucid Trigger",
     "artist": "Liq_mmry",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2c/Cover_lucidtrigger.png",
     "charts": {
       "massive": {
         "level": 13.5,
@@ -6147,7 +6223,7 @@
     "title": "虚",
     "artist": "Halv",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/75/Cover_utsuro.png",
     "charts": {
       "massive": {
         "level": 13.9,
@@ -6167,7 +6243,7 @@
     "title": "Restricted Access",
     "artist": "Knighthood",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b8/Cover_restrictedaccess.png",
     "charts": {
       "massive": {
         "level": 15.6,
@@ -6187,7 +6263,7 @@
     "title": "Press",
     "artist": "VeetaCrush",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/87/Cover_press.png",
     "charts": {
       "massive": {
         "level": 13.3,
@@ -6207,7 +6283,7 @@
     "title": "Chase",
     "artist": "HLXQ",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/92/Cover_chase.png",
     "charts": {
       "massive": {
         "level": 12.0,
@@ -6227,7 +6303,7 @@
     "title": "Awaken In Ruins",
     "artist": "Supa7onyz",
     "b15": false,
-    "cover_url": "",
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_awakeninruins.png",
     "charts": {
       "massive": {
         "level": 10.5,

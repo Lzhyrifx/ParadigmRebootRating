@@ -6,30 +6,43 @@ import urllib.parse
 from bs4 import BeautifulSoup
 
 cover_urls = []
-processed_titles = set()
-
+SPECIAL_TITLE_MAP = {
+    "Cipher : /2&//<|0": "Cipher"
+}
 
 def signal_handler(signal, frame):
     print("\n正在保存已处理结果...")
-    save_results()
-    print(f"已保存 {len(cover_urls)} 条记录到 cover_url.json")
+    # 加载当前数据并保存（防止内存数据丢失）
+    try:
+        with open("prr_songs_data.json", "r", encoding="utf-8") as f:
+            current_data = json.load(f)
+        save_results(current_data)
+        print(f"已保存 {len(current_data)} 条记录到 prr_songs_data.json")
+    except:
+        print("保存失败，可能数据未完全写入")
     exit(0)
 
+def normalize_title_for_wiki(title: str) -> str:
+    title = (title.
+             replace('[', '［').
+             replace(']', '］').
+             replace('/', '／').
+             replace('#', '＃'))
+    return title
 
-def save_results():
-    with open("cover_url.json", "w", encoding="utf-8") as f:
-        json.dump(cover_urls, f, ensure_ascii=False, indent=2)
+def save_results(songs_data):  # 接收数据参数
+    with open("prr_songs_data.json", "w", encoding="utf-8") as f:
+        json.dump(songs_data, f, ensure_ascii=False, indent=2)
 
 
 def get_cover_url(song_name):
-    processed_song_name = song_name.lower().replace(" ", "").replace("feat.", "").replace("(", "").replace(")",
-                                                                                                           "").replace(
-        ".", "").replace(",", "").replace("'", "").replace(":", "").replace("%", "").replace("ø", "").replace("Ø", "")
-    file_direct_url = f"https://paradigmrebootzh.miraheze.org/wiki/文件:Cover_{processed_song_name}.png"
+    wiki_title = SPECIAL_TITLE_MAP.get(song_name, song_name)
+    if song_name not in SPECIAL_TITLE_MAP:
+        wiki_title = normalize_title_for_wiki(song_name)
 
-    encoded_song_name = urllib.parse.quote(song_name, safe='')
-    encoded_song_name = encoded_song_name.replace('%20', '_')
-    song_page_url = f"https://paradigmrebootzh.miraheze.org/wiki/{encoded_song_name}"
+    encoded = urllib.parse.quote(wiki_title, safe='').replace('%20', '_')
+    song_page_url = f"https://paradigmrebootzh.miraheze.org/wiki/{encoded}"
+    file_direct_url = f"https://paradigmrebootzh.miraheze.org/wiki/文件:Cover_{song_name}.png"
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
@@ -50,7 +63,7 @@ def get_cover_url(song_name):
                             real_url = "https:" + real_url
                         return real_url
         except Exception as e:
-            pass
+            print(f"{song_name}: {e}")
 
         try:
             song_page_response = client.get(song_page_url, headers=headers, timeout=15)
@@ -104,61 +117,53 @@ def get_cover_url(song_name):
             return final_url
 
         except Exception as e:
-            print(f"备用流程执行失败（歌曲：{song_name}），错误：{str(e)}")
+            print(f"{song_name}:{str(e)}")
             return None
 
 
 def main():
     signal.signal(signal.SIGINT, signal_handler)
 
-    if os.path.exists("cover_url.json"):
-        try:
-            with open("cover_url.json", "r", encoding="utf-8") as f:
-                global cover_urls, processed_titles
-                cover_urls = json.load(f)
-                processed_titles = {item["title"] for item in cover_urls}
-                print(f"已加载 {len(cover_urls)} 条历史记录")
-        except Exception as e:
-            print(f"加载历史记录失败：{str(e)}，将从头开始")
-
-    if not os.path.exists("songs_data.json"):
-        print("未找到 songs_data.json 文件，请先准备歌曲数据源！")
+    if not os.path.exists("prr_songs_data.json"):
+        print("未找到 prr_songs_data.json 文件，请先准备歌曲数据源！")
         return
 
-    with open("songs_data.json", "r", encoding="utf-8") as f:
+    with open("prr_songs_data.json", "r", encoding="utf-8") as f:
         songs_data = json.load(f)
 
-    unique_songs = {}
+
+    processed_titles = set()
     for song in songs_data:
         title = song.get("title")
-        artist = song.get("artist", "未知歌手")
-        if title and title not in unique_songs and title not in processed_titles:
-            unique_songs[title] = artist
+        cover = song.get("cover_url")
+        if title and cover and cover != "获取失败":
+            processed_titles.add(title)
 
-    total = len(unique_songs)
+    unprocessed = [
+        (i, song) for i, song in enumerate(songs_data)
+        if song.get("title") and song["title"] not in processed_titles
+    ]
+
+    total = len(unprocessed)
     if total == 0:
         print("无待处理歌曲（所有歌曲已处理或数据源为空）")
         return
 
     print(f"待处理歌曲总数：{total}\n")
-    count = 0
 
-    for song_title, song_artist in unique_songs.items():
-        count += 1
-        print(f"正在处理 {count}/{total}：{song_title}")
+    for count, (idx, song) in enumerate(unprocessed, 1):
+        title = song["title"]
+        print(f"正在处理 {count}/{total}：{title}")
 
-        cover_url = get_cover_url(song_title)
+        cover_url = get_cover_url(title)
 
-        cover_urls.append({
-            "title": song_title,
-            "cover_url": cover_url if cover_url else "获取失败",
-        })
+        songs_data[idx]["cover_url"] = cover_url if cover_url else "获取失败"
 
         if count % 10 == 0 or count == total:
-            save_results()
-            print(f"已临时保存 {len(cover_urls)} 条记录到 cover_url.json\n")
+            save_results(songs_data)
+            print(f"已临时保存进度到 prr_songs_data.json（共 {len(songs_data)} 首）\n")
 
-    print(f"所有歌曲处理完成，共 {len(cover_urls)} 条记录，已保存到cover_url.json")
+    print(f"所有歌曲处理完成，结果已保存到 songs_data.json")
 
 
 if __name__ == "__main__":
