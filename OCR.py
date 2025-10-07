@@ -25,7 +25,9 @@ def ocr_region(image_path, region_coords):
     return res
 
 def distinguish(image_path):
-    img = cv2.imread(image_path)
+    img = safe_imread(image_path)
+    if img is None:
+        return None
     x, y = 27, 1934
     b, g, r = img[y, x]
     return "type2" if (60 <= r <= 66 and 136 <= g <= 142 and 170 <= b <= 176) else "type1"
@@ -48,9 +50,7 @@ def single_rating(level: float, score: int) -> float:
         rating += 10 * (level * ((score / 1000000) ** 1.5) - 0.9)
 
     rating = max(.0, rating)
-
-    int_rating: int = int(rating * 100 + EPS)
-    return int_rating
+    return round(rating, 4)
 
 def level(image_path):
     img = cv2.imread(image_path)
@@ -58,22 +58,22 @@ def level(image_path):
         x, y = 1590, 441
         b, g, r = img[y, x]
         if 210 <= r <= 225 and 135 <= g <= 150 and 235 <= b <= 255:
-            return "Massive"
+            return "massive"
         elif 225 <= r <= 238 and 108 <= g <= 120 and 105 <= b <= 120:
-            return "Invaded"
+            return "invaded"
         elif 100 <= r <= 115 and 190 <= g <= 205 and 240 <= b <= 255:
-            return "Detected"
+            return "detected"
         else:
             return "ERROR"
     if result_type == "type2":
         x, y = 2982, 1520
         b, g, r = img[y, x]
         if 170 <= r <= 190 and 120 <= g <= 135 and 200 <= b <= 215:
-            return "Massive"
+            return "massive"
         elif 195 <= r <= 210 and 110 <= g <= 120 and 105 <= b <= 120:
-            return "Invaded"
+            return "invaded"
         elif 120 <= r <= 135 and 170 <= g <= 185 and 205 <= b <= 220:
-            return "Detected"
+            return "detected"
         else:
             return "ERROR"
 
@@ -151,12 +151,27 @@ def load_json_data(json_path):
     with open(json_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def preprocess_songs_data(raw_data):
+    processed = []
+    for song in raw_data:
 
-def save_to_json(match_result, score, result_score, filename, output_file="songs_results.json"):
+        for difficulty, info in song["charts"].items():
+            processed.append({
+                "title": song["title"],
+                "artist": song["artist"],
+                "difficulty": difficulty,
+                "level": info["level"],
+                "song_level_id": info["song_level_id"],
+                "cover_url": song["cover_url"],
+                "b15": song["b15"]
+            })
+    return processed
+
+
+def save_to_json(match_result, ocr_score_str, output_file):
     try:
-        score_int = int(result_score)
         song_level = match_result.get('level', 0)
-        rating = single_rating(song_level, score_int)
+        rating = single_rating(song_level, int(ocr_score_str))
     except (ValueError, TypeError) as e:
         rating = 0
 
@@ -165,10 +180,11 @@ def save_to_json(match_result, score, result_score, filename, output_file="songs
         "artist": match_result['artist'],
         "difficulty": match_result['difficulty'],
         "song_level_id": match_result.get('song_level_id', ''),
+        "cover_url": match_result.get('cover_url', ''),
         "b15": match_result.get('b15', False),
         "level": match_result.get('level', ''),
-        "score": result_score,
-        "rating": rating / 100
+        "score": ocr_score_str,
+        "rating": rating
     }
 
     existing_data = []
@@ -190,30 +206,52 @@ def save_to_json(match_result, score, result_score, filename, output_file="songs
         existing_data = []
 
     found_existing = False
+    # 替换原有的for循环判断逻辑
     for i, item in enumerate(existing_data):
-        if isinstance(item, dict) and item.get('song_level_id') == result_data['song_level_id']:
+        # 新增：先判断是否为有效字典，避免类型错误
+        if not isinstance(item, dict):
+            continue
+
+        # 核心修改：不使用song_level_id，改为对比Rating + 标题 + 难度（避免不同歌曲Rating相同）
+        # 1. 先检查标题和难度是否一致（确保是同一首歌的同一难度）
+        title_match = item.get('title') == result_data['title']
+        difficulty_match = item.get('difficulty') == result_data['difficulty']
+
+        # 2. 再对比Rating是否相同（注意：Rating是浮点数，需用近似判断）
+        existing_rating = float(item.get('rating', 0.0))
+        new_rating = float(result_data['rating'])
+        rating_match = abs(existing_rating - new_rating) < 0.001  # 允许微小精度误差
+
+        if title_match and difficulty_match and rating_match:
             found_existing = True
             existing_score = int(item.get('score', 0))
-            new_score = int(result_score)
+            print(f"已存在相同Rating的记录，旧分数: {existing_score}")
+            new_score = int(ocr_score_str)
 
+            # 后续的分数对比逻辑不变
             if new_score > existing_score:
                 existing_data[i] = result_data
                 print(f"更新记录: {result_data['title']} 分数 {existing_score} -> {new_score}")
             else:
-                print(f"跳过保存: {result_data['title']} 当前分数 {existing_score} 小于或等于新分数 {new_score}")
+                print(f"跳过保存: 新分数 {new_score}小于或等于当前分数 {existing_score} ")
             break
-
 
     if not found_existing:
         existing_data.append(result_data)
-        print(f"添加新记录: {result_data['title']} 分数 {result_score}")
+        print(f"添加新记录: {result_data['title']} 分数 {ocr_score_str}")
 
 
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(existing_data, f, ensure_ascii=False, indent=2)
 
+def safe_imread(path):
+    img = cv2.imread(path)
+    if img is None:
+        print(f"无法读取图像文件（可能损坏或格式无效）: {path}")
+        return None
+    return img
 
-def best(input_file="songs_results.json"):
+def best(input_file):
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -247,16 +285,18 @@ def best(input_file="songs_results.json"):
         return None
 
 
-json_file_path = "Resource/songs_data.json"
-
+json_file_path = "Resource/prr_songs_data.json"
+output_file="songs_results.json"
 bounds = [900000, 930000, 950000, 970000, 980000, 990000]
 rewards = [3, 1, 1, 1, 1, 1]
 
 EPS = 0.00002
 
-all_songs_data = load_json_data(json_file_path)
+all_songs_raw = load_json_data(json_file_path)
+all_songs_data = preprocess_songs_data(all_songs_raw)
 
-difficulty_points = {"Massive": (2687, 1780),"Invaded": (2416, 1780),"Detected": (2132, 1780),}
+
+difficulty_points = {"massive": (2687, 1780),"invaded": (2416, 1780),"detected": (2132, 1780),}
 
 region_rating1 = (559, 1180, 1319, 1323)
 region_song1 = (935, 266, 2272, 346)
@@ -298,11 +338,11 @@ for filename in os.listdir(src_folder):
             mini_match= mini_region
         )
         if match_result:
-            save_to_json(match_result, score, result_rating, filename)
+            save_to_json(match_result, result_rating,output_file)
         else:
             print("ERROR")
         print("\n")
-best()
+best(output_file)
 end_time = time.time()
 elapsed_time = end_time - start_time
 print(f"程序总执行耗时: {elapsed_time:.2f} 秒")

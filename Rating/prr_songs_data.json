@@ -7,15 +7,15 @@
     "charts": {
       "massive": {
         "level": 16.9,
-        "song_level_id": 1074
+        "song_level_id": 11111
       },
       "invaded": {
         "level": 14.1,
-        "song_level_id": 1073
+        "song_level_id": 11111
       },
       "detected": {
         "level": 8.0,
-        "song_level_id": 1072
+        "song_level_id": 11111
       }
     }
   },
@@ -27,15 +27,15 @@
     "charts": {
       "massive": {
         "level": 16.8,
-        "song_level_id": 1071
+        "song_level_id": 11111
       },
       "invaded": {
         "level": 13.8,
-        "song_level_id": 1070
+        "song_level_id": 11111
       },
       "detected": {
         "level": 8.0,
-        "song_level_id": 1069
+        "song_level_id": 11111
       }
     }
   },
@@ -47,15 +47,15 @@
     "charts": {
       "massive": {
         "level": 16.5,
-        "song_level_id": 1068
+        "song_level_id": 11111
       },
       "invaded": {
         "level": 13.3,
-        "song_level_id": 1067
+        "song_level_id": 11111
       },
       "detected": {
         "level": 7.0,
-        "song_level_id": 1065
+        "song_level_id": 11111
       }
     }
   },
@@ -67,15 +67,15 @@
     "charts": {
       "massive": {
         "level": 16.4,
-        "song_level_id": 1064
+        "song_level_id": 11111
       },
       "invaded": {
         "level": 13.3,
-        "song_level_id": 1063
+        "song_level_id": 11111
       },
       "detected": {
         "level": 6.0,
-        "song_level_id": 1062
+        "song_level_id": 11111
       }
     }
   },
@@ -87,15 +87,15 @@
     "charts": {
       "massive": {
         "level": 15.0,
-        "song_level_id": 1061
+        "song_level_id": 11111
       },
       "invaded": {
         "level": 11.0,
-        "song_level_id": 1060
+        "song_level_id": 11111
       },
       "detected": {
         "level": 5.0,
-        "song_level_id": 1059
+        "song_level_id": 11111
       }
     }
   },

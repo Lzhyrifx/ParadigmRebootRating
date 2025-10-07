@@ -1,10 +1,26 @@
 [
   {
     "title": "LABYRINTHOX",
-    "artist": "BlackYooh vs. siromaru",
+    "artist": "Black%BlackYYooh vs. siromaru",
     "difficulty": "Massive",
     "level": 16.9,
-    "song_level_id": 10086,
+    "song_level_id": 1074,
+    "b15": true
+  },
+  {
+    "title": "LABYRINTHOX",
+    "artist": "Black%BlackYYooh vs. siromaru",
+    "difficulty": "Invaded",
+    "level": 14.1,
+    "song_level_id": 1073,
+    "b15": true
+  },
+  {
+    "title": "LABYRINTHOX",
+    "artist": "Black%BlackYYooh vs. siromaru",
+    "difficulty": "Detected",
+    "level": 8.0,
+    "song_level_id": 1072,
     "b15": true
   },
   {
@@ -12,7 +28,23 @@
     "artist": "cybermiso",
     "difficulty": "Massive",
     "level": 16.8,
-    "song_level_id": 10001,
+    "song_level_id": 1071,
+    "b15": true
+  },
+  {
+    "title": "ANOVA",
+    "artist": "cybermiso",
+    "difficulty": "Invaded",
+    "level": 13.8,
+    "song_level_id": 1070,
+    "b15": true
+  },
+  {
+    "title": "ANOVA",
+    "artist": "cybermiso",
+    "difficulty": "Detected",
+    "level": 8.0,
+    "song_level_id": 1069,
     "b15": true
   },
   {
@@ -20,14 +52,313 @@
     "artist": "Knighthood",
     "difficulty": "Massive",
     "level": 16.5,
-    "song_level_id": 2233,
+    "song_level_id": 1068,
     "b15": true
   },
-
-
-
-
-
+  {
+    "title": "Argonovice",
+    "artist": "Knighthood",
+    "difficulty": "Invaded",
+    "level": 13.3,
+    "song_level_id": 1067,
+    "b15": true
+  },
+  {
+    "title": "Argonovice",
+    "artist": "Knighthood",
+    "difficulty": "Detected",
+    "level": 7.0,
+    "song_level_id": 1066,
+    "b15": true
+  },
+  {
+    "title": "Field Transistor Effect",
+    "artist": "Sephid",
+    "difficulty": "Massive",
+    "level": 16.4,
+    "song_level_id": 1065,
+    "b15": true
+  },
+  {
+    "title": "Field Transistor Effect",
+    "artist": "Sephid",
+    "difficulty": "Invaded",
+    "level": 13.3,
+    "song_level_id": 1064,
+    "b15": true
+  },
+  {
+    "title": "Field Transistor Effect",
+    "artist": "Sephid",
+    "difficulty": "Detected",
+    "level": 6.0,
+    "song_level_id": 1063,
+    "b15": true
+  },
+  {
+    "title": "Take On The H.E.A.T!!!",
+    "artist": "Supa7onyz",
+    "difficulty": "Massive",
+    "level": 15.0,
+    "song_level_id": 1062,
+    "b15": true
+  },
+  {
+    "title": "Take On The H.E.A.T!!!",
+    "artist": "Supa7onyz",
+    "difficulty": "Invaded",
+    "level": 11.0,
+    "song_level_id": 1061,
+    "b15": true
+  },
+  {
+    "title": "Take On The H.E.A.T!!!",
+    "artist": "Supa7onyz",
+    "difficulty": "Detected",
+    "level": 5.0,
+    "song_level_id": 1060,
+    "b15": true
+  },
+  {
+    "title": "Inverted Paradise",
+    "artist": "Essbee",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1059,
+    "b15": true
+  },
+  {
+    "title": "Inverted Paradise",
+    "artist": "Essbee",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1058,
+    "b15": true
+  },
+  {
+    "title": "Inverted Paradise",
+    "artist": "Essbee",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1057,
+    "b15": true
+  },
+  {
+    "title": "だってerror",
+    "artist": "Alice. feat. 記憶に残る",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1056,
+    "b15": true
+  },
+  {
+    "title": "だってerror",
+    "artist": "Alice. feat. 記憶に残る",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1055,
+    "b15": true
+  },
+  {
+    "title": "だってerror",
+    "artist": "Alice. feat. 記憶に残る",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1054,
+    "b15": true
+  },
+  {
+    "title": "Install me",
+    "artist": "CHRYSAD",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1053,
+    "b15": true
+  },
+  {
+    "title": "Install me",
+    "artist": "CHRYSAD",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1052,
+    "b15": true
+  },
+  {
+    "title": "Install me",
+    "artist": "CHRYSAD",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1051,
+    "b15": true
+  },
+  {
+    "title": "归零",
+    "artist": "KAIRCI × Aletta",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1050,
+    "b15": true
+  },
+  {
+    "title": "归零",
+    "artist": "KAIRCI × Aletta",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1049,
+    "b15": true
+  },
+  {
+    "title": "归零",
+    "artist": "KAIRCI × Aletta",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1048,
+    "b15": true
+  },
+  {
+    "title": "キオク回路",
+    "artist": "ShiBa",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1047,
+    "b15": true
+  },
+  {
+    "title": "キオク回路",
+    "artist": "ShiBa",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1046,
+    "b15": true
+  },
+  {
+    "title": "キオク回路",
+    "artist": "ShiBa",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1045,
+    "b15": true
+  },
+  {
+    "title": "残響404号DDD線",
+    "artist": "Nyan.PLANET (TAKIO + 羽鳥玲)",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1044,
+    "b15": true
+  },
+  {
+    "title": "残響404号DDD線",
+    "artist": "Nyan.PLANET (TAKIO + 羽鳥玲)",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1043,
+    "b15": true
+  },
+  {
+    "title": "残響404号DDD線",
+    "artist": "Nyan.PLANET (TAKIO + 羽鳥玲)",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1042,
+    "b15": true
+  },
+  {
+    "title": "Mermaid in binary",
+    "artist": "みーに feat. はらもりよしな",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1041,
+    "b15": true
+  },
+  {
+    "title": "Mermaid in binary",
+    "artist": "みーに feat. はらもりよしな",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1040,
+    "b15": true
+  },
+  {
+    "title": "Mermaid in binary",
+    "artist": "みーに feat. はらもりよしな",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1039,
+    "b15": true
+  },
+  {
+    "title": "Memorial Time Capsule",
+    "artist": "yuudo",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1038,
+    "b15": true
+  },
+  {
+    "title": "Memorial Time Capsule",
+    "artist": "yuudo",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1037,
+    "b15": true
+  },
+  {
+    "title": "Memorial Time Capsule",
+    "artist": "yuudo",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1036,
+    "b15": true
+  },
+  {
+    "title": "『PIXEL OVERFLØW』",
+    "artist": "zsry & AisE",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1035,
+    "b15": true
+  },
+  {
+    "title": "『PIXEL OVERFLØW』",
+    "artist": "zsry & AisE",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1034,
+    "b15": true
+  },
+  {
+    "title": "『PIXEL OVERFLØW』",
+    "artist": "zsry & AisE",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1033,
+    "b15": true
+  },
+  {
+    "title": "GRANDLUX::OBLIVIO",
+    "artist": "DRIVE.",
+    "difficulty": "Massive",
+    "level": 0.0,
+    "song_level_id": 1032,
+    "b15": true
+  },
+  {
+    "title": "GRANDLUX::OBLIVIO",
+    "artist": "DRIVE.",
+    "difficulty": "Invaded",
+    "level": 0.0,
+    "song_level_id": 1031,
+    "b15": true
+  },
+  {
+    "title": "GRANDLUX::OBLIVIO",
+    "artist": "DRIVE.",
+    "difficulty": "Detected",
+    "level": 0.0,
+    "song_level_id": 1030,
+    "b15": true
+  },
   {
     "title": "名無しの宣教師",
     "artist": "MIssionary",
