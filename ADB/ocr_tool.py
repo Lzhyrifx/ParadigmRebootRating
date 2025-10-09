@@ -22,5 +22,5 @@ def ocr_region(image_path, region_coords):
 
 region_song_level= (667,1786,827,1871)
 
-level = ocr_region("Temp/1.png",region_song_level)
+level = ocr_region("SCR/1.png", region_song_level)
 print(level)

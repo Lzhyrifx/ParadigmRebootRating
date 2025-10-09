@@ -29,7 +29,7 @@ song_coords = [
 ]
 
 # 截图保存目录
-screenshot_dir = "Temp/"
+screenshot_dir = "SCR/"
 # 等级检测区域坐标
 region_song_level = (667, 1786, 827, 1871)
 # 指定的最低可接受等级（可根据需要修改）

@@ -76,7 +76,7 @@ def main():
 
     if token_info:
         # 登录成功，可以保存 token 供后续使用
-        with open('token.json', 'w') as f:
+        with open('../token.json', 'w') as f:
             json.dump(token_info, f, indent=2)
         print("Token 已保存到 token.json")
 

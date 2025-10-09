@@ -26,6 +26,7 @@ Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.mir
 ## 获取b50
 通过[Paradigm Prober](https://prp.icel.site/)获取b50图片
 
+## 
 
 ## 声明
 本软件与击弦网络及相关游戏发行、开发及分发公司无任何关系，均使用互联网公开资源，仅供学习研究用途，相关版权归相关方所有

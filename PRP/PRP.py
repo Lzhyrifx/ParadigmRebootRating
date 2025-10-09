@@ -34,7 +34,7 @@ if __name__ == "__main__":
         }
         simplified_songs.append(simplified_song)
 
-    with open('songs_data.json', 'w', encoding='utf-8') as f:
+    with open('../songs_data.json', 'w', encoding='utf-8') as f:
         json.dump(simplified_songs, f, indent=2, ensure_ascii=False)
 
     end_time = time.time()

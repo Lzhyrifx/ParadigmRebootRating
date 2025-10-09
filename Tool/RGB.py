@@ -24,7 +24,7 @@ image_path = Path(folder_path)
 
 
 # 快速遍历和分类
-src_folder = "SCR"
+src_folder = "../SCR"
 
 for filename in os.listdir(src_folder):
     if filename.upper().endswith('.JPG'):

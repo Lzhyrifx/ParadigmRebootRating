@@ -206,18 +206,15 @@ def save_to_json(match_result, ocr_score_str, output_file):
         existing_data = []
 
     found_existing = False
-    # 替换原有的for循环判断逻辑
+
     for i, item in enumerate(existing_data):
-        # 新增：先判断是否为有效字典，避免类型错误
+
         if not isinstance(item, dict):
             continue
 
-        # 核心修改：不使用song_level_id，改为对比Rating + 标题 + 难度（避免不同歌曲Rating相同）
-        # 1. 先检查标题和难度是否一致（确保是同一首歌的同一难度）
         title_match = item.get('title') == result_data['title']
         difficulty_match = item.get('difficulty') == result_data['difficulty']
 
-        # 2. 再对比Rating是否相同（注意：Rating是浮点数，需用近似判断）
         existing_rating = float(item.get('rating', 0.0))
         new_rating = float(result_data['rating'])
         rating_match = abs(existing_rating - new_rating) < 0.001  # 允许微小精度误差
@@ -308,7 +305,7 @@ region_song2 = (1603,454,3016,535)
 region_song_mini2 = (2598,454,3016,545)
 region_artist2 = (1681,555,3018,624)
 
-src_folder = "ADB/Temp"
+src_folder = "ADB/SCR"
 
 start_time = time.time()
 

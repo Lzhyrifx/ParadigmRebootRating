@@ -1,5 +1,5 @@
 from PIL import Image, ImageDraw, ImageFont
-import requests
+import httpx
 from io import BytesIO
 import json
 
@@ -29,7 +29,7 @@ x, y = 50, 60
 best_15_songs = [song for song in songs_data if song.get("b15", False)]
 for i, song in enumerate(best_15_songs):
     # 下载曲绘
-    response = requests.get(song["cover_url"])
+    response = httpx.get(song["cover_url"])
     cover = Image.open(BytesIO(response.content))
     # 调整曲绘尺寸
     cover = cover.resize((80, 80))
@@ -51,7 +51,7 @@ x, y = 50, 430
 # 假设取除了b15为True之外的歌曲作为Best 35部分（实际可根据需求筛选）
 best_35_songs = [song for song in songs_data if not song.get("b15", False)]
 for i, song in enumerate(best_35_songs[:20]):  # 示例取前20首，可根据实际调整
-    response = requests.get(song["cover_url"])
+    response = httpx.get(song["cover_url"])
     cover = Image.open(BytesIO(response.content))
     cover = cover.resize((80, 80))
     image.paste(cover, (x, y))

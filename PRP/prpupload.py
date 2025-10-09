@@ -55,7 +55,7 @@ def upload_score(access_token, username, song_level_id, score):
 
 def main():
     try:
-        with open('token.json', 'r') as f:
+        with open('../token.json', 'r') as f:
             token_info = json.load(f)
         access_token = token_info.get('access_token')
         if not access_token:

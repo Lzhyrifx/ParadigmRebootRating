@@ -2,26 +2,93 @@ import subprocess
 import base64
 import cv2
 import numpy as np
-import os  # 新增：用于文件夹操作
+import os
+import adbutils
+
+LAST_DEVICE_FILE = ".last_used_device"
+
+def init_device():
+    """初始化并选择要连接的设备"""
+    try:
+        adb = adbutils.AdbClient(host="127.0.0.1", port=5037)
+        devices = adb.list()
+
+        if not devices:
+            print("没有检测到任何连接的设备，请确保设备已通过ADB连接")
+            return None
+
+        # 尝试读取上次使用的设备ID
+        last_used_device = None
+        if os.path.exists(LAST_DEVICE_FILE):
+            with open(LAST_DEVICE_FILE, "r") as f:
+                last_used_device = f.read().strip()
+                print(f"检测到上次使用的设备：{last_used_device}")
+
+        # 检查上次设备是否仍在连接列表中
+        matched_device = None
+        if last_used_device:
+            for dev in devices:
+                if dev.serial == last_used_device:
+                    matched_device = dev
+                    break
+
+        # 优先使用上次设备（如果存在且仍连接）
+        if matched_device:
+            print(f"自动连接上次使用的设备：{matched_device.serial}")
+            return matched_device.serial
+
+        # 没有上次设备或上次设备已断开，按设备数量处理
+        if len(devices) == 1:
+            device_id = devices[0].serial
+            print(f"只检测到一个设备，自动连接: {device_id}")
+        else:
+            print("检测到多个设备，请选择要连接的设备：")
+            for i, device in enumerate(devices, 1):
+                print(f"{i}. {device.serial} (状态: {device.state})")
+
+            while True:
+                try:
+                    choice = int(input(f"请输入设备编号(1-{len(devices)}): "))
+                    if 1 <= choice <= len(devices):
+                        device_id = devices[choice - 1].serial
+                        break
+                    else:
+                        print(f"请输入1到{len(devices)}之间的数字")
+                except ValueError:
+                    print("请输入有效的数字")
+
+        # 保存本次选择的设备ID到文件
+        with open(LAST_DEVICE_FILE, "w") as f:
+            f.write(device_id)
+        print(f"已记住当前设备：{device_id}（下次将自动连接）")
+
+        return device_id
+
+    except ImportError:
+        print("请先安装adbutils库：pip install adbutils")
+        return None
+    except Exception as e:
+        print(f"设备连接失败：{str(e)}")
+        return None
 
 
-def take_screenshot_safe(folder="ADBSCR", filename="screenshot.png"):
-    """使用ADB从设备截图并安全保存到指定文件夹"""
+def take_screenshot_safe(device_id, folder="ADBSCR", filename="screenshot.png"):
+    """使用指定设备的ADB截图并安全保存到指定文件夹"""
     try:
         # 确保文件夹存在
         os.makedirs(folder, exist_ok=True)
         full_path = os.path.join(folder, filename)
 
-        # 在设备上截图并用base64编码输出（避免二进制传输问题）
+        # 在指定设备上截图并用base64编码输出
         result = subprocess.run(
-            ["adb", "shell", "screencap -p | base64"],
+            ["adb", "-s", device_id, "shell", "screencap -p | base64"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True,  # 此时输出是文本（base64字符串）
+            text=True,
             check=True
         )
 
-        # 获取base64字符串（可能包含换行，需去除）
+        # 获取base64字符串（去除换行）
         b64_str = result.stdout.strip()
 
         # 解码为原始PNG二进制数据
@@ -58,7 +125,7 @@ def get_coordinates(event, x, y, flags, param):
             b, g, r = pixel_color
 
             print(f"显示窗口坐标: ({x}, {y})")
-            print(f"设备实际坐标: ({orig_x}, {orig_y})")  # 这是设备上的实际坐标，可用于ADB点击
+            print(f"设备实际坐标: ({orig_x}, {orig_y})")
             print(f"RGB颜色: ({r}, {g}, {b})")
             print(f"BGR颜色: ({b}, {g}, {r})")
             print("-" * 60)
@@ -77,15 +144,22 @@ def get_coordinates(event, x, y, flags, param):
 
 
 def main():
-    # 1. 使用ADB获取设备截图，保存到ADBSCR文件夹
+    # 1. 选择设备
+    print("正在检测连接的设备...")
+    device_id = init_device()
+    if not device_id:
+        print("无法选择设备，程序退出")
+        return
+
+    # 2. 使用选定设备获取截图
     print("正在从设备截取屏幕...")
-    original_image = take_screenshot_safe("ADBSCR", "device_screenshot.png")
+    original_image = take_screenshot_safe(device_id, "ADBSCR", "device_screenshot.png")
 
     if original_image is None:
         print("无法获取截图，程序退出")
         return
 
-    # 2. 准备显示图像
+    # 3. 准备显示图像
     img_height, img_width = original_image.shape[:2]
     print(f"设备屏幕尺寸: {img_width} x {img_height}")
 
@@ -100,7 +174,7 @@ def main():
     print(f"显示尺寸: {new_width} x {new_height}, 缩放比例: {scale_factor:.2f}")
     print("提示: 点击图像选择坐标点，按q退出，按r重置选择，按c查看所有选择的点")
 
-    # 3. 设置OpenCV窗口和回调
+    # 4. 设置OpenCV窗口和回调
     cv2.namedWindow('设备屏幕 - 点击选择坐标 (q退出, r重置)', cv2.WINDOW_NORMAL)
     cv2.resizeWindow('设备屏幕 - 点击选择坐标 (q退出, r重置)', new_width, new_height)
 
@@ -115,7 +189,7 @@ def main():
 
     cv2.setMouseCallback('设备屏幕 - 点击选择坐标 (q退出, r重置)', get_coordinates, param=params)
 
-    # 4. 主循环
+    # 5. 主循环
     while True:
         cv2.imshow('设备屏幕 - 点击选择坐标 (q退出, r重置)', params['display_img'])
         key = cv2.waitKey(1) & 0xFF
@@ -145,12 +219,12 @@ def main():
 
     cv2.destroyAllWindows()
 
-    # 5. 输出最终选择的坐标
+    # 6. 输出最终选择的坐标（包含设备信息）
     if params['points']:
-        print("\n\n最终选择的坐标点（可直接用于ADB点击命令）：")
+        print(f"\n\n最终选择的坐标点（设备 {device_id}）：")
         print("=" * 50)
         for i, (x, y) in enumerate(params['points']):
-            print(f"点{i + 1}: ({x}, {y})  -->  adb shell input tap {x} {y}")
+            print(f"点{i + 1}: ({x}, {y})  -->  adb -s {device_id} shell input tap {x} {y}")
         print("=" * 50)
     else:
         print("\n未选择任何坐标点")

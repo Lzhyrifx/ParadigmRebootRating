@@ -42,27 +42,6 @@
     "cover": "diva_juggernaut.png"
   },
   {
-    "title": "LABYRINTHOX",
-    "artist": "BlackYooh vs. siromaru",
-    "b15": true,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_labyrinthox.png",
-    "charts": {
-      "massive": {
-        "level": 16.9,
-        "song_level_id": 1074
-      },
-      "invaded": {
-        "level": 14.1,
-        "song_level_id": 1073
-      },
-      "detected": {
-        "level": 8.0,
-        "song_level_id": 1072
-      }
-    },
-    "cover": "labyrinthox_blackyooh_vs_siromaru.png"
-  },
-  {
     "title": "名無しの宣教師",
     "artist": "MIssionary",
     "b15": true,
@@ -82,6 +61,27 @@
       }
     },
     "cover": "名無しの宣教師_missionary.png"
+  },
+  {
+    "title": "LABYRINTHOX",
+    "artist": "BlackYooh vs. siromaru",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_labyrinthox.png",
+    "charts": {
+      "massive": {
+        "level": 16.9,
+        "song_level_id": 1074
+      },
+      "invaded": {
+        "level": 14.1,
+        "song_level_id": 1073
+      },
+      "detected": {
+        "level": 8.0,
+        "song_level_id": 1072
+      }
+    },
+    "cover": "labyrinthox_blackyooh_vs_siromaru.png"
   },
   {
     "title": "Rocket Lanterns",
@@ -168,6 +168,27 @@
     "cover": "soar_to_ø_aoi.png"
   },
   {
+    "title": "Field Transistor Effect",
+    "artist": "Sephid",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7b/Cover_fieldtransistoreffect.png",
+    "charts": {
+      "massive": {
+        "level": 16.4,
+        "song_level_id": 1064
+      },
+      "invaded": {
+        "level": 13.3,
+        "song_level_id": 1063
+      },
+      "detected": {
+        "level": 6.0,
+        "song_level_id": 1062
+      }
+    },
+    "cover": "field_transistor_effect_sephid.png"
+  },
+  {
     "title": "Libra",
     "artist": "MIssionary vs Mimineko",
     "b15": true,
@@ -208,48 +229,6 @@
       }
     },
     "cover": "anova_cybermiso.png"
-  },
-  {
-    "title": "Field Transistor Effect",
-    "artist": "Sephid",
-    "b15": true,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7b/Cover_fieldtransistoreffect.png",
-    "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 1064
-      },
-      "invaded": {
-        "level": 13.3,
-        "song_level_id": 1063
-      },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 1062
-      }
-    },
-    "cover": "field_transistor_effect_sephid.png"
-  },
-  {
-    "title": "Take On The H.E.A.T!!!",
-    "artist": "Supa7onyz",
-    "b15": true,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1a/Cover_takeontheheat.png",
-    "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 1061
-      },
-      "invaded": {
-        "level": 11.0,
-        "song_level_id": 1060
-      },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 1059
-      }
-    },
-    "cover": "take_on_the_heat_supa7onyz.png"
   },
   {
     "title": "Rebellion",
@@ -313,6 +292,27 @@
       }
     },
     "cover": "road_to_starlightz_feat_ninnikuu_normal1zersupa7onyz.png"
+  },
+  {
+    "title": "Take On The H.E.A.T!!!",
+    "artist": "Supa7onyz",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1a/Cover_takeontheheat.png",
+    "charts": {
+      "massive": {
+        "level": 15.0,
+        "song_level_id": 1061
+      },
+      "invaded": {
+        "level": 11.0,
+        "song_level_id": 1060
+      },
+      "detected": {
+        "level": 5.0,
+        "song_level_id": 1059
+      }
+    },
+    "cover": "take_on_the_heat_supa7onyz.png"
   },
   {
     "title": "炯眼の絶対零度",
@@ -420,27 +420,6 @@
     "cover": "end_time_cres.png"
   },
   {
-    "title": "GOODWORLD",
-    "artist": "EBIMAYO",
-    "b15": true,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/73/Cover_goodworld.png",
-    "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 984
-      },
-      "invaded": {
-        "level": 12.0,
-        "song_level_id": 983
-      },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 982
-      }
-    },
-    "cover": "goodworld_ebimayo.png"
-  },
-  {
     "title": "Random",
     "artist": "Sobrem × Silentroom",
     "b15": true,
@@ -460,6 +439,27 @@
       }
     },
     "cover": "random_sobrem_×_silentroom.png"
+  },
+  {
+    "title": "GOODWORLD",
+    "artist": "EBIMAYO",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/73/Cover_goodworld.png",
+    "charts": {
+      "massive": {
+        "level": 15.6,
+        "song_level_id": 984
+      },
+      "invaded": {
+        "level": 12.0,
+        "song_level_id": 983
+      },
+      "detected": {
+        "level": 5.0,
+        "song_level_id": 982
+      }
+    },
+    "cover": "goodworld_ebimayo.png"
   },
   {
     "title": "Äventyr",
@@ -546,27 +546,6 @@
     "cover": "initialize_rhukia.png"
   },
   {
-    "title": "Respawn",
-    "artist": "Hidra-Xjeil",
-    "b15": true,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_respawn.png",
-    "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 966
-      },
-      "invaded": {
-        "level": 12.0,
-        "song_level_id": 965
-      },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 964
-      }
-    },
-    "cover": "respawn_hidraxjeil.png"
-  },
-  {
     "title": "Memory of Azure",
     "artist": "tsuki",
     "b15": true,
@@ -586,6 +565,27 @@
       }
     },
     "cover": "memory_of_azure_tsuki.png"
+  },
+  {
+    "title": "Respawn",
+    "artist": "Hidra-Xjeil",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_respawn.png",
+    "charts": {
+      "massive": {
+        "level": 15.9,
+        "song_level_id": 966
+      },
+      "invaded": {
+        "level": 12.0,
+        "song_level_id": 965
+      },
+      "detected": {
+        "level": 5.0,
+        "song_level_id": 964
+      }
+    },
+    "cover": "respawn_hidraxjeil.png"
   },
   {
     "title": "SLASH",
@@ -903,48 +903,6 @@
     "cover": "sweet_dream_feat_奈良ひより_mysteka.png"
   },
   {
-    "title": "SHIFT (・ω・)",
-    "artist": "Blacklolita",
-    "b15": true,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/95/Cover_shift.png",
-    "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 915
-      },
-      "invaded": {
-        "level": 13.2,
-        "song_level_id": 914
-      },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 913
-      }
-    },
-    "cover": "shift_ω_blacklolita.png"
-  },
-  {
-    "title": "DAWN",
-    "artist": "Mylta",
-    "b15": true,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1f/Cover_dawn.png",
-    "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 912
-      },
-      "invaded": {
-        "level": 12.5,
-        "song_level_id": 911
-      },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 910
-      }
-    },
-    "cover": "dawn_mylta.png"
-  },
-  {
     "title": "ルナティッククレイジー feat. PANXI",
     "artist": "lapix & Zekk",
     "b15": true,
@@ -966,6 +924,27 @@
     "cover": "ルナティッククレイジー_feat_panxi_lapix__zekk.png"
   },
   {
+    "title": "SHIFT (・ω・)",
+    "artist": "Blacklolita",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/95/Cover_shift.png",
+    "charts": {
+      "massive": {
+        "level": 16.4,
+        "song_level_id": 915
+      },
+      "invaded": {
+        "level": 13.2,
+        "song_level_id": 914
+      },
+      "detected": {
+        "level": 6.0,
+        "song_level_id": 913
+      }
+    },
+    "cover": "shift_ω_blacklolita.png"
+  },
+  {
     "title": "シャーデンフロイデ",
     "artist": "poplavor × PANXI",
     "b15": true,
@@ -985,6 +964,27 @@
       }
     },
     "cover": "シャーデンフロイデ_poplavor_×_panxi.png"
+  },
+  {
+    "title": "DAWN",
+    "artist": "Mylta",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1f/Cover_dawn.png",
+    "charts": {
+      "massive": {
+        "level": 15.9,
+        "song_level_id": 912
+      },
+      "invaded": {
+        "level": 12.5,
+        "song_level_id": 911
+      },
+      "detected": {
+        "level": 5.0,
+        "song_level_id": 910
+      }
+    },
+    "cover": "dawn_mylta.png"
   },
   {
     "title": "ぽちっとりせっと (feat. 中村さんそ)",
@@ -1092,27 +1092,6 @@
     "cover": "shuffle_paradise_99_so87.png"
   },
   {
-    "title": "GALDЯ",
-    "artist": "Nego_tiator",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/39/Cover_galdr.png",
-    "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 885
-      },
-      "invaded": {
-        "level": 12.0,
-        "song_level_id": 884
-      },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 883
-      }
-    },
-    "cover": "galdя_nego_tiator.png"
-  },
-  {
     "title": "sense of wonder",
     "artist": "Yu_Asahina",
     "b15": false,
@@ -1132,6 +1111,27 @@
       }
     },
     "cover": "sense_of_wonder_yu_asahina.png"
+  },
+  {
+    "title": "GALDЯ",
+    "artist": "Nego_tiator",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/39/Cover_galdr.png",
+    "charts": {
+      "massive": {
+        "level": 16.4,
+        "song_level_id": 885
+      },
+      "invaded": {
+        "level": 12.0,
+        "song_level_id": 884
+      },
+      "detected": {
+        "level": 6.0,
+        "song_level_id": 883
+      }
+    },
+    "cover": "galdя_nego_tiator.png"
   },
   {
     "title": "sacred sacrifices",
@@ -1239,27 +1239,6 @@
     "cover": "starchild_yusi.png"
   },
   {
-    "title": "Re:Time-Leap at Saturday 10:00 PM",
-    "artist": "litmus*",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retimeleap.png",
-    "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 867
-      },
-      "invaded": {
-        "level": 11.0,
-        "song_level_id": 866
-      },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 865
-      }
-    },
-    "cover": "retimeleap_at_saturday_1000_pm_litmus.png"
-  },
-  {
     "title": "神話",
     "artist": "Pica & M2U",
     "b15": false,
@@ -1279,6 +1258,27 @@
       }
     },
     "cover": "神話_pica__m2u.png"
+  },
+  {
+    "title": "Re:Time-Leap at Saturday 10:00 PM",
+    "artist": "litmus*",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retimeleap.png",
+    "charts": {
+      "massive": {
+        "level": 14.8,
+        "song_level_id": 867
+      },
+      "invaded": {
+        "level": 11.0,
+        "song_level_id": 866
+      },
+      "detected": {
+        "level": 4.0,
+        "song_level_id": 865
+      }
+    },
+    "cover": "retimeleap_at_saturday_1000_pm_litmus.png"
   },
   {
     "title": "C-U-NRG",
@@ -2184,27 +2184,6 @@
     "cover": "damped_fall_supa7onyz.png"
   },
   {
-    "title": "祈雨の菖蒲",
-    "artist": "Nego_tiator",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_kiunoayame.png",
-    "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 728
-      },
-      "invaded": {
-        "level": 9.5,
-        "song_level_id": 727
-      },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 726
-      }
-    },
-    "cover": "祈雨の菖蒲_nego_tiator.png"
-  },
-  {
     "title": "Akasagarbha -reincarnate-",
     "artist": "wa. vs ETIA.",
     "b15": false,
@@ -2224,6 +2203,27 @@
       }
     },
     "cover": "akasagarbha_reincarnate_wa_vs_etia.png"
+  },
+  {
+    "title": "祈雨の菖蒲",
+    "artist": "Nego_tiator",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_kiunoayame.png",
+    "charts": {
+      "massive": {
+        "level": 14.4,
+        "song_level_id": 728
+      },
+      "invaded": {
+        "level": 9.5,
+        "song_level_id": 727
+      },
+      "detected": {
+        "level": 4.0,
+        "song_level_id": 726
+      }
+    },
+    "cover": "祈雨の菖蒲_nego_tiator.png"
   },
   {
     "title": "浮世絵横丁",
@@ -2289,27 +2289,6 @@
     "cover": "observatory_かめりあ.png"
   },
   {
-    "title": "Awakening of Civilization",
-    "artist": "黒魔",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/47/Cover_awakeningofcivilization.png",
-    "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 713
-      },
-      "invaded": {
-        "level": 12.5,
-        "song_level_id": 712
-      },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 711
-      }
-    },
-    "cover": "awakening_of_civilization_黒魔.png"
-  },
-  {
     "title": "Downfall",
     "artist": "くるぶっこちゃん",
     "b15": false,
@@ -2329,6 +2308,27 @@
       }
     },
     "cover": "downfall_くるぶっこちゃん.png"
+  },
+  {
+    "title": "Awakening of Civilization",
+    "artist": "黒魔",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/47/Cover_awakeningofcivilization.png",
+    "charts": {
+      "massive": {
+        "level": 16.4,
+        "song_level_id": 713
+      },
+      "invaded": {
+        "level": 12.5,
+        "song_level_id": 712
+      },
+      "detected": {
+        "level": 6.0,
+        "song_level_id": 711
+      }
+    },
+    "cover": "awakening_of_civilization_黒魔.png"
   },
   {
     "title": "Iridescence",
@@ -2457,27 +2457,6 @@
     "cover": "astral_injection_xacla.png"
   },
   {
-    "title": "Blue Sphere",
-    "artist": "satella",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a3/Cover_bluesphere.png",
-    "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 644
-      },
-      "invaded": {
-        "level": 12.5,
-        "song_level_id": 643
-      },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 642
-      }
-    },
-    "cover": "blue_sphere_satella.png"
-  },
-  {
     "title": "Spell of chaoS",
     "artist": "Halv",
     "b15": false,
@@ -2497,6 +2476,27 @@
       }
     },
     "cover": "spell_of_chaos_halv.png"
+  },
+  {
+    "title": "Blue Sphere",
+    "artist": "satella",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a3/Cover_bluesphere.png",
+    "charts": {
+      "massive": {
+        "level": 14.9,
+        "song_level_id": 644
+      },
+      "invaded": {
+        "level": 12.5,
+        "song_level_id": 643
+      },
+      "detected": {
+        "level": 4.0,
+        "song_level_id": 642
+      }
+    },
+    "cover": "blue_sphere_satella.png"
   },
   {
     "title": "PUPA (GRG REMIX)",
@@ -2541,27 +2541,6 @@
     "cover": "pupa_uma_remix_モリモリあつし_remixed_by_uma.png"
   },
   {
-    "title": "PUPA",
-    "artist": "モリモリあつし",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_pupa.png",
-    "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 632
-      },
-      "invaded": {
-        "level": 12.0,
-        "song_level_id": 631
-      },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 630
-      }
-    },
-    "cover": "pupa_モリモリあつし.png"
-  },
-  {
     "title": "翠杜",
     "artist": "隣の庭は青い (庭師+Aoi)",
     "b15": false,
@@ -2581,6 +2560,27 @@
       }
     },
     "cover": "翠杜_隣の庭は青い_庭師aoi.png"
+  },
+  {
+    "title": "PUPA",
+    "artist": "モリモリあつし",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_pupa.png",
+    "charts": {
+      "massive": {
+        "level": 15.7,
+        "song_level_id": 632
+      },
+      "invaded": {
+        "level": 12.0,
+        "song_level_id": 631
+      },
+      "detected": {
+        "level": 6.0,
+        "song_level_id": 630
+      }
+    },
+    "cover": "pupa_モリモリあつし.png"
   },
   {
     "title": "Secret Illumination",
@@ -2772,27 +2772,6 @@
     "cover": "dataerr0r_cosmograph.png"
   },
   {
-    "title": "Halcyon",
-    "artist": "xi",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/50/Cover_halcyon.png",
-    "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 575
-      },
-      "invaded": {
-        "level": 12.5,
-        "song_level_id": 574
-      },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 573
-      }
-    },
-    "cover": "halcyon_xi.png"
-  },
-  {
     "title": "Aleph-0",
     "artist": "LeaF",
     "b15": false,
@@ -2812,6 +2791,27 @@
       }
     },
     "cover": "aleph0_leaf.png"
+  },
+  {
+    "title": "Halcyon",
+    "artist": "xi",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/50/Cover_halcyon.png",
+    "charts": {
+      "massive": {
+        "level": 15.9,
+        "song_level_id": 575
+      },
+      "invaded": {
+        "level": 12.5,
+        "song_level_id": 574
+      },
+      "detected": {
+        "level": 6.0,
+        "song_level_id": 573
+      }
+    },
+    "cover": "halcyon_xi.png"
   },
   {
     "title": "夢/あるいは在りし日の",
@@ -2877,6 +2877,27 @@
     "cover": "zephyrs_frums.png"
   },
   {
+    "title": "Wolves Standing Towards Enemies",
+    "artist": "かめりあ(EDP)",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/fc/Cover_wolvesstanding.png",
+    "charts": {
+      "massive": {
+        "level": 16.7,
+        "song_level_id": 530
+      },
+      "invaded": {
+        "level": 13.4,
+        "song_level_id": 529
+      },
+      "detected": {
+        "level": 7.0,
+        "song_level_id": 528
+      }
+    },
+    "cover": "wolves_standing_towards_enemies_かめりあedp.png"
+  },
+  {
     "title": "Final Farewell",
     "artist": "TAG",
     "b15": false,
@@ -2917,27 +2938,6 @@
       }
     },
     "cover": "meteorite_lotus_wa.png"
-  },
-  {
-    "title": "Wolves Standing Towards Enemies",
-    "artist": "かめりあ(EDP)",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/fc/Cover_wolvesstanding.png",
-    "charts": {
-      "massive": {
-        "level": 16.7,
-        "song_level_id": 530
-      },
-      "invaded": {
-        "level": 13.4,
-        "song_level_id": 529
-      },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 528
-      }
-    },
-    "cover": "wolves_standing_towards_enemies_かめりあedp.png"
   },
   {
     "title": "cyanine",
@@ -3486,27 +3486,6 @@
     "cover": "never_escape_void_mournfinale_feat_gthakkyoukun.png"
   },
   {
-    "title": "Name of oath",
-    "artist": "void (Mournfinale) feat. コツキミヤ (Gt. えば)",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_nameofoath.png",
-    "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 448
-      },
-      "invaded": {
-        "level": 12.0,
-        "song_level_id": 447
-      },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 446
-      }
-    },
-    "cover": "name_of_oath_void_mournfinale_feat_コツキミヤ_gt_えば.png"
-  },
-  {
     "title": "Act Beloved",
     "artist": "void (Mournfinale) feat. Salita",
     "b15": false,
@@ -3526,6 +3505,27 @@
       }
     },
     "cover": "act_beloved_void_mournfinale_feat_salita.png"
+  },
+  {
+    "title": "Name of oath",
+    "artist": "void (Mournfinale) feat. コツキミヤ (Gt. えば)",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_nameofoath.png",
+    "charts": {
+      "massive": {
+        "level": 15.7,
+        "song_level_id": 448
+      },
+      "invaded": {
+        "level": 12.0,
+        "song_level_id": 447
+      },
+      "detected": {
+        "level": 5.0,
+        "song_level_id": 446
+      }
+    },
+    "cover": "name_of_oath_void_mournfinale_feat_コツキミヤ_gt_えば.png"
   },
   {
     "title": "When the rain",
@@ -3633,27 +3633,6 @@
     "cover": "grin_hyun.png"
   },
   {
-    "title": "Retribution",
-    "artist": "nm-y & Kry.exe",
-    "b15": false,
-    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retribution.png",
-    "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 429
-      },
-      "invaded": {
-        "level": 11.0,
-        "song_level_id": 428
-      },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 427
-      }
-    },
-    "cover": "retribution_nmy__kryexe.png"
-  },
-  {
     "title": "Re: End of a Dream",
     "artist": "uma vs. モリモリあつし",
     "b15": false,
@@ -3673,6 +3652,27 @@
       }
     },
     "cover": "re_end_of_a_dream_uma_vs_モリモリあつし.png"
+  },
+  {
+    "title": "Retribution",
+    "artist": "nm-y & Kry.exe",
+    "b15": false,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retribution.png",
+    "charts": {
+      "massive": {
+        "level": 15.5,
+        "song_level_id": 429
+      },
+      "invaded": {
+        "level": 11.0,
+        "song_level_id": 428
+      },
+      "detected": {
+        "level": 4.0,
+        "song_level_id": 427
+      }
+    },
+    "cover": "retribution_nmy__kryexe.png"
   },
   {
     "title": "CO5M1C R4ILR0AD",
