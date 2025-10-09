@@ -1,14 +1,8 @@
 import re
 import signal
-
-import uiautomator2 as u2
 import time
 import os
 from function import ocr_region,init_device
-import adbutils
-
-
-
 
 
 song_coords = [
@@ -35,7 +29,7 @@ def signal_handler(signum, frame):
 
 
     wait_start = time.time()
-    while is_saving_screenshot and (time.time() - wait_start < 5):
+    while is_saving_screenshot and (time.time() - wait_start < 3):
         time.sleep(0.1)
 
     if is_saving_screenshot:
@@ -85,17 +79,16 @@ def slide(d):
 
 
 def screenshot(d, song_name):
-    """修改截图函数，增加状态标记"""
     global is_saving_screenshot
     local_path = os.path.join(screenshot_dir, f"{song_name}.png")
     try:
-        is_saving_screenshot = True  # 开始截图，标记状态
+        is_saving_screenshot = True
         d.screenshot(local_path)
         print(f"已保存截图：{local_path}")
     except Exception as e:
         print(f"截图失败：{str(e)}")
     finally:
-        is_saving_screenshot = False  # 无论成功失败，都标记为完成
+        is_saving_screenshot = False
     return local_path
 
 

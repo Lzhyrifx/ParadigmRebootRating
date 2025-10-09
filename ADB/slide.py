@@ -8,7 +8,7 @@ d = init_device()
 w = d.info['displayWidth']
 h = d.info['displayHeight'] * 0.5
 reset_region = (947,448,1535,520)
-level_
+
 def slide(x,start_y,end_y):
     d.touch.down(x, start_y)
 
@@ -45,16 +45,19 @@ def reset():
 
     time.sleep(0.2)
 
+
 temp_dir = "Temp/"
+if not os.path.exists(temp_dir):
+    os.makedirs(temp_dir)
 
 screenshot(d, temp_dir)
 
+image_path = os.path.join(temp_dir, "screenshot.png")
 
-image_path = os.path.join(temp_dir)
-
-level_str = ocr_region(reset_region, image_path).txts[0]
-
-
+random_level = ocr_region(reset_region, image_path).txts[0]
+random_level = random_level.replace("t", "+")
+if random_level != "16" or "16+" or "17"
+    d.click()
 
 reset()
 scroll()
