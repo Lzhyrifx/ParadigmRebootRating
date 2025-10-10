@@ -1,13 +1,9 @@
 import os
 
-import uiautomator2 as u2
 import time
-from function import init_device, ocr_region, screenshot
+from function import init_device, ocr_region
 
-d = init_device()
-w = d.info['displayWidth']
-h = d.info['displayHeight'] * 0.5
-reset_region = (947,448,1535,520)
+
 
 def slide(x,start_y,end_y):
     d.touch.down(x, start_y)
@@ -22,13 +18,12 @@ def scroll():
 
     x = w * 0.5
     start_y = 1800
-    end_y = 843
+    end_y = 880
 
-    slide(x, start_y, end_y)
-
+    d.swipe(x, start_y, x,end_y,duration=0.1)
     d.click(x, h)
 
-    slide(x, start_y, end_y)
+    d.swipe(x, start_y, x,end_y,duration=0.1)
 
     d.click(x, h)
 
@@ -45,25 +40,26 @@ def reset():
 
     time.sleep(0.2)
 
+def screenshot(d,temp_dir):
+    if not os.path.exists(temp_dir):
+        os.makedirs(temp_dir)
+    local_path = os.path.join(temp_dir, f"Temp.png")
+    try:
+        d.screenshot(local_path)
+        print(f"已保存截图：{local_path}")
+    except Exception as e:
+        print(f"截图失败：{str(e)}")
+    return local_path
 
 temp_dir = "Temp/"
-if not os.path.exists(temp_dir):
-    os.makedirs(temp_dir)
+d = init_device()
+w = d.info['displayWidth']
+h = d.info['displayHeight'] * 0.5
+reset_region = (947,448,1535,520)
 
-screenshot(d, temp_dir)
 
-image_path = os.path.join(temp_dir, "screenshot.png")
 
-random_level = ocr_region(reset_region, image_path).txts[0]
-random_level = random_level.replace("t", "+")
-if random_level != "16" or "16+" or "17"
-    d.click()
+while True:
+    scroll()
+    time.sleep(3)
 
-reset()
-scroll()
-time.sleep(1)
-scroll()
-time.sleep(1)
-scroll()
-time.sleep(1)
-scroll()

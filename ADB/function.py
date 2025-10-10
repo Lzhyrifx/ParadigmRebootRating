@@ -15,7 +15,7 @@ engine = RapidOCR(
         "Rec.model_type": ModelType.MOBILE,
     }
 )
-LAST_DEVICE_FILE = ".last_used_device"
+LAST_DEVICE_FILE = ".used_device"
 
 def init_device():
     try:

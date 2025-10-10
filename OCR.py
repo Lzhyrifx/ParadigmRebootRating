@@ -225,7 +225,7 @@ def save_to_json(match_result, ocr_score_str, output_file):
             print(f"已存在相同Rating的记录，旧分数: {existing_score}")
             new_score = int(ocr_score_str)
 
-            # 后续的分数对比逻辑不变
+
             if new_score > existing_score:
                 existing_data[i] = result_data
                 print(f"更新记录: {result_data['title']} 分数 {existing_score} -> {new_score}")
@@ -295,13 +295,17 @@ all_songs_data = preprocess_songs_data(all_songs_raw)
 
 difficulty_points = {"massive": (2687, 1780),"invaded": (2416, 1780),"detected": (2132, 1780),}
 
+
+
 region_rating1 = (559, 1180, 1319, 1323)
 region_song1 = (935, 266, 2272, 346)
 region_song_mini1 = (1435,266,1754,340)
 region_artist1 = (1000,351,2200,425)
 
+
+
 region_rating2 = (1946, 1485, 2420, 1596)
-region_song2 = (1603,454,3016,535)
+region_song2 = (1603,454,3016,547)
 region_song_mini2 = (2598,454,3016,545)
 region_artist2 = (1681,555,3018,624)
 

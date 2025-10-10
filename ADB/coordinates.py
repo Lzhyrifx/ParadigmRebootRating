@@ -5,7 +5,7 @@ import numpy as np
 import os
 import adbutils
 
-LAST_DEVICE_FILE = ".last_used_device"
+LAST_DEVICE_FILE = ".used_device"
 
 def init_device():
     """初始化并选择要连接的设备"""
