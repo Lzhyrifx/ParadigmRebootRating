@@ -18,7 +18,7 @@ def scroll():
 
     x = w * 0.5
     start_y = 1800
-    end_y = 843
+    end_y = 840
 
     slide(x, start_y, end_y)
 
