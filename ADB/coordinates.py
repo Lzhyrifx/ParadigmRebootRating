@@ -73,7 +73,6 @@ def init_device():
 
 
 def take_screenshot_safe(device_id, folder="ADBSCR", filename="screenshot.png"):
-    """使用指定设备的ADB截图并安全保存到指定文件夹"""
     try:
         # 确保文件夹存在
         os.makedirs(folder, exist_ok=True)
@@ -102,19 +101,18 @@ def take_screenshot_safe(device_id, folder="ADBSCR", filename="screenshot.png"):
         with open(full_path, "wb") as f:
             f.write(png_data)
 
-        print(f"✅ 截图已成功保存到 {full_path}")
+        print(f"截图已成功保存到 {full_path}")
         return img
 
     except subprocess.CalledProcessError as e:
-        print("❌ ADB命令失败:", e.stderr)
+        print("ADB命令失败:", e.stderr)
     except Exception as e:
-        print("❌ 错误:", str(e))
+        print("错误:", str(e))
         print("可能原因：设备未连接、未开启USB调试、adb未安装")
     return None
 
 
 def get_coordinates(event, x, y, flags, param):
-    """鼠标回调函数，用于获取点击的坐标"""
     if event == cv2.EVENT_LBUTTONDOWN:
         scale_factor = param['scale_factor']
         orig_x = int(x / scale_factor)
