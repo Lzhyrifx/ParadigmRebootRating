@@ -2,7 +2,6 @@ import subprocess
 
 def show_android_screen():
     try:
-        # 启动 scrcpy，显示设备屏幕
         subprocess.run(["scrcpy"], check=True)
     except subprocess.CalledProcessError as e:
         print("启动 scrcpy 失败:", e)

@@ -1,0 +1,91 @@
+{
+  "file": "background.png",
+  "font": "1.ttf",
+  "title_font": "1.ttf",
+  "score_font": "1.ttf",
+  "generated_by": {
+    "x": 850,
+    "y": 950,
+    "font_size": 14,
+    "text_rgba": [200, 200, 200, 255]
+  },
+  "username": {
+    "x": 30,
+    "y": 150,
+    "font_size": 28,
+    "text_rgba": [255, 255, 255, 255]
+  },
+  "rating": {
+    "x": 30,
+    "y": 200,
+    "font_size": 24,
+    "text_rgba": [255, 255, 255, 255]
+  },
+  "b35_rating": {
+    "x": 30,
+    "y": 240,
+    "font_size": 20,
+    "text_rgba": [255, 255, 255, 255]
+  },
+  "b15_rating": {
+    "x": 30,
+    "y": 280,
+    "font_size": 20,
+    "text_rgba": [100, 180, 255, 255]
+  },
+  "character": {
+    "x": 50,
+    "y": 350,
+    "width": 250,
+    "height": 400
+  },
+  "padding": {
+    "x": 10,
+    "y": 10
+  },
+  "single": {
+    "width": 160,
+    "height": 80,
+    "title": {
+      "x": 60,
+      "y": 10,
+      "font_size": 12,
+      "text_rgba": [255, 255, 255, 255]
+    },
+    "index": {
+      "x": 10,
+      "y": 10,
+      "font_size": 12,
+      "text_rgba": [255, 255, 255, 255]
+    },
+    "difficulty": {
+      "x": 10,
+      "y": 30,
+      "font_size": 12,
+      "text_rgba": [255, 255, 255, 255]
+    },
+    "score": {
+      "x": 10,
+      "y": 50,
+      "font_size": 12,
+      "text_rgba": [255, 255, 255, 255]
+    },
+    "rating": {
+      "x": 10,
+      "y": 70,
+      "font_size": 12,
+      "text_rgba": [255, 255, 255, 255]
+    }
+  },
+  "det_rgba": [200, 200, 200, 255],
+  "ivd_rgba": [100, 100, 255, 255],
+  "msv_rgba": [255, 100, 255, 255],
+  "b35_offset": {
+    "x": 350,
+    "y": 30
+  },
+  "b15_offset": {
+    "x": 350,
+    "y": 400
+  }
+}
