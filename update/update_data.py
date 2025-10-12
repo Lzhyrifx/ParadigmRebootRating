@@ -6,13 +6,13 @@ import re
 import urllib.parse
 import time
 from bs4 import BeautifulSoup
-from requests.exceptions import HTTPError, ConnectionError
+from paths import ROOT_DIR
 
 
 COVER_URL_RETRIES = 3
 
 
-DATA_FILE = "prr_songs_data.json"
+DATA_FILE = ROOT_DIR / "prr_songs_data.json"
 
 
 SPECIAL_TITLE_MAP = {
@@ -139,85 +139,76 @@ def extract_song_info(url):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
     }
-
-    try:
-        response = httpx.get(url, headers=headers, timeout=15)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+    response = httpx.get(url, headers=headers, timeout=15)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
 
 
-        title_elem = soup.find("h1", class_="firstHeading")
-        title = title_elem.text.strip() if title_elem else "未知标题"
+    title_elem = soup.find("h1", class_="firstHeading")
+    title = title_elem.text.strip() if title_elem else "未知标题"
 
 
-        artist = "未知艺术家"
-        data_full_div = soup.find("div", class_="data full")
-        if data_full_div and (artist_a := data_full_div.find("a")):
-            artist = artist_a.text.strip()
+    artist = "未知艺术家"
+    data_full_div = soup.find("div", class_="data full")
+    if data_full_div and (artist_a := data_full_div.find("a")):
+        artist = artist_a.text.strip()
+    else:
+        # 备选方案：信息框
+        infobox = soup.find("table", class_="infobox")
+        if infobox:
+            for row in infobox.find_all("tr"):
+                if (th := row.find("th")) and "艺术家" in th.text:
+                    if (td := row.find("td")):
+                        artist = td.text.strip()
+                        break
+
+
+    charts = {v: {"level": None} for v in DIFFICULTY_LABEL_MAP.values()}
+    label_divs = soup.find_all("div", class_="label")
+
+    for label_div in label_divs:
+
+        if not (label_b := label_div.find("b")):
+            continue
+        label_text = label_b.text.strip()
+        if label_text.startswith("[") and label_text.endswith("]"):
+            code = label_text[1:-1].upper()
+            difficulty_type = DIFFICULTY_LABEL_MAP.get(code)
+            if not difficulty_type:
+                continue
         else:
-            # 备选方案：信息框
-            infobox = soup.find("table", class_="infobox")
-            if infobox:
-                for row in infobox.find_all("tr"):
-                    if (th := row.find("th")) and "艺术家" in th.text:
-                        if (td := row.find("td")):
-                            artist = td.text.strip()
-                            break
+            continue
 
-        # 提取难度定数
-        charts = {v: {"level": None} for v in DIFFICULTY_LABEL_MAP.values()}
-        label_divs = soup.find_all("div", class_="label")
 
-        for label_div in label_divs:
-            # 解析难度标识（如[DET]）
-            if not (label_b := label_div.find("b")):
-                continue
-            label_text = label_b.text.strip()
-            if label_text.startswith("[") and label_text.endswith("]"):
-                code = label_text[1:-1].upper()
-                difficulty_type = DIFFICULTY_LABEL_MAP.get(code)
-                if not difficulty_type:
-                    continue
-            else:
-                continue
+        if not (data_div := label_div.find_next_sibling("div", class_="data")):
+            continue
+        if not (b_elem := data_div.find("b")):
+            continue
+        integer_part = b_elem.text.strip().replace("+", "").strip()
+        if not integer_part.isdigit():
+            continue
 
-            # 解析对应定数
-            if not (data_div := label_div.find_next_sibling("div", class_="data")):
-                continue
-            if not (b_elem := data_div.find("b")):
-                continue
-            integer_part = b_elem.text.strip().replace("+", "").strip()
-            if not integer_part.isdigit():
-                continue
+        if not (small_elem := data_div.find("small")):
+            continue
+        if not (decimal_match := re.search(r"\.(\d+)", small_elem.text.strip())):
+            continue
+        decimal_part = decimal_match.group(1)
 
-            if not (small_elem := data_div.find("small")):
-                continue
-            if not (decimal_match := re.search(r"\.(\d+)", small_elem.text.strip())):
-                continue
-            decimal_part = decimal_match.group(1)
+        # 组合为浮点数
+        try:
+            charts[difficulty_type]["level"] = float(f"{integer_part}.{decimal_part}")
+        except ValueError:
+            print(f"[{title}] 定数解析失败: {integer_part}.{decimal_part}")
 
-            # 组合为浮点数
-            try:
-                charts[difficulty_type]["level"] = float(f"{integer_part}.{decimal_part}")
-            except ValueError:
-                print(f"[{title}] 定数解析失败: {integer_part}.{decimal_part}")
+    return {
+        "title": title,
+        "artist": artist,
+        "b15": True,
+        "cover_url": None,
+        "charts": charts
 
-        return {
-            "title": title,
-            "artist": artist,
-            "b15": True,
-            "cover_url": None,
-            "charts": charts
+    }
 
-        }
-
-    except HTTPError as e:
-        print(f"网页访问错误: {str(e)}")
-    except ConnectionError as e:
-        print(f"网络连接错误: {str(e)}")
-    except Exception as e:
-        print(f"信息提取错误: {str(e)}")
-    return None
 
 
 def single_data(url, output_file=None):
@@ -249,13 +240,6 @@ def single_data(url, output_file=None):
     songs_data.insert(0, song_info)
     save_results(songs_data)
 
-    # 如需单独保存
-    if output_file:
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(song_info, f, ensure_ascii=False, indent=2)
-        print(f"单独保存到 {output_file}")
-
-    print(f"处理完成: {song_info['title']}")
 
 
 def main():

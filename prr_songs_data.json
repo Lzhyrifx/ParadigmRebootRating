@@ -1,5 +1,175 @@
 [
   {
+    "title": "Inverted Paradise",
+    "artist": "Essbee",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/24/Cover_invertedparadise.png",
+    "charts": {
+      "detected": {
+        "level": 6.0
+      },
+      "invaded": {
+        "level": 13.8
+      },
+      "massive": {
+        "level": 16.6
+      }
+    }
+  },
+  {
+    "title": "『PIXEL OVERFLØW』",
+    "artist": "AisE",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6e/Cover_pixeloverflow.png",
+    "charts": {
+      "detected": {
+        "level": 3.0
+      },
+      "invaded": {
+        "level": 9.0
+      },
+      "massive": {
+        "level": 14.6
+      }
+    }
+  },
+  {
+    "title": "归零",
+    "artist": "KAIRCI",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/12/Cover_guiling.png",
+    "charts": {
+      "detected": {
+        "level": 4.0
+      },
+      "invaded": {
+        "level": 9.5
+      },
+      "massive": {
+        "level": 14.6
+      }
+    }
+  },
+  {
+    "title": "GRANDLUX::OBLIVIO",
+    "artist": "DRIVE.",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/92/Cover_grandluxoblivio.png",
+    "charts": {
+      "detected": {
+        "level": 4.0
+      },
+      "invaded": {
+        "level": 8.0
+      },
+      "massive": {
+        "level": 14.3
+      }
+    }
+  },
+  {
+    "title": "Memorial Time Capsule",
+    "artist": "yuudo",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c4/Cover_memorialtimecapsule.png",
+    "charts": {
+      "detected": {
+        "level": 4.0
+      },
+      "invaded": {
+        "level": 11.5
+      },
+      "massive": {
+        "level": 15.3
+      }
+    }
+  },
+  {
+    "title": "だってerror",
+    "artist": "Alice.",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/19/Cover_datteerror.png",
+    "charts": {
+      "detected": {
+        "level": 6.0
+      },
+      "invaded": {
+        "level": 12.0
+      },
+      "massive": {
+        "level": 15.9
+      }
+    }
+  },
+  {
+    "title": "Install me",
+    "artist": "CHRYSAD",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c5/Cover_installme.png",
+    "charts": {
+      "detected": {
+        "level": 5.0
+      },
+      "invaded": {
+        "level": 11.5
+      },
+      "massive": {
+        "level": 15.2
+      }
+    }
+  },
+  {
+    "title": "キオク回路",
+    "artist": "ShiBa",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a7/Cover_kiokukairo.png",
+    "charts": {
+      "detected": {
+        "level": 3.0
+      },
+      "invaded": {
+        "level": 10.0
+      },
+      "massive": {
+        "level": 14.2
+      }
+    }
+  },
+  {
+    "title": "Mermaid in binary",
+    "artist": "みーに",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/14/Cover_mermaidinbinary.png",
+    "charts": {
+      "detected": {
+        "level": 5.0
+      },
+      "invaded": {
+        "level": 13.4
+      },
+      "massive": {
+        "level": 16.1
+      }
+    }
+  },
+  {
+    "title": "残響404号DDD線",
+    "artist": "TAKIO",
+    "b15": true,
+    "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/47/Cover_zankyou404.png",
+    "charts": {
+      "detected": {
+        "level": 7.0
+      },
+      "invaded": {
+        "level": 14.4
+      },
+      "massive": {
+        "level": 16.8
+      }
+    }
+  },
+  {
     "title": "LABYRINTHOX",
     "artist": "BlackYooh vs. siromaru",
     "b15": true,

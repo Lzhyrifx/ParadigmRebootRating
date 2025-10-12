@@ -80,38 +80,46 @@ def level(image_path):
 def ocr_optimize(text):
     return text.replace('/', '').replace('、', '').replace(',', '').replace('.', '')
 
-def scr_ocr(region_song,region_artist,region_rating):
+def scr_ocr(region_song, region_artist, region_rating):
     mini_region = False
     song_name = os.path.splitext(filename)[0]
 
     result_song_obj = ocr_region(img_path, region_song)
-    if not result_song_obj or not result_song_obj.txts or not result_song_obj.txts[0].strip():
+    song_text = ""
+    if result_song_obj and result_song_obj.txts:
+        song_text = result_song_obj.txts[0].strip()
+
+
+    if not song_text or (result_type == "type2" and len(song_text) <= 7):
         if result_type == "type1":
             backup_region = region_song_mini1
         else:
             backup_region = region_song_mini2
         mini_region = True
-
         result_song_obj = ocr_region(img_path, backup_region)
+
+        if result_song_obj and result_song_obj.txts:
+            song_text = result_song_obj.txts[0].strip()
+
+
     result_artist_obj = ocr_region(img_path, region_artist)
     result_rating_obj = ocr_region(img_path, region_rating)
+
 
     result_song_obj.vis("Result/" + song_name + ".jpg")
     result_artist_obj.vis("Result/" + song_name + "ART.jpg")
     result_rating_obj.vis("Result/" + song_name + "RAT.jpg")
 
-
-    result_song_ocr = ocr_optimize(result_song_obj.txts[0] if result_song_obj.txts else "")
+    result_song_ocr = ocr_optimize(song_text)
     result_artist_ocr = ocr_optimize(result_artist_obj.txts[0] if result_artist_obj.txts else "")
-    result_rating_ocr= ocr_optimize(result_rating_obj.txts[0] if result_rating_obj.txts else "")
-
+    result_rating_ocr = ocr_optimize(result_rating_obj.txts[0] if result_rating_obj.txts else "")
     result_rating_ocr = result_rating_ocr.lstrip('0')
 
     print(result_song_ocr)
     print(result_artist_ocr)
     print(result_rating_ocr)
 
-    return result_song_ocr, result_artist_ocr, result_rating_ocr,mini_region
+    return result_song_ocr, result_artist_ocr, result_rating_ocr, mini_region
 
 
 def method_hierarchical_match(items, song, artist, difficulty, mini_match=False):
@@ -129,13 +137,13 @@ def method_hierarchical_match(items, song, artist, difficulty, mini_match=False)
             filtered_items = short_title_items
     compare_texts = [f"{item['title']} {item['artist']}" for item in filtered_items]
 
-    query_text = f"{song} {artist}"
-
+    match_text = f"{song} {artist}"
+    print(match_text)
     result_match = process.extractOne(
-        query_text,
+        match_text,
         compare_texts,
         scorer=fuzz.partial_ratio,
-        score_cutoff=50
+        score_cutoff=60
     )
 
     if result_match:
@@ -161,7 +169,6 @@ def preprocess_songs_data(raw_data):
                 "artist": song["artist"],
                 "difficulty": difficulty,
                 "level": info["level"],
-                "song_level_id": info["song_level_id"],
                 "cover_url": song["cover_url"],
                 "b15": song["b15"]
             })
@@ -179,7 +186,6 @@ def save_to_json(match_result, ocr_score_str, output_file):
         "title": match_result['title'],
         "artist": match_result['artist'],
         "difficulty": match_result['difficulty'],
-        "song_level_id": match_result.get('song_level_id', ''),
         "cover_url": match_result.get('cover_url', ''),
         "b15": match_result.get('b15', False),
         "level": match_result.get('level', ''),
@@ -217,7 +223,7 @@ def save_to_json(match_result, ocr_score_str, output_file):
 
         existing_rating = float(item.get('rating', 0.0))
         new_rating = float(result_data['rating'])
-        rating_match = abs(existing_rating - new_rating) < 0.001  # 允许微小精度误差
+        rating_match = abs(existing_rating - new_rating) < 0.001
 
         if title_match and difficulty_match and rating_match:
             found_existing = True
@@ -284,6 +290,7 @@ def best(input_file):
 
 json_file_path = "prr_songs_data.json"
 output_file="songs_results.json"
+
 bounds = [900000, 930000, 950000, 970000, 980000, 990000]
 rewards = [3, 1, 1, 1, 1, 1]
 
@@ -295,29 +302,32 @@ all_songs_data = preprocess_songs_data(all_songs_raw)
 
 difficulty_points = {"massive": (2687, 1780),"invaded": (2416, 1780),"detected": (2132, 1780),}
 
+supported_extensions = {'.png', '.jpg', '.jpeg'}
 
 
+
+# 结算界面(x1, y1, x2, y2)
 region_rating1 = (559, 1180, 1319, 1323)
-region_song1 = (935, 266, 2272, 346)
-region_song_mini1 = (1435,266,1754,340)
+region_song1 = (935, 266, 2272, 350)
+region_song_mini1 = (1435,266,1754,350)
 region_artist1 = (1000,351,2200,425)
 
 
-
+# 选曲界面(x1, y1, x2, y2)
 region_rating2 = (1946, 1485, 2420, 1596)
-region_song2 = (1603,454,3016,547)
-region_song_mini2 = (2598,454,3016,545)
-region_artist2 = (1681,555,3018,624)
+region_song2 = (1603,450,3016,545)
+region_song_mini2 = (2598,450,3016,545)
+region_artist2 = (1681,553,3018,628)
 
-src_folder = "ADB/SCR"
+src_folder = "SCR"
 
 start_time = time.time()
 
 for filename in os.listdir(src_folder):
-    if filename.upper().endswith('.PNG'):
+    _, ext = os.path.splitext(filename)
+    if ext.lower() in supported_extensions:
         img_path = os.path.join(src_folder, filename)
         result_type = distinguish(img_path)
-
         result_level = level(img_path)
 
         if result_level == "ERROR":
@@ -329,17 +339,17 @@ for filename in os.listdir(src_folder):
         else:
             continue
 
-        result_song, result_artist, result_rating ,mini_region= final_result
+        result_song, result_artist, result_rating, mini_region = final_result
 
         match_result, score = method_hierarchical_match(
             items=all_songs_data,
             song=result_song,
             artist=result_artist,
             difficulty=result_level,
-            mini_match= mini_region
+            mini_match=mini_region
         )
         if match_result:
-            save_to_json(match_result, result_rating,output_file)
+            save_to_json(match_result, result_rating, output_file)
         else:
             print("ERROR")
         print("\n")

@@ -52,10 +52,10 @@ def get_new_songs_urls(base_url, target_section="新谱速递"):
 
 
 if __name__ == "__main__":
-    # 网站基础URL
+
     BASE_WIKI_URL = "https://paradigmrebootzh.miraheze.org/wiki/"
 
-    # 获取新谱速递的所有歌曲URL
+
     new_song_urls = get_new_songs_urls(BASE_WIKI_URL)
 
     if not new_song_urls:

@@ -1,14 +1,11 @@
-# TODO: Implement b50 table generation functions
 import json
 import io
 import os
+import math
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter, ImageEnhance
-
-
-
-
 from dataclasses import dataclass
+
 
 # 模拟 PlayRecordInfo 类
 @dataclass
@@ -16,6 +13,7 @@ class PlayRecordInfo:
     song_level: 'SongLevelInfo'
     score: int
     rating: float
+
 
 # 模拟 SongLevelInfo 类
 @dataclass
@@ -26,13 +24,13 @@ class SongLevelInfo:
     level: float
     b15: bool
 
+
 # 模拟 backend_config 配置
 class BackendConfig:
     RESOURCE_COVER_PATH = "resources/covers/"  # 封面图存放路径，需确保有default.png和测试用封面
 
 
 backend_config = BackendConfig()
-
 
 
 def image_to_byte_array(image: Image) -> bytes:
@@ -43,23 +41,32 @@ def image_to_byte_array(image: Image) -> bytes:
 
 
 def draw_single_text(draw: ImageDraw, font: ImageFont, config, content):
-    df = font.font_variant(size=config['font_size'])
-    draw.multiline_text((config['x'], config['y']),
-                        text=content,
-                        font=df,
-                        fill=tuple(config['text_rgba']))
+    # 增加字体大小以提高清晰度，后续会缩放
+    df = font.font_variant(size=int(config['font_size'] * 1.5))
+    # 使用抗锯齿渲染
+    draw.multiline_text(
+        (config['x'], config['y']),
+        text=content,
+        font=df,
+        fill=tuple(config['text_rgba']),
+        align="center",
+        spacing=2
+    )
 
 
-def draw_single_text_border(draw: ImageDraw, font: ImageFont, config, content, color=(0, 0, 0, 0)):
-    df = font.font_variant(size=config['font_size'])
-    draw.multiline_text((config['x'] + 1, config['y']),
-                        text=content, font=df, fill=color)
-    draw.multiline_text((config['x'] - 1, config['y']),
-                        text=content, font=df, fill=color)
-    draw.multiline_text((config['x'], config['y'] + 1),
-                        text=content, font=df, fill=color)
-    draw.multiline_text((config['x'], config['y'] - 1),
-                        text=content, font=df, fill=color)
+def draw_single_text_border(draw: ImageDraw, font: ImageFont, config, content, color=(0, 0, 0, 255)):
+    # 边框也使用更大的字体
+    df = font.font_variant(size=int(config['font_size'] * 1.5))
+    positions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+    for dx, dy in positions:
+        draw.multiline_text(
+            (config['x'] + dx, config['y'] + dy),
+            text=content,
+            font=df,
+            fill=color,
+            align="center",
+            spacing=2
+        )
 
 
 async def generate_b50_img(play_records: list[PlayRecordInfo], nickname, character: str = 'Para_Young_Awaken',
@@ -81,76 +88,164 @@ async def generate_b50_img(play_records: list[PlayRecordInfo], nickname, charact
     b15_ra /= 1500
     username = nickname
 
-    # Generate Image process
+    # 加载配置
     with open(config_path, 'r', encoding='utf-8') as f:
         config = json.load(f)
-    template = Image.open(config['file']).convert("RGBA")
-    font = ImageFont.truetype(config['font'], encoding='unic')
-    title_font = ImageFont.truetype(config['title_font'], encoding='unic')
-    score_font = ImageFont.truetype(config['score_font'], encoding='unic')
+
+    # 先创建高分辨率模板，后续再缩小，提高清晰度
+    base_template = Image.open(config['file']).convert("RGBA")
+
+    # 为背景图添加高斯模糊，radius=0.7
+    base_template = base_template.filter(ImageFilter.GaussianBlur(radius=0.7))
+
+    scale_factor = 2  # 临时缩放因子，提高绘制精度
+    template = Image.new(
+        "RGBA",
+        (base_template.width * scale_factor, base_template.height * scale_factor),
+        (0, 0, 0, 0)
+    )
+    # 放大基础模板
+    template.paste(
+        base_template.resize(
+            (base_template.width * scale_factor, base_template.height * scale_factor),
+            Image.Resampling.LANCZOS  # 使用高质量缩放
+        )
+    )
+
+    # 加载字体，使用更高的初始大小
+    font = ImageFont.truetype(config['font'], size=int(12 * scale_factor), encoding='unic')
+    title_font = ImageFont.truetype(config['title_font'], size=int(14 * scale_factor), encoding='unic')
+    score_font = ImageFont.truetype(config['score_font'], size=int(16 * scale_factor), encoding='unic')
     draw = ImageDraw.Draw(template)
 
-    # Draw credential
-    draw_single_text(draw, font, config['generated_by'], credential_info)
+    # 调整配置坐标以适应缩放
+    scaled_config = json.loads(json.dumps(config))  # 深拷贝配置
+    for key in ['generated_by', 'username', 'rating', 'b35_rating', 'b15_rating']:
+        scaled_config[key]['x'] *= scale_factor
+        scaled_config[key]['y'] *= scale_factor
+        scaled_config[key]['font_size'] *= scale_factor
 
-    # Draw username
-    draw_single_text(draw, font, config['username'], username)
+    # 绘制信息
+    draw_single_text(draw, font, scaled_config['generated_by'], credential_info)
+    draw_single_text(draw, font, scaled_config['username'], username)
+    draw_single_text(draw, font, scaled_config['rating'], "%.4f" % b50_ra)
+    draw_single_text(draw, font, scaled_config['b35_rating'], "%.4f" % b35_ra)
+    draw_single_text(draw, font, scaled_config['b15_rating'], "%.4f" % b15_ra)
 
-    # Draw rating
-    draw_single_text(draw, font, config['rating'], "%.4f" % b50_ra)
-    draw_single_text(draw, font, config['b35_rating'], "%.4f" % b35_ra)
-    draw_single_text(draw, font, config['b15_rating'], "%.4f" % b15_ra)
+    # 调整单个记录的配置
+    scaled_config['b35_offset']['x'] *= scale_factor
+    scaled_config['b35_offset']['y'] *= scale_factor
+    scaled_config['b15_offset']['x'] *= scale_factor
+    scaled_config['b15_offset']['y'] *= scale_factor
+    scaled_config['padding']['x'] *= scale_factor
+    scaled_config['padding']['y'] *= scale_factor
+    scaled_config['single']['width'] *= scale_factor
+    scaled_config['single']['height'] *= scale_factor
 
+    # 调整单个记录内部元素的配置
+    for key in ['title', 'index', 'difficulty', 'score', 'rating']:
+        scaled_config['single'][key]['x'] *= scale_factor
+        scaled_config['single'][key]['y'] *= scale_factor
+        scaled_config['single'][key]['font_size'] *= scale_factor
 
-    # Draw single
-    x_offset, y_offset = config['b35_offset']['x'], config['b35_offset']['y']
-    x_padding, y_padding = config['padding']['x'], config['padding']['y']
+    # 绘制B35记录
+    x_offset, y_offset = scaled_config['b35_offset']['x'], scaled_config['b35_offset']['y']
+    x_padding, y_padding = scaled_config['padding']['x'], scaled_config['padding']['y']
     for i, record in enumerate(b35):
-        single = generate_single(config, font, title_font, score_font, record, i + 1)
+        single = generate_single(
+            scaled_config,
+            font,
+            title_font,
+            score_font,
+            record,
+            i + 1,
+            scale_factor=scale_factor
+        )
         template.alpha_composite(single, (x_offset, y_offset))
-        x_offset += config['single']['width'] + x_padding
+        x_offset += scaled_config['single']['width'] + x_padding
         if (i + 1) % 5 == 0:
-            x_offset = config['b35_offset']['x']
-            y_offset += config['single']['height'] + y_padding
+            x_offset = scaled_config['b35_offset']['x']
+            y_offset += scaled_config['single']['height'] + y_padding
 
-    x_offset, y_offset = config['b15_offset']['x'], config['b15_offset']['y']
+    # 绘制B15记录
+    x_offset, y_offset = scaled_config['b15_offset']['x'], scaled_config['b15_offset']['y']
     for i, record in enumerate(b15):
-        single = generate_single(config, font, title_font, score_font, record, i + 1)
+        single = generate_single(
+            scaled_config,
+            font,
+            title_font,
+            score_font,
+            record,
+            i + 1,
+            scale_factor=scale_factor
+        )
         template.alpha_composite(single, (x_offset, y_offset))
-        x_offset += config['single']['width'] + x_padding
+        x_offset += scaled_config['single']['width'] + x_padding
         if (i + 1) % 5 == 0:
-            x_offset = config['b15_offset']['x']
-            y_offset += config['single']['height'] + y_padding
+            x_offset = scaled_config['b15_offset']['x']
+            y_offset += scaled_config['single']['height'] + y_padding
 
-    template = template.resize((int(template.width / template.height * height), height))
+    # 最终缩放到目标尺寸，使用高质量缩放算法
+    target_width = int(template.width / template.height * height)
+    template = template.resize(
+        (target_width, height),
+        Image.Resampling.LANCZOS  # 这是保持清晰度的关键
+    )
+
     return template
 
 
 def generate_single(config, font: ImageFont, title_font: ImageFont, score_font: ImageFont,
-                    record: PlayRecordInfo, index: int, radius=3):
+                    record: PlayRecordInfo, index: int, radius=3, scale_factor=2):
+    # 加载封面图
     cover_path = backend_config.RESOURCE_COVER_PATH + record.song_level.cover
     if not os.path.exists(cover_path):
-        cover_path = 'default.png'
+        cover_path = 'res/default.png'
+
     cover = Image.open(cover_path).convert("RGBA")
-    cover = ImageOps.fit(cover, (config['single']['width'] - radius * 2, config['single']['height'] - radius * 2))
-    single = Image.new("RGBA", (config['single']['width'], config['single']['width']), (0, 0, 0, 0))
+    cover_size = (
+        config['single']['width'] - radius * 2,
+        config['single']['height'] - radius * 2
+    )
+    # 使用高质量缩放
+    cover = ImageOps.fit(cover, cover_size, Image.Resampling.LANCZOS)
+
+    # 创建单个记录的图像
+    single = Image.new(
+        "RGBA",
+        (config['single']['width'], config['single']['height']),
+        (0, 0, 0, 0)
+    )
     single.paste(cover, (radius, radius))
+
+    # 处理封面效果
     single = single.filter(ImageFilter.GaussianBlur(radius=radius))
     enhancer = ImageEnhance.Brightness(single)
     single = enhancer.enhance(0.7)
+
     single_draw = ImageDraw.Draw(single)
-    # Draw single title
-    if len(record.song_level.title) > 18:
-        record.song_level.title = record.song_level.title[:15] + '...'
-    draw_single_text_border(single_draw, title_font, config['single']['title'], record.song_level.title)
-    draw_single_text(single_draw, title_font, config['single']['title'], record.song_level.title)
-    # Draw index
+
+    # 绘制标题
+    title = record.song_level.title
+    if len(title) > 18:
+        title = title[:15] + '...'
+    draw_single_text_border(single_draw, title_font, config['single']['title'], title)
+    draw_single_text(single_draw, title_font, config['single']['title'], title)
+
+    # 绘制索引
     index_str = '#' + ('0' if index < 10 else '') + str(index)
     draw_single_text_border(single_draw, font, config['single']['index'], index_str)
     draw_single_text(single_draw, font, config['single']['index'], index_str)
-    # Draw single difficulty
-    draw_single_text_border(single_draw, font, config['single']['difficulty'],
-                            record.song_level.difficulty)
+
+    # 绘制难度
+    draw_single_text_border(
+        single_draw,
+        font,
+        config['single']['difficulty'],
+        record.song_level.difficulty
+    )
+
+    # 根据难度设置颜色
     if record.song_level.difficulty == 'Detected':
         color = config['det_rgba']
     elif record.song_level.difficulty == 'Invaded':
@@ -159,22 +254,26 @@ def generate_single(config, font: ImageFont, title_font: ImageFont, score_font: 
         color = config['msv_rgba']
     else:
         color = config['text_rgba']
+
     df = font.font_variant(size=config['single']['difficulty']['font_size'])
-    single_draw.multiline_text((config['single']['difficulty']['x'], config['single']['difficulty']['y']),
-                               text=record.song_level.difficulty,
-                               fill=tuple(color), font=df)
-    # Draw single score
+    single_draw.multiline_text(
+        (config['single']['difficulty']['x'], config['single']['difficulty']['y']),
+        text=record.song_level.difficulty,
+        fill=tuple(color),
+        font=df,
+        align="center"
+    )
+
+    # 绘制分数
     draw_single_text_border(single_draw, score_font, config['single']['score'], str(record.score))
     draw_single_text(single_draw, score_font, config['single']['score'], str(record.score))
-    # Draw single rating
-    draw_single_text_border(single_draw, font, config['single']['rating'],
-                            "%.1f->%.2f" % (record.song_level.level, record.rating / 100))
-    draw_single_text(single_draw, font, config['single']['rating'],
-                     "%.1f->%.2f" % (record.song_level.level, record.rating / 100))
-    # Paste to template
+
+    # 绘制评级
+    rating_text = "%.1f->%.2f" % (record.song_level.level, record.rating / 100)
+    draw_single_text_border(single_draw, font, config['single']['rating'], rating_text)
+    draw_single_text(single_draw, font, config['single']['rating'], rating_text)
+
     return single
-
-
 
 
 async def test_generate_b50_img():
@@ -202,13 +301,15 @@ async def test_generate_b50_img():
         nickname="TestUser",
         character='Para_Young_Awaken',
         credential_info="Test Credential",
-        config_path="config.json",  # 确保配置文件存在
+        config_path="res/config.json",  # 确保配置文件存在
         height=1920
     )
-    # 保存生成的图片
-    img.save("test_b50.png")
+    # 保存生成的图片，使用高DPI设置
+    img.save("test_b50.png", dpi=(300, 300), optimize=True, quality=95)
     print("B50 image generated and saved as test_b50.png")
+
 
 # 运行测试函数
 import asyncio
+
 asyncio.run(test_generate_b50_img())
