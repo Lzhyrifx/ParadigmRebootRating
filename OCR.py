@@ -80,6 +80,7 @@ def level(image_path):
 def ocr_optimize(text):
     return text.replace('/', '').replace('、', '').replace(',', '').replace('.', '')
 
+
 def scr_ocr(region_song, region_artist, region_rating):
     mini_region = False
     song_name = os.path.splitext(filename)[0]
@@ -89,15 +90,15 @@ def scr_ocr(region_song, region_artist, region_rating):
     if result_song_obj and result_song_obj.txts:
         song_text = result_song_obj.txts[0].strip()
 
+    if not song_text.strip() or len(song_text.strip()) <= 5:
 
-    if not song_text or (result_type == "type2" and len(song_text) <= 7):
         if result_type == "type1":
             backup_region = region_song_mini1
         else:
             backup_region = region_song_mini2
         mini_region = True
-        result_song_obj = ocr_region(img_path, backup_region)
 
+        result_song_obj = ocr_region(img_path, backup_region)
         if result_song_obj and result_song_obj.txts:
             song_text = result_song_obj.txts[0].strip()
 
@@ -110,10 +111,12 @@ def scr_ocr(region_song, region_artist, region_rating):
     result_artist_obj.vis("Result/" + song_name + "ART.jpg")
     result_rating_obj.vis("Result/" + song_name + "RAT.jpg")
 
-    result_song_ocr = ocr_optimize(song_text)
-    result_artist_ocr = ocr_optimize(result_artist_obj.txts[0] if result_artist_obj.txts else "")
-    result_rating_ocr = ocr_optimize(result_rating_obj.txts[0] if result_rating_obj.txts else "")
+
+    result_song_ocr = song_text
+    result_artist_ocr = result_artist_obj.txts[0] if result_artist_obj.txts else ""
+    result_rating_ocr = result_rating_obj.txts[0] if result_rating_obj.txts else ""
     result_rating_ocr = result_rating_ocr.lstrip('0')
+
 
     print(result_song_ocr)
     print(result_artist_ocr)
@@ -131,14 +134,13 @@ def method_hierarchical_match(items, song, artist, difficulty, mini_match=False)
     if not filtered_items:
         return None, 0
 
-    if mini_match and len(song.strip()) <= 7:
-        short_title_items = [item for item in filtered_items if len(item['title']) <= 7]
+    if mini_match and len(song.strip()) <= 5:
+        short_title_items = [item for item in filtered_items if len(item['title']) <= 5]
         if short_title_items:
             filtered_items = short_title_items
     compare_texts = [f"{item['title']} {item['artist']}" for item in filtered_items]
 
     match_text = f"{song} {artist}"
-    print(match_text)
     result_match = process.extractOne(
         match_text,
         compare_texts,
@@ -316,10 +318,10 @@ region_artist1 = (1000,351,2200,425)
 # 选曲界面(x1, y1, x2, y2)
 region_rating2 = (1946, 1485, 2420, 1596)
 region_song2 = (1603,450,3016,545)
-region_song_mini2 = (2598,450,3016,545)
+region_song_mini2 = (2500,450,3016,545)
 region_artist2 = (1681,553,3018,628)
 
-src_folder = "SCR"
+src_folder = "ADB/SCR"
 
 start_time = time.time()
 

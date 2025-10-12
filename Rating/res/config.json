@@ -1,8 +1,8 @@
 {
-  "file": "background.png",
-  "font": "1.ttf",
-  "title_font": "1.ttf",
-  "score_font": "1.ttf",
+  "file": "res/background.png",
+  "font": "res/1.ttf",
+  "title_font": "res/1.ttf",
+  "score_font": "res/1.ttf",
   "generated_by": {
     "x": 850,
     "y": 950,
@@ -44,34 +44,34 @@
     "y": 10
   },
   "single": {
-    "width": 160,
-    "height": 80,
+    "width": 300,
+    "height": 150,
     "title": {
-      "x": 60,
-      "y": 10,
+      "x": 80,
+      "y": 20,
       "font_size": 12,
       "text_rgba": [255, 255, 255, 255]
     },
     "index": {
-      "x": 10,
-      "y": 10,
+      "x": 20,
+      "y": 20,
       "font_size": 12,
       "text_rgba": [255, 255, 255, 255]
     },
     "difficulty": {
-      "x": 10,
+      "x": 20,
       "y": 30,
       "font_size": 12,
       "text_rgba": [255, 255, 255, 255]
     },
     "score": {
-      "x": 10,
+      "x": 30,
       "y": 50,
       "font_size": 12,
       "text_rgba": [255, 255, 255, 255]
     },
     "rating": {
-      "x": 10,
+      "x": 30,
       "y": 70,
       "font_size": 12,
       "text_rgba": [255, 255, 255, 255]
