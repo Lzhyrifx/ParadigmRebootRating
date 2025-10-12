@@ -9,13 +9,15 @@ Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.mir
 ## 导入
 - 通过adb连接手机/平板进行批量截图<br>
 - 手动截图(支持选曲界面和结算界面)
+
+
 ## OCR
 判断截图类型<br>
 选取指定歌曲,曲师,分数区域<br>
 使用RapidOCR进行OCR
 
 ## 匹配
-通过[Paradigm Prober](https://prp.icel.site/)提供的API拉取全部歌曲数据到本地<br>
+通过github拉取全部歌曲数据到本地以及通过[范式：起源wiki](https://paradigmrebootzh.miraheze.org/wiki)更新新数据<br>
 匹配难度→曲师→歌曲<br>
 通过模糊匹配保存结果到本地
 
@@ -24,9 +26,8 @@ Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.mir
 选择Rating最高的35首旧版本歌曲和15首新版本歌曲上传[Paradigm Prober](https://prp.icel.site/)
 
 ## 获取b50
-通过[Paradigm Prober](https://prp.icel.site/)获取b50图片
-
-## 
+通过[范式：起源wiki](https://paradigmrebootzh.miraheze.org/wiki)获取曲绘
+生成b50图片
 
 ## 声明
 本软件与击弦网络及相关游戏发行、开发及分发公司无任何关系，均使用互联网公开资源，仅供学习研究用途，相关版权归相关方所有
