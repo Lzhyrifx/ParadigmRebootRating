@@ -282,7 +282,7 @@ def best(input_file):
         return None
 
 
-json_file_path = "Resource/prr_songs_data.json"
+json_file_path = "prr_songs_data.json"
 output_file="songs_results.json"
 bounds = [900000, 930000, 950000, 970000, 980000, 990000]
 rewards = [3, 1, 1, 1, 1, 1]

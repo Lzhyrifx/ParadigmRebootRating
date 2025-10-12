@@ -21,10 +21,6 @@ Rating的原理即计算详见[范式：起源wiki](https://paradigmrebootzh.mir
 匹配难度→曲师→歌曲<br>
 通过模糊匹配保存结果到本地
 
-## 上传
-登录到[Paradigm Prober](https://prp.icel.site/)<br>
-选择Rating最高的35首旧版本歌曲和15首新版本歌曲上传[Paradigm Prober](https://prp.icel.site/)
-
 ## 获取b50
 通过[范式：起源wiki](https://paradigmrebootzh.miraheze.org/wiki)获取曲绘
 生成b50图片

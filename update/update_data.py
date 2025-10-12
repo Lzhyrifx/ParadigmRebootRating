@@ -9,8 +9,12 @@ from bs4 import BeautifulSoup
 from requests.exceptions import HTTPError, ConnectionError
 
 
-COVER_URL_RETRIES = 2
+COVER_URL_RETRIES = 3
+
+
 DATA_FILE = "prr_songs_data.json"
+
+
 SPECIAL_TITLE_MAP = {
     "Cipher : /2&//<|0": "Cipher"
 }
@@ -98,9 +102,6 @@ def get_cover_url(song_name, artist, max_retries=COVER_URL_RETRIES):
 
 
                     img_src = target_img["src"]
-                    if "Cover_" not in img_src:
-                        print(f"[{song_name}] 图片URL不包含Cover_标识: {img_src}")
-                        continue
 
                     cover_filename = "Cover_" + img_src.split("Cover_")[1].split("?")[0].split("/")[0]
                     if not cover_filename.endswith(".png"):
@@ -127,12 +128,12 @@ def get_cover_url(song_name, artist, max_retries=COVER_URL_RETRIES):
         except Exception as e:
             print(f"[{song_name}] 第{attempt + 1}次尝试失败: {str(e)}")
             if attempt < max_retries - 1:
-                time.sleep(1)  # 重试间隔
+                time.sleep(1)
 
     return "获取失败"
 
 
-# 功能函数：从网页提取歌曲信息（标题、艺术家、难度定数）
+
 def extract_song_info(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
@@ -144,11 +145,11 @@ def extract_song_info(url):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # 提取标题
+
         title_elem = soup.find("h1", class_="firstHeading")
         title = title_elem.text.strip() if title_elem else "未知标题"
 
-        # 提取艺术家
+
         artist = "未知艺术家"
         data_full_div = soup.find("div", class_="data full")
         if data_full_div and (artist_a := data_full_div.find("a")):
@@ -245,7 +246,7 @@ def single_data(url, output_file=None):
             songs_data = json.load(f)
     else:
         songs_data = []
-    songs_data.append(song_info)
+    songs_data.insert(0, song_info)
     save_results(songs_data)
 
     # 如需单独保存
@@ -298,6 +299,19 @@ def main():
     print(f"\n所有处理完成，结果已保存到 {DATA_FILE}")
 
 
+def process_urls_from_input():
+    input_str = input("请输入URL（多个用逗号分隔）: ").strip()
+    target_urls = [url.strip() for url in input_str.split(',') if url.strip()]
+
+    if not target_urls:
+        print("未输入有效URL")
+        return
+
+    for url in target_urls:
+        single_data(url)
+
+    print(f"\n所有URL处理完成，结果已保存到 {DATA_FILE}")
+
 
 if __name__ == "__main__":
-    main()
+    process_urls_from_input()
