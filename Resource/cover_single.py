@@ -52,6 +52,8 @@ def download_single(song, save_folder, headers, max_retries=2, retry_delay=1.0):
         .replace('"', '')
         .replace('=', '')
         .replace('¿', '')
+        .replace('『', '')
+        .replace('』', '')
         .replace('・', '')
     )
 
@@ -98,6 +100,8 @@ def download_single(song, save_folder, headers, max_retries=2, retry_delay=1.0):
         .replace('"', '')
         .replace('=', '')
         .replace('¿', '')
+        .replace('『', '')
+        .replace('』', '')
         .replace('・', '')
     )
 

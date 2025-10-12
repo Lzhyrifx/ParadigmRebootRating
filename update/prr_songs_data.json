@@ -5,17 +5,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_labyrinthox.png",
     "charts": {
-      "massive": {
-        "level": 16.9,
-        "song_level_id": 1074
+      "detected": {
+        "level": 8.0
       },
       "invaded": {
-        "level": 14.1,
-        "song_level_id": 1073
+        "level": 14.1
       },
-      "detected": {
-        "level": 8.0,
-        "song_level_id": 1072
+      "massive": {
+        "level": 16.9
       }
     }
   },
@@ -25,17 +22,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_anova.png",
     "charts": {
-      "massive": {
-        "level": 16.8,
-        "song_level_id": 1071
+      "detected": {
+        "level": 8.0
       },
       "invaded": {
-        "level": 13.8,
-        "song_level_id": 1070
+        "level": 13.8
       },
-      "detected": {
-        "level": 8.0,
-        "song_level_id": 1069
+      "massive": {
+        "level": 16.8
       }
     }
   },
@@ -45,17 +39,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/20/Cover_argonovice.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 1068
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.3,
-        "song_level_id": 1067
+        "level": 13.3
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 1065
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -65,17 +56,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7b/Cover_fieldtransistoreffect.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 1064
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.3,
-        "song_level_id": 1063
+        "level": 13.3
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 1062
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -85,17 +73,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1a/Cover_takeontheheat.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 1061
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 1060
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 1059
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -105,17 +90,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/26/Cover_namelessmissionary.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 1029
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 1028
+        "level": 9.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 1027
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -125,17 +107,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4d/Cover_keigannozettaireido.png",
     "charts": {
-      "massive": {
-        "level": 16.1,
-        "song_level_id": 1026
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.0,
-        "song_level_id": 1025
+        "level": 13.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 1024
+      "massive": {
+        "level": 16.1
       }
     }
   },
@@ -145,17 +124,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/38/Cover_soartonullset.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 1023
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 1022
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 1021
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -165,17 +141,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/31/Cover_libra.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 1020
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 1019
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 1018
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -185,17 +158,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e4/Cover_lovelikeweredying.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 1017
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 1016
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 1015
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -205,17 +175,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/47/Cover_rocketlanterns.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 1014
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 1013
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 1012
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -225,17 +192,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b6/Cover_dontblink.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 1011
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 1010
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 1009
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -245,17 +209,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/23/Cover_roadtostarlightz.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 1008
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 1007
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 1006
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -265,17 +226,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e2/Cover_spiritofthemonarch.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 1005
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.3,
-        "song_level_id": 1004
+        "level": 13.3
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 1003
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -285,17 +243,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/52/Cover_diva.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 1002
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 1001
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 1000
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -305,17 +260,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5e/Cover_rebellion.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 999
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 998
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 997
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -325,17 +277,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/53/Cover_antler.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 996
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 995
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 994
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -345,17 +294,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8a/Cover_ignite.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 993
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 992
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 991
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -365,17 +311,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ed/Cover_synthesis.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 990
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.3,
-        "song_level_id": 989
+        "level": 13.3
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 988
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -385,17 +328,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9f/Cover_endtime.png",
     "charts": {
-      "massive": {
-        "level": 16.7,
-        "song_level_id": 987
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.6,
-        "song_level_id": 986
+        "level": 13.6
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 985
+      "massive": {
+        "level": 16.7
       }
     }
   },
@@ -405,17 +345,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/73/Cover_goodworld.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 984
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 983
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 982
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -425,17 +362,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1a/Cover_random.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 981
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 980
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 979
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -445,17 +379,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/00/Cover_aventyr.png",
     "charts": {
-      "massive": {
-        "level": 13.7,
-        "song_level_id": 978
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 977
+        "level": 8.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 976
+      "massive": {
+        "level": 13.7
       }
     }
   },
@@ -465,17 +396,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4d/Cover_wheelof4tune.png",
     "charts": {
-      "massive": {
-        "level": 16.8,
-        "song_level_id": 975
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.9,
-        "song_level_id": 974
+        "level": 13.9
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 973
+      "massive": {
+        "level": 16.8
       }
     }
   },
@@ -485,17 +413,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/25/Cover_shinovazal.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 972
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.2,
-        "song_level_id": 971
+        "level": 13.2
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 970
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -505,17 +430,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2e/Cover_initialize.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 969
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 968
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 967
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -525,17 +447,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_respawn.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 966
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 965
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 964
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -545,17 +464,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/74/Cover_memoryofazure.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 963
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 962
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 961
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -565,17 +481,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/02/Cover_slash.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 960
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.4,
-        "song_level_id": 959
+        "level": 13.4
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 958
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -585,17 +498,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ef/Cover_meikyourekka.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 957
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 956
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 955
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -605,17 +515,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f0/Cover_nue.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 954
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 953
+        "level": 10.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 952
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -625,17 +532,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5c/Cover_intoxicateddance.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 951
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 950
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 949
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -645,17 +549,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/81/Cover_traxxendenza.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 948
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.1,
-        "song_level_id": 947
+        "level": 13.1
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 946
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -665,17 +566,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9c/Cover_finixtahv.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 945
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 944
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 943
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -685,17 +583,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/76/Cover_omg.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 942
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 941
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 940
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -705,17 +600,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/43/Cover_resistance.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 939
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 938
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 937
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -725,17 +617,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/df/Cover_emancipator.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 936
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 935
+        "level": 12.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 934
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -745,17 +634,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/63/Cover_infinitehyperdrive.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 933
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 932
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 931
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -765,17 +651,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/54/Cover_cloudbuster.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 930
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 929
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 928
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -785,17 +668,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/54/Cover_marionette.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 927
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 926
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 925
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -805,17 +685,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/07/Cover_astroopt.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 924
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 923
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 922
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -825,17 +702,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/90/Cover_findmydream.png",
     "charts": {
-      "massive": {
-        "level": 14.0,
-        "song_level_id": 921
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 920
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 919
+      "massive": {
+        "level": 14.0
       }
     }
   },
@@ -845,17 +719,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6d/Cover_sweetdream.png",
     "charts": {
-      "massive": {
-        "level": 13.8,
-        "song_level_id": 918
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 917
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 916
+      "massive": {
+        "level": 13.8
       }
     }
   },
@@ -865,17 +736,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/95/Cover_shift.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 915
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.2,
-        "song_level_id": 914
+        "level": 13.2
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 913
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -885,17 +753,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1f/Cover_dawn.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 912
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 911
+        "level": 12.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 910
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -905,17 +770,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/69/Cover_lunaticcrazy.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 909
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 908
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 907
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -925,17 +787,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e3/Cover_schadenfreude.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 906
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 905
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 904
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -945,17 +804,14 @@
     "b15": true,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9e/Cover_pochittoreset.png",
     "charts": {
-      "massive": {
-        "level": 13.6,
-        "song_level_id": 903
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 902
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 901
+      "massive": {
+        "level": 13.6
       }
     }
   },
@@ -965,17 +821,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b1/Cover_darkfalchion.png",
     "charts": {
-      "massive": {
-        "level": 16.6,
-        "song_level_id": 900
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.1,
-        "song_level_id": 899
+        "level": 13.1
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 898
+      "massive": {
+        "level": 16.6
       }
     }
   },
@@ -985,17 +838,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/11/Cover_hellsgate.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 897
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 896
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 895
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -1005,17 +855,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_musicdive.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 894
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 893
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 892
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -1025,17 +872,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ad/Cover_shuffleparadise99.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 891
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 890
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 889
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -1045,17 +889,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/65/Cover_senseofwonder.png",
     "charts": {
-      "massive": {
-        "level": 16.8,
-        "song_level_id": 888
+      "detected": {
+        "level": 8.0
       },
       "invaded": {
-        "level": 13.9,
-        "song_level_id": 887
+        "level": 13.9
       },
-      "detected": {
-        "level": 8.0,
-        "song_level_id": 886
+      "massive": {
+        "level": 16.8
       }
     }
   },
@@ -1065,17 +906,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/39/Cover_galdr.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 885
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 884
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 883
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -1085,17 +923,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_sacredsacrifices.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 882
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 881
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 880
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -1105,17 +940,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c4/Cover_overflow.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 879
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 878
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 877
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -1125,17 +957,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ac/Cover_thekingsreturn.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 876
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 875
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 874
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -1145,17 +974,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b5/Cover_metheus.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 873
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 872
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 871
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -1165,17 +991,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f0/Cover_starchild.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 870
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 869
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 868
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -1185,17 +1008,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retimeleap.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 867
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 866
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 865
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -1205,17 +1025,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f8/Cover_shinwa.png",
     "charts": {
-      "massive": {
-        "level": 13.9,
-        "song_level_id": 864
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 863
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 862
+      "massive": {
+        "level": 13.9
       }
     }
   },
@@ -1225,17 +1042,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8a/Cover_cunrg.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 861
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 860
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 859
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -1245,17 +1059,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/ba/Cover_hysteria.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 858
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 857
+        "level": 12.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 856
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -1265,17 +1076,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9d/Cover_mysticalobserver.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 855
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.4,
-        "song_level_id": 854
+        "level": 13.4
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 853
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -1285,17 +1093,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e1/Cover_makaizo.png",
     "charts": {
-      "massive": {
-        "level": 16.8,
-        "song_level_id": 852
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.7,
-        "song_level_id": 851
+        "level": 13.7
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 850
+      "massive": {
+        "level": 16.8
       }
     }
   },
@@ -1305,17 +1110,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3f/Cover_withu.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 848
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 847
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 846
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -1325,17 +1127,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/12/Cover_elegante.png",
     "charts": {
-      "massive": {
-        "level": 13.5,
-        "song_level_id": 845
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.5,
-        "song_level_id": 844
+        "level": 8.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 843
+      "massive": {
+        "level": 13.5
       }
     }
   },
@@ -1345,17 +1144,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_artificialintelligence.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 842
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 841
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 840
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -1365,17 +1161,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ee/Cover_themountaineater.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 839
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 838
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 837
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -1385,17 +1178,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4f/Cover_untroddenmorn.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 836
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 835
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 834
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -1405,17 +1195,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/fc/Cover_yozakuramautokikara.png",
     "charts": {
-      "massive": {
-        "level": 13.1,
-        "song_level_id": 833
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 8.5,
-        "song_level_id": 832
+        "level": 8.5
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 831
+      "massive": {
+        "level": 13.1
       }
     }
   },
@@ -1425,17 +1212,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/31/Cover_silentphobia.png",
     "charts": {
-      "massive": {
-        "level": 16.7,
-        "song_level_id": 830
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.3,
-        "song_level_id": 829
+        "level": 13.3
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 828
+      "massive": {
+        "level": 16.7
       }
     }
   },
@@ -1445,17 +1229,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3e/Cover_dangerousjungle.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 827
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 826
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 825
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -1465,17 +1246,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_dualbreakerxx.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 824
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 823
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 822
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -1485,17 +1263,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_adam.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 821
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 820
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 819
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -1505,17 +1280,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/ba/Cover_rainshower.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 818
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.3,
-        "song_level_id": 817
+        "level": 13.3
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 816
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -1525,17 +1297,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c6/Cover_sense.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 815
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 814
+        "level": 11.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 813
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -1545,17 +1314,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/98/Cover_owaritohajimarinooto.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 812
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 811
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 810
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -1565,17 +1331,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5e/Cover_timephasept1.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 809
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 808
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 807
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -1585,17 +1348,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/29/Cover_tougenkyou.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 806
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 805
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 804
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -1605,17 +1365,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7c/Cover_flamedark.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 803
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 802
+        "level": 9.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 801
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -1625,17 +1382,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/af/Cover_kokoro.png",
     "charts": {
-      "massive": {
-        "level": 13.6,
-        "song_level_id": 800
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.5,
-        "song_level_id": 799
+        "level": 8.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 798
+      "massive": {
+        "level": 13.6
       }
     }
   },
@@ -1645,17 +1399,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8b/Cover_incyde.png",
     "charts": {
-      "massive": {
-        "level": 16.6,
-        "song_level_id": 797
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.9,
-        "song_level_id": 796
+        "level": 13.9
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 795
+      "massive": {
+        "level": 16.6
       }
     }
   },
@@ -1665,17 +1416,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c8/Cover_alexandrite.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 794
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 793
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 792
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -1685,17 +1433,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d3/Cover_chromevox.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 791
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 790
+        "level": 12.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 789
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -1705,17 +1450,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0e/Cover_icanavoidit.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 788
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 787
+        "level": 11.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 786
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -1725,17 +1467,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f7/Cover_hyouryuu.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 785
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 784
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 783
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -1745,17 +1484,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/56/Cover_kirakiranoelstory.png",
     "charts": {
-      "massive": {
-        "level": 13.7,
-        "song_level_id": 782
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 781
+        "level": 9.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 780
+      "massive": {
+        "level": 13.7
       }
     }
   },
@@ -1765,17 +1501,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/41/Cover_noel.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 779
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 778
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 777
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -1785,17 +1518,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/40/Cover_praystation.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 776
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 775
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 774
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -1805,17 +1535,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6f/Cover_platinum.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 773
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 772
+        "level": 10.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 771
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -1825,17 +1552,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/14/Cover_kimitomitasoranouta.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 770
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 769
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 768
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -1845,17 +1569,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/56/Cover_wilt.png",
     "charts": {
-      "massive": {
-        "level": 13.3,
-        "song_level_id": 767
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 766
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 765
+      "massive": {
+        "level": 13.3
       }
     }
   },
@@ -1865,17 +1586,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c4/Cover_hydra.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 764
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 763
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 762
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -1885,17 +1603,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/89/Cover_maboroshi.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 761
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 760
+        "level": 11.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 759
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -1905,17 +1620,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4a/Cover_prayersforthecolourless.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 758
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 757
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 756
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -1925,17 +1637,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_newquest.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 755
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 754
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 753
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -1945,17 +1654,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_thewholerest.png",
     "charts": {
-      "massive": {
-        "level": 14.1,
-        "song_level_id": 752
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 751
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 750
+      "massive": {
+        "level": 14.1
       }
     }
   },
@@ -1965,17 +1671,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8d/Cover_paradigmlanoche.png",
     "charts": {
-      "massive": {
-        "level": 13.2,
-        "song_level_id": 749
+      "detected": {
+        "level": 1.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 748
+        "level": 7.0
       },
-      "detected": {
-        "level": 1.0,
-        "song_level_id": 747
+      "massive": {
+        "level": 13.2
       }
     }
   },
@@ -1985,17 +1688,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/81/Cover_abyssgazer.png",
     "charts": {
-      "massive": {
-        "level": 17.4,
-        "song_level_id": 746
+      "detected": {
+        "level": 9.0
       },
       "invaded": {
-        "level": 14.7,
-        "song_level_id": 745
+        "level": 14.7
       },
-      "detected": {
-        "level": 9.0,
-        "song_level_id": 744
+      "massive": {
+        "level": 17.4
       }
     }
   },
@@ -2005,17 +1705,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/20/Cover_olvido.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 743
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 742
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 741
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -2025,17 +1722,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_pourqaa.png",
     "charts": {
-      "massive": {
-        "level": 13.5,
-        "song_level_id": 740
+      "detected": {
+        "level": 1.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 739
+        "level": 7.0
       },
-      "detected": {
-        "level": 1.0,
-        "song_level_id": 738
+      "massive": {
+        "level": 13.5
       }
     }
   },
@@ -2045,17 +1739,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c3/Cover_sweetdreams.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 737
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 736
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 735
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -2065,17 +1756,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_orfevre.png",
     "charts": {
-      "massive": {
-        "level": 13.7,
-        "song_level_id": 734
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 733
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 732
+      "massive": {
+        "level": 13.7
       }
     }
   },
@@ -2085,17 +1773,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8c/Cover_dampedfall.png",
     "charts": {
-      "massive": {
-        "level": 13.3,
-        "song_level_id": 731
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 730
+        "level": 8.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 729
+      "massive": {
+        "level": 13.3
       }
     }
   },
@@ -2105,17 +1790,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_kiunoayame.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 728
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 727
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 726
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -2125,17 +1807,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_akasagarbha.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 725
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 724
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 723
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -2145,17 +1824,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0b/Cover_ukiyoeyokochou.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 722
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 721
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 720
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -2165,17 +1841,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/92/Cover_n00.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 719
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 718
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 717
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -2185,17 +1858,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/cf/Cover_observatory.png",
     "charts": {
-      "massive": {
-        "level": 16.9,
-        "song_level_id": 716
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.9,
-        "song_level_id": 715
+        "level": 13.9
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 714
+      "massive": {
+        "level": 16.9
       }
     }
   },
@@ -2205,17 +1875,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/47/Cover_awakeningofcivilization.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 713
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 712
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 711
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -2225,17 +1892,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d7/Cover_downfall.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 710
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 709
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 708
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -2245,17 +1909,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_iridescence.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 707
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 706
+        "level": 8.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 705
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -2265,17 +1926,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_magdalena.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 704
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 703
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 702
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -2285,17 +1943,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5e/Cover_verite.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 701
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 700
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 699
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -2305,17 +1960,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/df/Cover_grandnebula.png",
     "charts": {
-      "massive": {
-        "level": 16.7,
-        "song_level_id": 653
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.8,
-        "song_level_id": 652
+        "level": 13.8
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 651
+      "massive": {
+        "level": 16.7
       }
     }
   },
@@ -2325,17 +1977,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_radialraylights.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 650
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 649
+        "level": 11.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 648
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -2345,17 +1994,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/58/Cover_astralinjection.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 647
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 646
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 645
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -2365,17 +2011,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a3/Cover_bluesphere.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 644
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 643
+        "level": 12.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 642
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -2385,17 +2028,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e9/Cover_spellofchaos.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 641
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 640
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 639
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -2405,17 +2045,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e5/Cover_pupagrgremix.png",
     "charts": {
-      "massive": {
-        "level": 16.6,
-        "song_level_id": 638
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.8,
-        "song_level_id": 637
+        "level": 13.8
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 636
+      "massive": {
+        "level": 16.6
       }
     }
   },
@@ -2425,17 +2062,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a5/Cover_pupaumaremix.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 635
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 634
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 633
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -2445,17 +2079,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_pupa.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 632
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 631
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 630
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -2465,17 +2096,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/ca/Cover_suito.png",
     "charts": {
-      "massive": {
-        "level": 16.6,
-        "song_level_id": 629
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.7,
-        "song_level_id": 628
+        "level": 13.7
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 627
+      "massive": {
+        "level": 16.6
       }
     }
   },
@@ -2485,17 +2113,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4c/Cover_secretillumination.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 626
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 625
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 624
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -2505,17 +2130,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_lookingforstella.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 623
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 622
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 621
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -2525,17 +2147,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/23/Cover_thepromisedland.png",
     "charts": {
-      "massive": {
-        "level": 13.6,
-        "song_level_id": 620
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 619
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 618
+      "massive": {
+        "level": 13.6
       }
     }
   },
@@ -2545,17 +2164,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c3/Cover_galacticwarzone.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 617
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.3,
-        "song_level_id": 616
+        "level": 13.3
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 615
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -2565,17 +2181,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/12/Cover_spinel.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 614
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 613
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 612
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -2585,17 +2198,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/58/Cover_heavenscage.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 611
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 610
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 609
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -2605,17 +2215,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9e/Cover_achromaticdystopia.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 608
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 607
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 606
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -2625,17 +2232,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8a/Cover_travelerstandaloof.png",
     "charts": {
-      "massive": {
-        "level": 16.6,
-        "song_level_id": 581
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.4,
-        "song_level_id": 580
+        "level": 13.4
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 579
+      "massive": {
+        "level": 16.6
       }
     }
   },
@@ -2645,17 +2249,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/28/Cover_dataerror.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 578
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 577
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 576
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -2665,17 +2266,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/50/Cover_halcyon.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 575
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 574
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 573
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -2685,17 +2283,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/23/Cover_aleph0.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 572
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 571
+        "level": 12.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 570
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -2705,17 +2300,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7a/Cover_yumearuiwa.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 569
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 568
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 567
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -2725,17 +2317,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a8/Cover_infomorph.png",
     "charts": {
-      "massive": {
-        "level": 14.0,
-        "song_level_id": 542
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 541
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 540
+      "massive": {
+        "level": 14.0
       }
     }
   },
@@ -2745,17 +2334,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a7/Cover_finalfarewell.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 539
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 538
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 537
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -2765,17 +2351,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_zephyrs.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 536
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 535
+        "level": 10.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 534
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -2785,17 +2368,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c5/Cover_meteoritelotus.png",
     "charts": {
-      "massive": {
-        "level": 16.8,
-        "song_level_id": 533
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.7,
-        "song_level_id": 532
+        "level": 13.7
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 531
+      "massive": {
+        "level": 16.8
       }
     }
   },
@@ -2805,17 +2385,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/fc/Cover_wolvesstanding.png",
     "charts": {
-      "massive": {
-        "level": 16.7,
-        "song_level_id": 530
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.4,
-        "song_level_id": 529
+        "level": 13.4
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 528
+      "massive": {
+        "level": 16.7
       }
     }
   },
@@ -2825,17 +2402,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ae/Cover_cyanine.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 527
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 526
+        "level": 12.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 525
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -2845,17 +2419,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8d/Cover_rainmaker.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 524
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 523
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 522
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -2865,17 +2436,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a0/Cover_androgynos.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 521
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 520
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 519
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -2885,17 +2453,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/15/Cover_stasis.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 518
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 517
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 516
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -2905,17 +2470,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_freysphilosophy.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 515
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 514
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 513
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -2925,17 +2487,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/4b/Cover_protoflicker.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 512
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 511
+        "level": 10.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 510
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -2945,17 +2504,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d9/Cover_songforsprites.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 509
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 508
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 507
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -2965,17 +2521,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dd/Cover_crosssoul.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 505
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 504
+        "level": 12.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 503
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -2985,17 +2538,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/03/Cover_whirlwind.png",
     "charts": {
-      "massive": {
-        "level": 14.5,
-        "song_level_id": 502
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 501
+        "level": 11.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 500
+      "massive": {
+        "level": 14.5
       }
     }
   },
@@ -3005,17 +2555,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0c/Cover_nighttheater.png",
     "charts": {
-      "massive": {
-        "level": 13.9,
-        "song_level_id": 499
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 498
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 497
+      "massive": {
+        "level": 13.9
       }
     }
   },
@@ -3025,17 +2572,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1a/Cover_intellectualbreeze.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 496
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 495
+        "level": 10.5
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 494
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -3045,17 +2589,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_hoshikuzumonogatari.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 493
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 492
+        "level": 12.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 491
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -3065,17 +2606,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/08/Cover_stormyrage.png",
     "charts": {
-      "massive": {
-        "level": 16.9,
-        "song_level_id": 490
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 13.7,
-        "song_level_id": 489
+        "level": 13.7
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 488
+      "massive": {
+        "level": 16.9
       }
     }
   },
@@ -3085,17 +2623,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/bd/Cover_donthurtme.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 487
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 486
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 485
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -3105,17 +2640,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_drasticgenerate.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 484
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 483
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 482
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -3125,17 +2657,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1e/Cover_mrmidnight.png",
     "charts": {
-      "massive": {
-        "level": 16.0,
-        "song_level_id": 481
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 480
+        "level": 12.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 479
+      "massive": {
+        "level": 16.0
       }
     }
   },
@@ -3145,17 +2674,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/55/Cover_signal.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 478
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 477
+        "level": 12.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 476
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -3165,17 +2691,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b1/Cover_flamencohouse.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 475
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 474
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 473
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -3185,17 +2708,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_onestepcloser.png",
     "charts": {
-      "massive": {
-        "level": 13.9,
-        "song_level_id": 472
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 471
+        "level": 8.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 470
+      "massive": {
+        "level": 13.9
       }
     }
   },
@@ -3205,17 +2725,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/16/Cover_complexmind.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 469
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 468
+        "level": 12.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 467
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -3225,17 +2742,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7c/Cover_fatalist.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 466
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 465
+        "level": 12.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 464
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -3245,17 +2759,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2b/Cover_yuurei.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 463
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 462
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 461
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -3265,17 +2776,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/42/Cover_gloomyflash.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 460
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 459
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 458
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -3285,17 +2793,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1e/Cover_permutation.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 457
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 456
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 455
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -3305,17 +2810,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/57/Cover_lifeispiano.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 454
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 453
+        "level": 9.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 452
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -3325,17 +2827,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_neverescape.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 451
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 450
+        "level": 12.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 449
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -3345,17 +2844,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_nameofoath.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 448
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 447
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 446
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -3365,17 +2861,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_actbeloved.png",
     "charts": {
-      "massive": {
-        "level": 14.1,
-        "song_level_id": 445
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 444
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 443
+      "massive": {
+        "level": 14.1
       }
     }
   },
@@ -3385,17 +2878,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_whentherain.png",
     "charts": {
-      "massive": {
-        "level": 13.6,
-        "song_level_id": 442
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 441
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 440
+      "massive": {
+        "level": 13.6
       }
     }
   },
@@ -3405,17 +2895,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/16/Cover_disorder.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 438
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 437
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 436
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -3425,17 +2912,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/68/Cover_grin.png",
     "charts": {
-      "massive": {
-        "level": 14.5,
-        "song_level_id": 435
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 434
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 433
+      "massive": {
+        "level": 14.5
       }
     }
   },
@@ -3445,17 +2929,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d8/Cover_distortedfate.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 432
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.0,
-        "song_level_id": 431
+        "level": 13.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 430
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -3465,17 +2946,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7d/Cover_retribution.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 429
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 428
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 427
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -3485,17 +2963,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/09/Cover_luminescence.png",
     "charts": {
-      "massive": {
-        "level": 14.5,
-        "song_level_id": 426
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 425
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 424
+      "massive": {
+        "level": 14.5
       }
     }
   },
@@ -3505,17 +2980,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e0/Cover_destruction321.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 423
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 422
+        "level": 11.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 421
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -3525,17 +2997,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5a/Cover_reendofadream.png",
     "charts": {
-      "massive": {
-        "level": 16.5,
-        "song_level_id": 420
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 419
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 418
+      "massive": {
+        "level": 16.5
       }
     }
   },
@@ -3545,17 +3014,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/00/Cover_cosmicrailroad.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 417
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.5,
-        "song_level_id": 416
+        "level": 12.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 415
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -3565,17 +3031,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0f/Cover_csqn.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 414
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 413
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 412
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -3585,17 +3048,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/27/Cover_destroyer.png",
     "charts": {
-      "massive": {
-        "level": 16.0,
-        "song_level_id": 411
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 410
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 409
+      "massive": {
+        "level": 16.0
       }
     }
   },
@@ -3605,17 +3065,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_anokumene.png",
     "charts": {
-      "massive": {
-        "level": 13.4,
-        "song_level_id": 408
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 407
+        "level": 8.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 406
+      "massive": {
+        "level": 13.4
       }
     }
   },
@@ -3625,17 +3082,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d3/Cover_chronostasis.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 405
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 404
+        "level": 10.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 403
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -3645,17 +3099,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/71/Cover_selenotaxis.png",
     "charts": {
-      "massive": {
-        "level": 11.5,
-        "song_level_id": 402
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 401
+        "level": 7.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 400
+      "massive": {
+        "level": 11.5
       }
     }
   },
@@ -3665,17 +3116,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6b/Cover_pulsar.png",
     "charts": {
-      "massive": {
-        "level": 12.5,
-        "song_level_id": 399
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 398
+        "level": 8.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 397
+      "massive": {
+        "level": 12.5
       }
     }
   },
@@ -3685,17 +3133,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d7/Cover_etudesunset.png",
     "charts": {
-      "massive": {
-        "level": 14.0,
-        "song_level_id": 396
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 395
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 394
+      "massive": {
+        "level": 14.0
       }
     }
   },
@@ -3705,17 +3150,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_everything.png",
     "charts": {
-      "massive": {
-        "level": 14.1,
-        "song_level_id": 393
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 392
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 391
+      "massive": {
+        "level": 14.1
       }
     }
   },
@@ -3725,17 +3167,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/01/Cover_crossray.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 390
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 389
+        "level": 10.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 388
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -3745,17 +3184,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3d/Cover_sousouka.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 387
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 386
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 385
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -3765,17 +3201,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a3/Cover_vezzelix.png",
     "charts": {
-      "massive": {
-        "level": 14.0,
-        "song_level_id": 384
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 383
+        "level": 8.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 382
+      "massive": {
+        "level": 14.0
       }
     }
   },
@@ -3785,17 +3218,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/89/Cover_cereris.png",
     "charts": {
-      "massive": {
-        "level": 13.2,
-        "song_level_id": 381
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 380
+        "level": 9.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 379
+      "massive": {
+        "level": 13.2
       }
     }
   },
@@ -3805,17 +3235,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2e/Cover_burn.png",
     "charts": {
-      "massive": {
-        "level": 11.0,
-        "song_level_id": 378
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 377
+        "level": 8.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 376
+      "massive": {
+        "level": 11.0
       }
     }
   },
@@ -3825,17 +3252,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b4/Cover_vaultofsky.png",
     "charts": {
-      "massive": {
-        "level": 13.3,
-        "song_level_id": 375
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 374
+        "level": 8.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 373
+      "massive": {
+        "level": 13.3
       }
     }
   },
@@ -3845,17 +3269,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b6/Cover_cipher.png",
     "charts": {
-      "massive": {
-        "level": 14.5,
-        "song_level_id": 372
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 371
+        "level": 9.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 370
+      "massive": {
+        "level": 14.5
       }
     }
   },
@@ -3865,17 +3286,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ef/Cover_wintercube.png",
     "charts": {
-      "massive": {
-        "level": 11.0,
-        "song_level_id": 369
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 368
+        "level": 7.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 367
+      "massive": {
+        "level": 11.0
       }
     }
   },
@@ -3885,17 +3303,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dc/Cover_classmemories.png",
     "charts": {
-      "massive": {
-        "level": 12.0,
-        "song_level_id": 366
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 365
+        "level": 7.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 364
+      "massive": {
+        "level": 12.0
       }
     }
   },
@@ -3905,17 +3320,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c8/Cover_alexandrite.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 363
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 362
+        "level": 12.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 361
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -3925,17 +3337,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e3/Cover_disintegrateofeden.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 360
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 359
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 358
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -3945,17 +3354,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2c/Cover_kanoenesakuratengoku.png",
     "charts": {
-      "massive": {
-        "level": 12.0,
-        "song_level_id": 357
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 356
+        "level": 7.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 355
+      "massive": {
+        "level": 12.0
       }
     }
   },
@@ -3965,17 +3371,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/24/Cover_gekkasakuratengoku.png",
     "charts": {
-      "massive": {
-        "level": 12.5,
-        "song_level_id": 354
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 353
+        "level": 7.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 352
+      "massive": {
+        "level": 12.5
       }
     }
   },
@@ -3985,17 +3388,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/78/Cover_karappononfiction.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 351
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 350
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 349
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -4005,17 +3405,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/88/Cover_midnightfairytale.png",
     "charts": {
-      "massive": {
-        "level": 14.1,
-        "song_level_id": 348
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 347
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 346
+      "massive": {
+        "level": 14.1
       }
     }
   },
@@ -4025,17 +3422,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e3/Cover_reboot.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 345
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 344
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 343
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -4045,17 +3439,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/15/Cover_unprenas.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 342
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 341
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 340
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -4065,17 +3456,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c0/Cover_fracturetemporelle.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 339
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 338
+        "level": 10.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 337
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -4085,17 +3473,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2e/Cover_tot.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 336
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 335
+        "level": 8.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 334
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -4105,17 +3490,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/32/Cover_felysfinalremix.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 333
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 332
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 331
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -4125,17 +3507,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2a/Cover_artificialexistence.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 330
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 329
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 328
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -4145,17 +3524,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/87/Cover_pantomime.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 327
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 326
+        "level": 10.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 325
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -4165,17 +3541,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/96/Cover_divergence.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 324
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 323
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 322
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -4185,17 +3558,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c7/Cover_grilledcheeseburger.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 321
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 320
+        "level": 10.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 319
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -4205,17 +3575,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1f/Cover_xenolith.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 318
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 317
+        "level": 9.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 316
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -4225,17 +3592,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/13/Cover_whiterevolve.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 315
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 314
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 313
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -4245,17 +3609,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/af/Cover_graymachinegang.png",
     "charts": {
-      "massive": {
-        "level": 14.1,
-        "song_level_id": 312
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 311
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 310
+      "massive": {
+        "level": 14.1
       }
     }
   },
@@ -4265,17 +3626,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b4/Cover_thenightcity.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 309
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 308
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 307
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -4285,17 +3643,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/70/Cover_ikaros.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 306
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 305
+        "level": 9.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 304
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -4305,17 +3660,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1b/Cover_onandon.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 303
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 302
+        "level": 9.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 301
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -4325,17 +3677,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d7/Cover_resolve.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 300
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 299
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 298
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -4345,17 +3694,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/01/Cover_encore.png",
     "charts": {
-      "massive": {
-        "level": 12.5,
-        "song_level_id": 297
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 296
+        "level": 9.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 295
+      "massive": {
+        "level": 12.5
       }
     }
   },
@@ -4365,17 +3711,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_subterraneanblastoff.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 294
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 293
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 292
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -4385,17 +3728,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6a/Cover_ouverture.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 291
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 290
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 289
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -4405,17 +3745,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/81/Cover_letyoudive.png",
     "charts": {
-      "massive": {
-        "level": 14.5,
-        "song_level_id": 288
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 287
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 286
+      "massive": {
+        "level": 14.5
       }
     }
   },
@@ -4425,17 +3762,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/40/Cover_exiunyu.png",
     "charts": {
-      "massive": {
-        "level": 13.8,
-        "song_level_id": 285
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 284
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 283
+      "massive": {
+        "level": 13.8
       }
     }
   },
@@ -4445,17 +3779,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/21/Cover_tiansezhimeng.png",
     "charts": {
-      "massive": {
-        "level": 13.3,
-        "song_level_id": 282
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 281
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 280
+      "massive": {
+        "level": 13.3
       }
     }
   },
@@ -4465,17 +3796,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ee/Cover_aishangxiangxiangdeni.png",
     "charts": {
-      "massive": {
-        "level": 12.5,
-        "song_level_id": 279
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 278
+        "level": 7.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 277
+      "massive": {
+        "level": 12.5
       }
     }
   },
@@ -4485,17 +3813,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_jintianbushimingtian.png",
     "charts": {
-      "massive": {
-        "level": 12.5,
-        "song_level_id": 276
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 275
+        "level": 8.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 274
+      "massive": {
+        "level": 12.5
       }
     }
   },
@@ -4505,17 +3830,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b1/Cover_worldcall.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 273
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 272
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 271
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -4525,17 +3847,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f9/Cover_milk.png",
     "charts": {
-      "massive": {
-        "level": 13.6,
-        "song_level_id": 270
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 269
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 268
+      "massive": {
+        "level": 13.6
       }
     }
   },
@@ -4545,17 +3864,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_avantgarde.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 267
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 266
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 265
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -4565,17 +3881,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/53/Cover_kronos.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 264
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 263
+        "level": 9.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 262
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -4585,17 +3898,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/71/Cover_conflict.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 261
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 260
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 259
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -4605,17 +3915,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dd/Cover_immyhero.png",
     "charts": {
-      "massive": {
-        "level": 13.8,
-        "song_level_id": 258
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 257
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 256
+      "massive": {
+        "level": 13.8
       }
     }
   },
@@ -4625,17 +3932,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/38/Cover_fadingstar.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 255
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 8.5,
-        "song_level_id": 254
+        "level": 8.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 253
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -4645,17 +3949,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/29/Cover_paradigmshift.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 252
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 251
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 250
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -4665,17 +3966,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ab/Cover_houkagooverdrive.png",
     "charts": {
-      "massive": {
-        "level": 14.3,
-        "song_level_id": 249
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 248
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 247
+      "massive": {
+        "level": 14.3
       }
     }
   },
@@ -4685,17 +3983,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d6/Cover_oriens.png",
     "charts": {
-      "massive": {
-        "level": 14.4,
-        "song_level_id": 246
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 245
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 244
+      "massive": {
+        "level": 14.4
       }
     }
   },
@@ -4705,17 +4000,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/76/Cover_omg.png",
     "charts": {
-      "massive": {
-        "level": 14.5,
-        "song_level_id": 243
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 242
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 241
+      "massive": {
+        "level": 14.5
       }
     }
   },
@@ -4725,17 +4017,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/94/Cover_redash.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 240
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 239
+        "level": 10.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 238
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -4745,17 +4034,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e1/Cover_innernorm.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 237
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 236
+        "level": 9.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 235
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -4765,17 +4051,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/29/Cover_bpmrt.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 234
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 233
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 232
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -4785,17 +4068,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/e1/Cover_dogbite.png",
     "charts": {
-      "massive": {
-        "level": 13.0,
-        "song_level_id": 231
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 230
+        "level": 9.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 229
+      "massive": {
+        "level": 13.0
       }
     }
   },
@@ -4805,17 +4085,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/bd/Cover_chartreusegreen.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 228
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 227
+        "level": 9.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 226
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -4825,17 +4102,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9a/Cover_psychedfevereiro.png",
     "charts": {
-      "massive": {
-        "level": 13.2,
-        "song_level_id": 225
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 224
+        "level": 8.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 223
+      "massive": {
+        "level": 13.2
       }
     }
   },
@@ -4845,17 +4119,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_rrharil.png",
     "charts": {
-      "massive": {
-        "level": 16.7,
-        "song_level_id": 222
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 221
+        "level": 11.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 220
+      "massive": {
+        "level": 16.7
       }
     }
   },
@@ -4865,17 +4136,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d9/Cover_blackmagnam.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 219
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 218
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 217
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -4885,17 +4153,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/73/Cover_cantitbetrue.png",
     "charts": {
-      "massive": {
-        "level": 13.1,
-        "song_level_id": 216
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.5,
-        "song_level_id": 215
+        "level": 8.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 214
+      "massive": {
+        "level": 13.1
       }
     }
   },
@@ -4905,17 +4170,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/74/Cover_yorixiro.png",
     "charts": {
-      "massive": {
-        "level": 13.4,
-        "song_level_id": 213
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 212
+        "level": 8.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 211
+      "massive": {
+        "level": 13.4
       }
     }
   },
@@ -4925,17 +4187,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5a/Cover_saveandcontinue.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 210
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 209
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 208
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -4945,17 +4204,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/ce/Cover_sekigaeyatta.png",
     "charts": {
-      "massive": {
-        "level": 16.0,
-        "song_level_id": 207
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 206
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 205
+      "massive": {
+        "level": 16.0
       }
     }
   },
@@ -4965,17 +4221,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_tenq.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 204
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 203
+        "level": 9.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 202
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -4985,17 +4238,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_devilangel.png",
     "charts": {
-      "massive": {
-        "level": 14.1,
-        "song_level_id": 201
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 200
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 199
+      "massive": {
+        "level": 14.1
       }
     }
   },
@@ -5005,17 +4255,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/bd/Cover_paradialresonator.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 198
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 197
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 196
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -5025,17 +4272,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9e/Cover_macrowav.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 195
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 194
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 193
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -5045,17 +4289,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/da/Cover_clockparadox.png",
     "charts": {
-      "massive": {
-        "level": 13.4,
-        "song_level_id": 192
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 191
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 190
+      "massive": {
+        "level": 13.4
       }
     }
   },
@@ -5065,17 +4306,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/16/Cover_skyscape.png",
     "charts": {
-      "massive": {
-        "level": 12.5,
-        "song_level_id": 189
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 188
+        "level": 7.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 187
+      "massive": {
+        "level": 12.5
       }
     }
   },
@@ -5085,17 +4323,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/14/Cover_equalityofequites.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 186
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 185
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 184
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -5105,17 +4340,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/70/Cover_hiyaiya.png",
     "charts": {
-      "massive": {
-        "level": 12.5,
-        "song_level_id": 183
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 182
+        "level": 7.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 181
+      "massive": {
+        "level": 12.5
       }
     }
   },
@@ -5125,17 +4357,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/52/Cover_suttamonday.png",
     "charts": {
-      "massive": {
-        "level": 14.6,
-        "song_level_id": 180
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 179
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 178
+      "massive": {
+        "level": 14.6
       }
     }
   },
@@ -5145,17 +4374,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8f/Cover_occhocorestless.png",
     "charts": {
-      "massive": {
-        "level": 13.6,
-        "song_level_id": 177
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.5,
-        "song_level_id": 176
+        "level": 8.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 175
+      "massive": {
+        "level": 13.6
       }
     }
   },
@@ -5165,17 +4391,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f5/Cover_secretmaneuvers.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 174
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 173
+        "level": 11.5
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 172
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -5185,17 +4408,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/08/Cover_reversedzenith.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 171
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 170
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 169
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -5205,17 +4425,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ee/Cover_protection.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 168
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 167
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 166
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -5225,17 +4442,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/52/Cover_turningpoint.png",
     "charts": {
-      "massive": {
-        "level": 14.3,
-        "song_level_id": 165
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 164
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 163
+      "massive": {
+        "level": 14.3
       }
     }
   },
@@ -5245,17 +4459,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/40/Cover_indeliblescar.png",
     "charts": {
-      "massive": {
-        "level": 16.1,
-        "song_level_id": 162
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 161
+        "level": 11.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 160
+      "massive": {
+        "level": 16.1
       }
     }
   },
@@ -5265,17 +4476,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3f/Cover_redrave.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 159
+      "detected": {
+        "level": 8.0
       },
       "invaded": {
-        "level": 8.5,
-        "song_level_id": 158
+        "level": 8.5
       },
-      "detected": {
-        "level": 8.0,
-        "song_level_id": 157
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -5285,17 +4493,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7a/Cover_marshwinds.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 156
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 155
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 154
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -5305,17 +4510,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/93/Cover_tequilasunrise.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 153
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 152
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 151
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -5325,17 +4527,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/1/1c/Cover_viyellasmelancholy.png",
     "charts": {
-      "massive": {
-        "level": 16.6,
-        "song_level_id": 150
+      "detected": {
+        "level": 7.0
       },
       "invaded": {
-        "level": 13.8,
-        "song_level_id": 149
+        "level": 13.8
       },
-      "detected": {
-        "level": 7.0,
-        "song_level_id": 148
+      "massive": {
+        "level": 16.6
       }
     }
   },
@@ -5345,17 +4544,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/4/46/Cover_yokyuumi.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 147
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 146
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 145
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -5365,17 +4561,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/c5/Cover_rebootedmind.png",
     "charts": {
-      "massive": {
-        "level": 15.3,
-        "song_level_id": 144
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 143
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 142
+      "massive": {
+        "level": 15.3
       }
     }
   },
@@ -5385,17 +4578,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/99/Cover_d3d3d3.png",
     "charts": {
-      "massive": {
-        "level": 14.2,
-        "song_level_id": 141
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 140
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 139
+      "massive": {
+        "level": 14.2
       }
     }
   },
@@ -5405,17 +4595,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/23/Cover_summermemories.png",
     "charts": {
-      "massive": {
-        "level": 16.1,
-        "song_level_id": 138
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 137
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 136
+      "massive": {
+        "level": 16.1
       }
     }
   },
@@ -5425,17 +4612,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5f/Cover_veilofsummer.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 135
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 134
+        "level": 11.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 133
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -5445,17 +4629,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/90/Cover_heartpoint.png",
     "charts": {
-      "massive": {
-        "level": 14.3,
-        "song_level_id": 132
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 131
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 130
+      "massive": {
+        "level": 14.3
       }
     }
   },
@@ -5465,17 +4646,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/82/Cover_mintchoco.png",
     "charts": {
-      "massive": {
-        "level": 13.1,
-        "song_level_id": 129
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 128
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 127
+      "massive": {
+        "level": 13.1
       }
     }
   },
@@ -5485,17 +4663,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/be/Cover_hemisphere.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 126
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 125
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 124
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -5505,17 +4680,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d3/Cover_kokytos.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 123
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 122
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 121
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -5525,17 +4697,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2c/Cover_lastfarewell.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 120
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 119
+        "level": 12.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 118
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -5545,17 +4714,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/ac/Cover_hearteyes.png",
     "charts": {
-      "massive": {
-        "level": 13.9,
-        "song_level_id": 117
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 116
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 115
+      "massive": {
+        "level": 13.9
       }
     }
   },
@@ -5565,17 +4731,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0c/Cover_hoshizoratravel.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 114
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 113
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 112
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -5585,17 +4748,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/79/Cover_ashes.png",
     "charts": {
-      "massive": {
-        "level": 16.0,
-        "song_level_id": 111
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 110
+        "level": 10.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 109
+      "massive": {
+        "level": 16.0
       }
     }
   },
@@ -5605,17 +4765,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f1/Cover_invaded.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 108
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 14.3,
-        "song_level_id": 107
+        "level": 14.3
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 106
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -5625,17 +4782,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/94/Cover_littleboy.png",
     "charts": {
-      "massive": {
-        "level": 14.0,
-        "song_level_id": 105
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 104
+        "level": 10.5
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 103
+      "massive": {
+        "level": 14.0
       }
     }
   },
@@ -5645,17 +4799,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_crimsonemperor.png",
     "charts": {
-      "massive": {
-        "level": 16.4,
-        "song_level_id": 102
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 101
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 100
+      "massive": {
+        "level": 16.4
       }
     }
   },
@@ -5665,17 +4816,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/cb/Cover_dimensionhacker.png",
     "charts": {
-      "massive": {
-        "level": 16.1,
-        "song_level_id": 99
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 13.5,
-        "song_level_id": 98
+        "level": 13.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 97
+      "massive": {
+        "level": 16.1
       }
     }
   },
@@ -5685,17 +4833,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/a4/Cover_chariot.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 96
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 95
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 94
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -5705,17 +4850,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/3a/Cover_ephmr.png",
     "charts": {
-      "massive": {
-        "level": 14.8,
-        "song_level_id": 93
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 92
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 91
+      "massive": {
+        "level": 14.8
       }
     }
   },
@@ -5725,17 +4867,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/5/5c/Cover_angelhalo.png",
     "charts": {
-      "massive": {
-        "level": 16.3,
-        "song_level_id": 90
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 89
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 88
+      "massive": {
+        "level": 16.3
       }
     }
   },
@@ -5745,17 +4884,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/03/Cover_artemis.png",
     "charts": {
-      "massive": {
-        "level": 15.9,
-        "song_level_id": 87
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 86
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 85
+      "massive": {
+        "level": 15.9
       }
     }
   },
@@ -5765,17 +4901,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/7c/Cover_nekomusume.png",
     "charts": {
-      "massive": {
-        "level": 15.2,
-        "song_level_id": 84
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 83
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 82
+      "massive": {
+        "level": 15.2
       }
     }
   },
@@ -5785,17 +4918,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b4/Cover_knightrider.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 81
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 80
+        "level": 10.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 79
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -5805,17 +4935,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/91/Cover_oukaonrai.png",
     "charts": {
-      "massive": {
-        "level": 16.2,
-        "song_level_id": 78
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 77
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 76
+      "massive": {
+        "level": 16.2
       }
     }
   },
@@ -5825,17 +4952,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/05/Cover_kakuriyo.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 75
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 74
+        "level": 12.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 73
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -5845,17 +4969,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/95/Cover_kochounomai.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 72
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 71
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 70
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -5865,17 +4986,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/9b/Cover_hisei.png",
     "charts": {
-      "massive": {
-        "level": 13.7,
-        "song_level_id": 69
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 68
+        "level": 10.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 67
+      "massive": {
+        "level": 13.7
       }
     }
   },
@@ -5885,17 +5003,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/3/32/Cover_cyberneticvampire.png",
     "charts": {
-      "massive": {
-        "level": 16.7,
-        "song_level_id": 66
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 13.0,
-        "song_level_id": 65
+        "level": 13.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 64
+      "massive": {
+        "level": 16.7
       }
     }
   },
@@ -5905,17 +5020,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/90/Cover_echoesoftheforest.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 63
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 62
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 61
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -5925,17 +5037,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/db/Cover_thegrandfstar.png",
     "charts": {
-      "massive": {
-        "level": 15.5,
-        "song_level_id": 60
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 59
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 58
+      "massive": {
+        "level": 15.5
       }
     }
   },
@@ -5945,17 +5054,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/f/f0/Cover_blessedbleath.png",
     "charts": {
-      "massive": {
-        "level": 15.0,
-        "song_level_id": 57
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 56
+        "level": 11.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 55
+      "massive": {
+        "level": 15.0
       }
     }
   },
@@ -5965,17 +5071,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/65/Cover_incineraxion.png",
     "charts": {
-      "massive": {
-        "level": 14.7,
-        "song_level_id": 54
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 53
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 52
+      "massive": {
+        "level": 14.7
       }
     }
   },
@@ -5985,17 +5088,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/6c/Cover_shijimaniureu.png",
     "charts": {
-      "massive": {
-        "level": 13.0,
-        "song_level_id": 51
+      "detected": {
+        "level": 1.0
       },
       "invaded": {
-        "level": 7.0,
-        "song_level_id": 50
+        "level": 7.0
       },
-      "detected": {
-        "level": 1.0,
-        "song_level_id": 49
+      "massive": {
+        "level": 13.0
       }
     }
   },
@@ -6005,17 +5105,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/0d/Cover_onlyonelight.png",
     "charts": {
-      "massive": {
-        "level": 13.5,
-        "song_level_id": 48
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 47
+        "level": 9.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 46
+      "massive": {
+        "level": 13.5
       }
     }
   },
@@ -6025,17 +5122,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/dc/Cover_nwad.png",
     "charts": {
-      "massive": {
-        "level": 16.1,
-        "song_level_id": 45
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 44
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 43
+      "massive": {
+        "level": 16.1
       }
     }
   },
@@ -6045,17 +5139,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/e/ea/Cover_praw.png",
     "charts": {
-      "massive": {
-        "level": 15.4,
-        "song_level_id": 42
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.5,
-        "song_level_id": 41
+        "level": 11.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 40
+      "massive": {
+        "level": 15.4
       }
     }
   },
@@ -6065,17 +5156,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/a/aa/Cover_baoliemofa.png",
     "charts": {
-      "massive": {
-        "level": 15.8,
-        "song_level_id": 39
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 38
+        "level": 9.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 37
+      "massive": {
+        "level": 15.8
       }
     }
   },
@@ -6085,17 +5173,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/8e/Cover_linghaocheliang.png",
     "charts": {
-      "massive": {
-        "level": 15.1,
-        "song_level_id": 36
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 11.0,
-        "song_level_id": 35
+        "level": 11.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 34
+      "massive": {
+        "level": 15.1
       }
     }
   },
@@ -6105,17 +5190,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/60/Cover_fatefire.png",
     "charts": {
-      "massive": {
-        "level": 14.9,
-        "song_level_id": 33
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 32
+        "level": 10.5
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 31
+      "massive": {
+        "level": 14.9
       }
     }
   },
@@ -6125,17 +5207,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/0/02/Cover_forgottenasteroid.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 30
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.0,
-        "song_level_id": 29
+        "level": 10.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 28
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -6145,17 +5224,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/63/Cover_rondooftheend.png",
     "charts": {
-      "massive": {
-        "level": 16.0,
-        "song_level_id": 27
+      "detected": {
+        "level": 6.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 26
+        "level": 12.0
       },
-      "detected": {
-        "level": 6.0,
-        "song_level_id": 25
+      "massive": {
+        "level": 16.0
       }
     }
   },
@@ -6165,17 +5241,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/6/62/Cover_verreta.png",
     "charts": {
-      "massive": {
-        "level": 15.7,
-        "song_level_id": 24
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 12.0,
-        "song_level_id": 23
+        "level": 12.0
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 22
+      "massive": {
+        "level": 15.7
       }
     }
   },
@@ -6185,17 +5258,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/c/ce/Cover_timesup.png",
     "charts": {
-      "massive": {
-        "level": 12.0,
-        "song_level_id": 21
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 20
+        "level": 8.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 19
+      "massive": {
+        "level": 12.0
       }
     }
   },
@@ -6205,17 +5275,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/2/2c/Cover_lucidtrigger.png",
     "charts": {
-      "massive": {
-        "level": 13.5,
-        "song_level_id": 18
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 17
+        "level": 9.0
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 16
+      "massive": {
+        "level": 13.5
       }
     }
   },
@@ -6225,17 +5292,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/7/75/Cover_utsuro.png",
     "charts": {
-      "massive": {
-        "level": 13.9,
-        "song_level_id": 15
+      "detected": {
+        "level": 2.0
       },
       "invaded": {
-        "level": 9.5,
-        "song_level_id": 14
+        "level": 9.5
       },
-      "detected": {
-        "level": 2.0,
-        "song_level_id": 13
+      "massive": {
+        "level": 13.9
       }
     }
   },
@@ -6245,17 +5309,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/b/b8/Cover_restrictedaccess.png",
     "charts": {
-      "massive": {
-        "level": 15.6,
-        "song_level_id": 12
+      "detected": {
+        "level": 5.0
       },
       "invaded": {
-        "level": 10.5,
-        "song_level_id": 11
+        "level": 10.5
       },
-      "detected": {
-        "level": 5.0,
-        "song_level_id": 10
+      "massive": {
+        "level": 15.6
       }
     }
   },
@@ -6265,17 +5326,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/8/87/Cover_press.png",
     "charts": {
-      "massive": {
-        "level": 13.3,
-        "song_level_id": 9
+      "detected": {
+        "level": 4.0
       },
       "invaded": {
-        "level": 9.0,
-        "song_level_id": 8
+        "level": 9.0
       },
-      "detected": {
-        "level": 4.0,
-        "song_level_id": 7
+      "massive": {
+        "level": 13.3
       }
     }
   },
@@ -6285,17 +5343,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/9/92/Cover_chase.png",
     "charts": {
-      "massive": {
-        "level": 12.0,
-        "song_level_id": 6
+      "detected": {
+        "level": 3.0
       },
       "invaded": {
-        "level": 8.0,
-        "song_level_id": 5
+        "level": 8.0
       },
-      "detected": {
-        "level": 3.0,
-        "song_level_id": 4
+      "massive": {
+        "level": 12.0
       }
     }
   },
@@ -6305,17 +5360,14 @@
     "b15": false,
     "cover_url": "https://static.wikitide.net/paradigmrebootzhwiki/d/d5/Cover_awakeninruins.png",
     "charts": {
-      "massive": {
-        "level": 10.5,
-        "song_level_id": 3
+      "detected": {
+        "level": 1.0
       },
       "invaded": {
-        "level": 6.0,
-        "song_level_id": 2
+        "level": 6.0
       },
-      "detected": {
-        "level": 1.0,
-        "song_level_id": 1
+      "massive": {
+        "level": 10.5
       }
     }
   }

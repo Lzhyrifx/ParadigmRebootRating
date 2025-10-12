@@ -219,11 +219,48 @@ def extract_song_info(url):
     return None
 
 
-# 主函数：批量处理歌曲信息
-def main():
-    global songs_data  # 用于信号处理函数访问
+def single_data(url, output_file=None):
+    """处理单个URL并保存结果"""
+    # 先提取歌曲信息，检查是否成功
+    song_info = extract_song_info(url)
+    if not song_info:
+        print(f"[{url}] 提取歌曲信息失败，跳过处理")
+        return
 
-    # 初始化数据文件
+    # 检查是否已在数据文件中
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            songs_data = json.load(f)
+        # 比较标题判断是否已存在
+        if any(song.get("title") == song_info["title"] for song in songs_data):
+            print(f"[{url}] 已存在于数据中，跳过")
+            return
+
+    # 获取封面
+    song_info["cover_url"] = get_cover_url(song_info["title"], song_info["artist"])
+
+    # 保存到数据文件
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            songs_data = json.load(f)
+    else:
+        songs_data = []
+    songs_data.append(song_info)
+    save_results(songs_data)
+
+    # 如需单独保存
+    if output_file:
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(song_info, f, ensure_ascii=False, indent=2)
+        print(f"单独保存到 {output_file}")
+
+    print(f"处理完成: {song_info['title']}")
+
+
+def main():
+    global songs_data
+
+
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             songs_data = json.load(f)
@@ -237,12 +274,7 @@ def main():
     target_urls = [url.strip() for url in input_str.split(',') if url.strip()]
 
     for url in target_urls:
-        # 跳过已存在的歌曲
-        if any(song.get("source_url") == url for song in songs_data):
-            print(f"[{url}] 已存在于数据中，跳过")
-            continue
 
-        print(f"正在提取: {url}")
         song_info = extract_song_info(url)
         if song_info:
             songs_data.append(song_info)
@@ -250,7 +282,7 @@ def main():
         else:
             print(f"[{url}] 提取失败")
 
-    # 获取封面URL
+
     print("\n开始获取封面URL...")
     total = len(songs_data)
     for i, song in enumerate(songs_data):
@@ -258,12 +290,13 @@ def main():
             print(f"处理封面 ({i + 1}/{total}): {song['title']}")
             song["cover_url"] = get_cover_url(song["title"], song["artist"])
 
-        # 每处理10个保存一次
+
         if (i + 1) % 10 == 0 or i + 1 == total:
             save_results(songs_data)
             print(f"已保存进度 ({i + 1}/{total})")
 
     print(f"\n所有处理完成，结果已保存到 {DATA_FILE}")
+
 
 
 if __name__ == "__main__":
