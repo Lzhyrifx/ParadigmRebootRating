@@ -40,9 +40,9 @@ def get_coordinates(event, x, y, flags, param):
 
 
 
-''''''
+
 image_path = '../SCR/n002.jpg'
-''''''
+
 
 
 

@@ -4,88 +4,88 @@
   "title_font": "res/1.ttf",
   "score_font": "res/1.ttf",
   "generated_by": {
-    "x": 850,
-    "y": 950,
-    "font_size": 14,
+    "x": 736,
+    "y": 2006,
+    "font_size": 15,
     "text_rgba": [200, 200, 200, 255]
   },
-  "username": {
-    "x": 30,
-    "y": 150,
-    "font_size": 28,
+  "top_title": {
+    "x": 736,
+    "y": 54,
+    "font_size": 26,
     "text_rgba": [255, 255, 255, 255]
   },
-  "rating": {
-    "x": 30,
-    "y": 200,
+  "total_rating": {
+    "x": 736,
+    "y": 96,
     "font_size": 24,
     "text_rgba": [255, 255, 255, 255]
   },
-  "b35_rating": {
-    "x": 30,
-    "y": 240,
+  "b15_avg": {
+    "x": 68,
+    "y": 128,
     "font_size": 20,
     "text_rgba": [255, 255, 255, 255]
   },
-  "b15_rating": {
-    "x": 30,
-    "y": 280,
+  "b35_avg": {
+    "x": 68,
+    "y": 1046,
     "font_size": 20,
-    "text_rgba": [100, 180, 255, 255]
+    "text_rgba": [255, 255, 255, 255]
   },
-  "character": {
-    "x": 50,
-    "y": 350,
-    "width": 250,
-    "height": 400
+  "b15_offset": {
+    "x": 68,
+    "y": 160
   },
-  "padding": {
-    "x": 10,
-    "y": 10
+  "b35_offset": {
+    "x": 68,
+    "y": 1078
   },
   "single": {
-    "width": 300,
-    "height": 150,
-    "title": {
-      "x": 80,
-      "y": 20,
-      "font_size": 12,
-      "text_rgba": [255, 255, 255, 255]
-    },
+    "width": 267,
+    "height": 128,
     "index": {
-      "x": 20,
-      "y": 20,
-      "font_size": 12,
+      "x": 226,
+      "y": 11,
+      "font_size": 15,
       "text_rgba": [255, 255, 255, 255]
     },
     "difficulty": {
-      "x": 20,
-      "y": 30,
-      "font_size": 12,
+      "x": 14,
+      "y": 11,
+      "font_size": 15,
       "text_rgba": [255, 255, 255, 255]
     },
     "score": {
-      "x": 30,
-      "y": 50,
-      "font_size": 12,
+      "x": 14,
+      "y": 43,
+      "font_size": 15,
       "text_rgba": [255, 255, 255, 255]
     },
     "rating": {
-      "x": 30,
-      "y": 70,
-      "font_size": 12,
+      "x": 14,
+      "y": 75,
+      "font_size": 13,
+      "text_rgba": [255, 255, 255, 255]
+    },
+    "title": {
+      "x": 14,
+      "y": 96,
+      "font_size": 13,
       "text_rgba": [255, 255, 255, 255]
     }
   },
-  "det_rgba": [200, 200, 200, 255],
-  "ivd_rgba": [100, 100, 255, 255],
-  "msv_rgba": [255, 100, 255, 255],
-  "b35_offset": {
-    "x": 350,
-    "y": 30
+  "padding": {
+    "x": 14,
+    "y": 11
   },
-  "b15_offset": {
-    "x": 350,
-    "y": 400
+  "det_rgba": [200, 200, 200, 255],
+  "ivd_rgba": [100, 200, 255, 255],
+  "msv_rgba": [255, 255, 255, 255],
+  "character": {
+    "x": 50,
+    "y": 350,
+    "width": 0,
+    "height": 0
   }
 }
