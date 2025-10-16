@@ -162,8 +162,8 @@ def main():
     print(f"设备屏幕尺寸: {img_width} x {img_height}")
 
     # 计算缩放比例，确保图像适合屏幕显示
-    screen_max_width = 1200
-    screen_max_height = 800
+    screen_max_width = 1920
+    screen_max_height = 1080
     scale_factor = min(screen_max_width / img_width, screen_max_height / img_height, 1.0)
     new_width = int(img_width * scale_factor)
     new_height = int(img_height * scale_factor)

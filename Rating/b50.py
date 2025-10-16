@@ -144,7 +144,7 @@ def draw_section(draw, img, data, title, start_y):
     return y + CARD_H + 60
 
 
-# ============ 主逻辑 ===============
+
 if __name__ == "__main__":
     with open("songs_results.json", "r", encoding="utf-8") as f:
         js = json.load(f)

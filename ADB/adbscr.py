@@ -166,8 +166,6 @@ if __name__ == "__main__":
     signal.signal(signal.SIGTERM, signal_handler)
     os.makedirs(screenshot_dir, exist_ok=True)
 
-
-
     while True:
         image_path = temp_screenshot(d, temp_dir)
         ocr_result = ocr_region(image_path, reset_region)
