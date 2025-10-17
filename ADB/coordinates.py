@@ -7,7 +7,7 @@ import adbutils
 
 LAST_DEVICE_FILE = ".used_device"
 
-def init_device():
+def device():
     """初始化并选择要连接的设备"""
     try:
         adb = adbutils.AdbClient(host="127.0.0.1", port=5037)
@@ -144,7 +144,7 @@ def get_coordinates(event, x, y, flags, param):
 def main():
     # 1. 选择设备
     print("正在检测连接的设备...")
-    device_id = init_device()
+    device_id = device()
     if not device_id:
         print("无法选择设备，程序退出")
         return
