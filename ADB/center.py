@@ -3,14 +3,14 @@ import cv2
 import numpy as np
 from ADB.function import init_device
 
-# ========== 配置 ==========
+
 temp_dir = "Temp"
 point1 = (1437, 739)
 point2 = (1615, 437)
 reference_point = (1526, 588)
 y_threshold = 30
 
-# ========== 截图函数 ==========
+
 def temp_screenshot(d, temp_dir):
     if not os.path.exists(temp_dir):
         os.makedirs(temp_dir)
@@ -27,7 +27,7 @@ def temp_screenshot(d, temp_dir):
         print(f"截图失败：{str(e)}")
         return None
 
-# ========== 滑动函数 ==========
+
 def re_slide(d, start_xy, end_xy, steps=10):
     sx, sy = map(int, start_xy)
     ex, ey = map(int, end_xy)
@@ -39,7 +39,6 @@ def re_slide(d, start_xy, end_xy, steps=10):
     d.touch.up(ex, ey)
     d.click(cx, cy)
 
-# ========== 初始化与截图 ==========
 d = init_device()
 cx = d.info['displayWidth'] * 0.5
 cy = d.info['displayHeight'] * 0.5
@@ -59,7 +58,6 @@ ys = np.linspace(point1[1], point2[1], num_samples).astype(int)
 mask = cv2.inRange(hsv, lower_purple, upper_purple)
 purple_indices = [i for i, (x, y) in enumerate(zip(xs, ys)) if mask[y, x] > 0]
 
-# ========== 可视化 ==========
 vis = img.copy()
 cv2.line(vis, point1, point2, (0, 255, 0), 2)
 song_coords = [
@@ -73,9 +71,7 @@ song_coords = [
 for x, y in song_coords:
     cv2.circle(vis, (x, y), 6, (255, 0, 255), -1)
 
-# ========== 紫色中心检测 ==========
 if purple_indices:
-    # 拆分为连续段并选择最长段
     segments = np.split(purple_indices, np.where(np.diff(purple_indices) > 1)[0] + 1)
     main_segment = max(segments, key=len)
     start_i, end_i = main_segment[0], main_segment[-1]
@@ -106,5 +102,5 @@ if purple_indices:
 else:
     print("未检测到符合条件的紫色区域")
 
-cv2.imwrite("purple_detect_result.png", vis)
-print("检测结果已保存 -> purple_detect_result.png")
+cv2.imwrite("center.png", vis)
+print("检测结果已保存:center.png")

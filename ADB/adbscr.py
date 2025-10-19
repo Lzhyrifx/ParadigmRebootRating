@@ -6,7 +6,6 @@ import cv2
 import numpy as np
 from function import ocr_region, init_device
 
-# ====== 参数配置 ======
 song_coords = [
     (1110, 491),
     (1014, 744),
@@ -31,18 +30,14 @@ reference_point = (1526, 588)
 y_threshold = 30
 
 
-# ====== 工具函数 ======
-def signal_handler(signum, frame):
+def signal_handler():
     global continue_screenshot, is_saving_screenshot
-    print("\n收到停止信号，等待当前截图完成后退出...")
+    print("\n收到停止信号，等待当前截图完成后退出")
     continue_screenshot = False
     wait_start = time.time()
-    while is_saving_screenshot and (time.time() - wait_start < 3):
+    while is_saving_screenshot and (time.time() - wait_start < 2):
         time.sleep(0.1)
-    if is_saving_screenshot:
-        print("截图操作超时，强制退出")
-    else:
-        print("程序已安全退出")
+    print("程序已安全退出")
     exit(0)
 
 
@@ -119,31 +114,31 @@ def reset_slide(count=2):
 
 
 
-def check_and_correct_purple():
+def re_center():
     print("开始检测紫色区域...")
-    IMG_PATH = temp_screenshot(d, temp_dir)
-    img = cv2.imread(IMG_PATH)
+    img_path = temp_screenshot(d, temp_dir)
+    img = cv2.imread(img_path)
     if img is None:
-        print(f"无法读取图像：{IMG_PATH}")
+        print(f"无法读取图像：{img_path}")
         return
 
-    # 转 HSV 空间
+
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     lower_purple = np.array([125, 40, 40])
     upper_purple = np.array([155, 255, 255])
     mask = cv2.inRange(hsv, lower_purple, upper_purple)
 
-    # 沿检测线取样
+
     num_samples = max(int(np.hypot(point2[0]-point1[0], point2[1]-point1[1]) / 2), 1)
     xs = np.linspace(point1[0], point2[0], num_samples).astype(int)
     ys = np.linspace(point1[1], point2[1], num_samples).astype(int)
     purple_indices = [i for i, (x, y) in enumerate(zip(xs, ys)) if mask[y, x] > 0]
 
-    vis = img.copy()
-    cv2.line(vis, point1, point2, (0, 255, 0), 2)
+    # vis = img.copy()
+    # cv2.line(vis, point1, point2, (0, 255, 0), 2)
 
     if purple_indices:
-        # 选最长连续段
+
         segments = np.split(purple_indices, np.where(np.diff(purple_indices) > 1)[0] + 1)
         main_segment = max(segments, key=len)
         start_i, end_i = main_segment[0], main_segment[-1]
@@ -151,10 +146,10 @@ def check_and_correct_purple():
         mid_x, mid_y = int(xs[mid_i]), int(ys[mid_i])
 
         y_distance = mid_y - reference_point[1]
-        print(f"检测到紫色中心：({mid_x}, {mid_y})")
+        print(f"\n检测到紫色中心：({mid_x}, {mid_y})")
         print(f"与参考点 {reference_point} 的y轴偏差：{y_distance}")
 
-        # 超过阈值才回正
+
         if abs(y_distance) > y_threshold:
             if y_distance > 0:
                 print("检测到偏下,向上滑动回正")
@@ -166,17 +161,16 @@ def check_and_correct_purple():
             delta_y = reference_point[1] - mid_y
             end_y = int(mid_y + delta_y * slide_scale)
             print(f"执行回正：({mid_x}, {mid_y}) → ({mid_x}, {end_y})")
-            re_slide(d, (mid_x, mid_y), (mid_x, end_y))
+            re_slide( (mid_x, mid_y), (mid_x, end_y))
 
-        # 可视化输出
-        cv2.circle(vis, (mid_x, mid_y), 4, (0, 0, 255), -1)
-        cv2.circle(vis, reference_point, 4, (255, 0, 0), -1)
-        cv2.line(vis, (mid_x, mid_y), reference_point, (255, 255, 0), 1)
+        # cv2.circle(vis, (mid_x, mid_y), 4, (0, 0, 255), -1)
+        # cv2.circle(vis, reference_point, 4, (255, 0, 0), -1)
+        # cv2.line(vis, (mid_x, mid_y), reference_point, (255, 255, 0), 1)
     else:
-        print("未检测到紫色区域，可能亮度或角度偏差过大。")
+        print("未检测到紫色区域")
 
-    cv2.imwrite("purple_detect_result.png", vis)
-    print("检测结果已保存 -> purple_detect_result.png\n")
+    #cv2.imwrite("center.png", vis)
+    #print("检测结果已保存:center.png\n")
 
 
 
@@ -192,7 +186,7 @@ def scroll():
     global scroll_counter
     scroll_counter += 1
     if scroll_counter % 2 == 0:
-        check_and_correct_purple()
+        re_center()
 
 
 def read_songs(d):
@@ -217,7 +211,6 @@ def read_songs(d):
         counter += 1
 
 
-# ====== 初始化 ======
 d = init_device()
 w = d.info['displayWidth']
 h = d.info['displayHeight'] * 0.5
@@ -263,7 +256,7 @@ if __name__ == "__main__":
     else:
         print("尚未在最顶端，准备执行滑动操作")
 
-    while True:
+    while TOP == 0:
         image_path = temp_screenshot(d, temp_dir)
         ocr_result = ocr_region(image_path, reset_region)
         if ocr_result.txts:
@@ -277,7 +270,6 @@ if __name__ == "__main__":
         d.click(*reset_point)
         time.sleep(0.5)
 
-    # 滑动到顶部
     while TOP == 0:
         reset_slide()
         time.sleep(0.1)
@@ -293,7 +285,6 @@ if __name__ == "__main__":
             break
         previous = current
 
-    # 主循环
     start_time = time.time()
     while continue_screenshot:
         read_songs(d)
@@ -301,8 +292,6 @@ if __name__ == "__main__":
             scroll()
 
     elapsed_time = time.time() - start_time
-    print(f"\n" + "=" * 50)
     print(f"程序总执行耗时: {elapsed_time:.2f} 秒")
     print(f"平均每首歌耗时: {elapsed_time / (counter - 1):.2f} 秒")
-    print("=" * 50)
     print("启动OCR")
