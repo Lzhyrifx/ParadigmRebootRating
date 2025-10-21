@@ -9,9 +9,11 @@ ADB/Test
 
 Resource/Cover
 Resource/Cover_all
+Resource/songs_results.json
 
 Rating/Cover
 Rating/res
+Rating/songs_results.json
 
 other
 
