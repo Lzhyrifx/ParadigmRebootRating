@@ -5,14 +5,12 @@ from update_data import single_data  # 导入原有脚本中的single_data函数
 
 
 def get_new_songs_urls(base_url, target_section="新谱速递"):
-    """从指定页面提取新谱速递部分的歌曲URL"""
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
         "Referer": "https://paradigmrebootzh.miraheze.org/"
     }
 
     try:
-        # 使用Client处理重定向
         with httpx.Client(follow_redirects=True) as client:
             response = client.get(base_url, headers=headers, timeout=15)
             response.raise_for_status()

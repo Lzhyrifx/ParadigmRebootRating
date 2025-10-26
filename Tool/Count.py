@@ -41,7 +41,7 @@ def get_coordinates(event, x, y, flags, param):
 
 
 
-image_path = '../SCR/sign.jpg'
+image_path = '../ADB/SCR/sign1.PNG'
 
 
 

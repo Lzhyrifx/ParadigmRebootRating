@@ -22,7 +22,7 @@ region_song_level = (2587, 1636, 2838, 1764)
 reset_region = (1316, 712, 1439, 787)
 reset_point = (80, 1065)
 top_region = (937, 448, 1537, 525)
-
+sign_counter = 1
 
 point1 = (1437, 739)
 point2 = (1615, 437)
@@ -115,7 +115,6 @@ def reset_slide(count=2):
 
 
 def re_center():
-    print("开始检测紫色区域...")
     img_path = temp_screenshot(d, temp_dir)
     img = cv2.imread(img_path)
     if img is None:
@@ -290,6 +289,9 @@ if __name__ == "__main__":
         read_songs(d)
         if continue_screenshot:
             scroll()
+            sign_path = os.path.join(screenshot_dir, f"sign{sign_counter}.png")
+            d.screenshot(sign_path)
+            sign_counter += 1
 
     elapsed_time = time.time() - start_time
     print(f"程序总执行耗时: {elapsed_time:.2f} 秒")

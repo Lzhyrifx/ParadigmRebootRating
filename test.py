@@ -1,191 +1,151 @@
-import httpx
-import json
-import time
-import os
+import cv2
+import numpy as np
+import logging
+from rapidocr import EngineType, ModelType, OCRVersion, RapidOCR
 
+logging.getLogger('RapidOCR').disabled = True
 
-def user_login(username, password):
-    login_url = "https://api.prp.icel.site/user/login"
-
-    login_data = {
-        "grant_type": "password",
-        "username": username,
-        "password": password
+engine = RapidOCR(
+    params={
+        "Rec.ocr_version": OCRVersion.PPOCRV5,
+        "Rec.engine_type": EngineType.ONNXRUNTIME,
+        "Rec.model_type": ModelType.MOBILE,
     }
+)
 
-    try:
-        start_time = time.time()
-
-        with httpx.Client() as client:
-            response = client.post(
-                login_url,
-                data=login_data,
-                headers={
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "Accept": "application/json"
-                }
-            )
-
-            end_time = time.time()
-            request_duration = end_time - start_time
-
-            if response.status_code == 200:
-                token_data = response.json()
-                print("登录成功")
-                print(f"Access Token: {token_data.get('access_token')}")
-                print(f"Token Type: {token_data.get('token_type')}")
-                print(f"请求耗时: {request_duration:.2f} 秒")
-                return token_data, request_duration
-            elif response.status_code == 422:
-                error_data = response.json()
-                print("登录失败")
-                print(f"错误详情: {error_data}")
-                print(f"请求耗时: {request_duration:.2f} 秒")
-                return None, request_duration
-            else:
-                print(f"登录失败: 状态码 {response.status_code}")
-                print(f"响应内容: {response.text}")
-                print(f"请求耗时: {request_duration:.2f} 秒")
-                return None, request_duration
-
-    except httpx.RequestError as e:
-        end_time = time.time()
-        request_duration = end_time - start_time
-        print(f"请求错误: {e}")
-        print(f"请求耗时: {request_duration:.2f} 秒")
-        return None, request_duration
-    except Exception as e:
-        end_time = time.time()
-        request_duration = end_time - start_time
-        print(f"发生错误: {e}")
-        print(f"请求耗时: {request_duration:.2f} 秒")
-        return None, request_duration
+base_x1, base_x2 = 1048, 1160
+region_count = 6
+delta_x = -143
+delta_y = 248
 
 
-def get_upload_token(access_token):
-    """获取 upload_token"""
-    upload_token_url = "https://api.prp.icel.site/user/me/upload-token"
+def ocr_region_test(img, region_coords, region_index=None):
+    x1, y1, x2, y2 = region_coords
+    roi = img[y1:y2, x1:x2]
 
-    try:
-        start_time = time.time()
+    # 方法1: 欧氏距离法
+    target_color1 = (230, 230, 230)
+    tolerance1 = 35
+    diff1 = np.linalg.norm(roi.astype(np.int16) - np.array(target_color1, dtype=np.int16), axis=2)
+    mask1 = (diff1 < tolerance1).astype(np.uint8) * 255
+    filtered1 = cv2.bitwise_and(roi, roi, mask=mask1)
+    gray1 = cv2.cvtColor(filtered1, cv2.COLOR_BGR2GRAY)
+    _, bin_img1 = cv2.threshold(gray1, 10, 255, cv2.THRESH_BINARY)
 
-        with httpx.Client() as client:
-            response = client.post(
-                upload_token_url,
-                headers={
-                    "Authorization": f"Bearer {access_token}",
-                    "Accept": "application/json"
-                }
-            )
+    # 方法2: RGB区间法
+    mask2 = ((roi[:, :, 0] >= 220) & (roi[:, :, 0] <= 255) &
+             (roi[:, :, 1] >= 220) & (roi[:, :, 1] <= 255) &
+             (roi[:, :, 2] >= 220) & (roi[:, :, 2] <= 255)).astype(np.uint8) * 255
+    filtered2 = cv2.bitwise_and(roi, roi, mask=mask2)
+    gray2 = cv2.cvtColor(filtered2, cv2.COLOR_BGR2GRAY)
+    _, bin_img2 = cv2.threshold(gray2, 10, 255, cv2.THRESH_BINARY)
 
-            end_time = time.time()
-            request_duration = end_time - start_time
+    # 方法3: 灰度直接阈值
+    gray3 = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+    _, bin_img3 = cv2.threshold(gray3, 200, 255, cv2.THRESH_BINARY)
 
-            if response.status_code == 200:
-                upload_data = response.json()
-                upload_token = upload_data.get('upload_token')
-                print("成功获取 upload_token")
-                print(f"Upload Token: {upload_token}")
-                print(f"请求耗时: {request_duration:.2f} 秒")
-                return upload_token, request_duration
-            else:
-                print(f"获取 upload_token 失败: 状态码 {response.status_code}")
-                print(f"响应内容: {response.text}")
-                print(f"请求耗时: {request_duration:.2f} 秒")
-                return None, request_duration
+    # 方法4: 扩大欧氏距离法
+    target_color4 = (240, 240, 240)
+    tolerance4 = 60
+    diff4 = np.linalg.norm(roi.astype(np.int16) - np.array(target_color4, dtype=np.int16), axis=2)
+    mask4 = (diff4 < tolerance4).astype(np.uint8) * 255
+    filtered4 = cv2.bitwise_and(roi, roi, mask=mask4)
+    gray4 = cv2.cvtColor(filtered4, cv2.COLOR_BGR2GRAY)
+    _, bin_img4 = cv2.threshold(gray4, 10, 255, cv2.THRESH_BINARY)
 
-    except httpx.RequestError as e:
-        end_time = time.time()
-        request_duration = end_time - start_time
-        print(f"请求错误: {e}")
-        print(f"请求耗时: {request_duration:.2f} 秒")
-        return None, request_duration
-    except Exception as e:
-        end_time = time.time()
-        request_duration = end_time - start_time
-        print(f"发生错误: {e}")
-        print(f"请求耗时: {request_duration:.2f} 秒")
-        return None, request_duration
+    # 保存中间图
+    if region_index is not None:
+        cv2.imwrite(f"test_method1_euclidean_{region_index}.png", bin_img1)
+        cv2.imwrite(f"test_method2_rgb_range_{region_index}.png", bin_img2)
+        cv2.imwrite(f"test_method3_gray_thresh_{region_index}.png", bin_img3)
+        cv2.imwrite(f"test_method4_expanded_euclidean_{region_index}.png", bin_img4)
 
-
-def save_tokens_safely(token_info, upload_token, filename='tokens.json'):
-    """安全地保存 tokens 到文件"""
-    tokens_data = {
-        'access_token': token_info.get('access_token'),
-        'token_type': token_info.get('token_type'),
-        'upload_token': upload_token,
-        'created_at': time.time(),
-        'expires_in': token_info.get('expires_in', 3600)  # 默认 1 小时
-    }
-
-    try:
-        # 设置文件权限为仅当前用户可读写 (600)
-        with open(filename, 'w') as f:
-            json.dump(tokens_data, f, indent=2)
-
-        # 在 Unix 系统上设置文件权限
-        if os.name != 'nt':  # 不是 Windows 系统
-            os.chmod(filename, 0o600)
-
-        print(f"Tokens 已安全保存到 {filename}")
-        return True
-    except Exception as e:
-        print(f"保存 tokens 失败: {e}")
-        return False
+    # 4方法OCR
+    res1 = engine(bin_img1, use_cls=False, use_det=False, use_rec=True)
+    res2 = engine(bin_img2, use_cls=False, use_det=False, use_rec=True)
+    res3 = engine(bin_img3, use_cls=False, use_det=False, use_rec=True)
+    res4 = engine(bin_img4, use_cls=False, use_det=False, use_rec=True)
+    return [res1, res2, res3, res4]
 
 
-def load_tokens(filename='tokens.json'):
-    """从文件加载 tokens"""
-    try:
-        with open(filename, 'r') as f:
-            tokens_data = json.load(f)
-        print("Tokens 加载成功")
-        return tokens_data
-    except Exception as e:
-        print(f"加载 tokens 失败: {e}")
-        return None
+def detect_purple_y(image_path):
+    img = cv2.imread(image_path)
+    if img is None:
+        print(f"图片未读取成功: {image_path}")
+        return None, None, None
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    lower_purple = np.array([125, 40, 40])
+    upper_purple = np.array([155, 255, 255])
+    mask = cv2.inRange(hsv, lower_purple, upper_purple)
+
+    point1 = (1437, 739)
+    point2 = (1615, 437)
+    num_samples = max(int(np.hypot(point2[0] - point1[0], point2[1] - point1[1]) / 2), 1)
+    xs = np.linspace(point1[0], point2[0], num_samples).astype(int)
+    ys = np.linspace(point1[1], point2[1], num_samples).astype(int)
+    purple_indices = [i for i, (x, y) in enumerate(zip(xs, ys)) if mask[y, x] > 0]
+
+    if not purple_indices:
+        return None, mask, None
+
+    y_list = [ys[i] for i in purple_indices]
+    y_min = int(np.min(y_list))
+    y_max = int(np.max(y_list))
+    y_mean = int(np.mean(y_list))
+
+    segments = np.split(purple_indices, np.where(np.diff(purple_indices) > 1)[0] + 1)
+    main_segment = max(segments, key=len)
+    return (y_min, y_max, y_mean), mask, (
+        xs[main_segment[0]], ys[main_segment[0]], xs[main_segment[-1]], ys[main_segment[-1]])
 
 
-def main():
-    username = "Lzhyrifx"  # 替换为实际用户名
-    password = "Lzhyrifx042420"  # 替换为实际密码
+def process_page_test(image_path, visualize=True):
+    img = cv2.imread(image_path)
+    purple_info, mask, purple_line = detect_purple_y(image_path)
+    if purple_info is None:
+        print("未检测到紫色区域")
+        return
 
-    # 记录程序开始时间
-    program_start = time.time()
+    y_min, y_max, y_mean = purple_info
+    vis = img.copy()
+    cv2.line(vis, (1437, 739), (1615, 437), (255, 120, 0), 2)
+    if purple_line:
+        x_start, y_start, x_end, y_end = purple_line
+        cv2.line(vis, (x_start, y_start), (x_end, y_end), (0, 0, 255), 2)
 
-    # 执行登录
-    token_info, login_duration = user_login(username, password)
+    print("=== 测试不同颜色过滤方法 ===")
+    for i in range(region_count):
+        dx = delta_x * i
+        dy = delta_y * i
+        x1 = base_x1 + dx
+        x2 = base_x2 + dx
+        y1 = y_min + dy
+        y2 = y_max + dy
+        region = (x1, y1, x2, y2)
+        cv2.rectangle(vis, (x1, y1), (x2, y2), (0, 255, 255), 2)
+        ocr_results = ocr_region_test(img, region, region_index=i + 1)
+        result_texts = []
+        for idx, res in enumerate(ocr_results, 1):
+            ocr_text = ""
+            if res and isinstance(res, list):
+                texts = [r[1][0] for r in res if len(r) > 1 and r[1]]
+                ocr_text = " ".join(texts).strip()
+            elif res and hasattr(res, "txts"):
+                ocr_text = " ".join(res.txts).strip()
+            if not ocr_text:
+                ocr_text = "(no text)"
+            result_texts.append(f"方法{idx}: {ocr_text}")
+        print(f"曲目{i + 1}：" + " | ".join(result_texts))
+        # 只显示方法2在图上
+        text_pos = (x1, y1 - 10)
+        cv2.putText(vis, result_texts[1], text_pos,
+                    cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 255), 2, cv2.LINE_AA)
 
-    if token_info:
-        # 获取 upload_token
-        access_token = token_info.get('access_token')
-        upload_token, upload_duration = get_upload_token(access_token)
-        print(upload_token)
-
-        if upload_token:
-            # 安全地保存所有 tokens
-            save_tokens_safely(token_info, upload_token, 'tokens.json')
-
-            # 显示耗时信息
-            print(f"\n登录请求耗时: {login_duration:.2f} 秒")
-            print(f"获取 upload_token 耗时: {upload_duration:.2f} 秒")
-
-            # 记录程序结束时间
-            program_end = time.time()
-            program_duration = program_end - program_start
-            print(f"程序总执行时间: {program_duration:.2f} 秒")
-
-            # 可选：验证加载功能
-            print("\n验证 tokens 加载...")
-            loaded_tokens = load_tokens('tokens.json')
-            if loaded_tokens:
-                print("Tokens 加载验证成功")
-        else:
-            print("获取 upload_token 失败")
-    else:
-        print("登录失败，请检查用户名和密码")
-        print(f"登录请求耗时: {login_duration:.2f} 秒")
+    if visualize:
+        cv2.imwrite("output_test_visualized.jpg", vis)
+        print("结果图已保存：output_test_visualized.jpg")
+        print("各种预处理方法的图片已保存，文件名格式：test_methodX_xxx_Y.png")
 
 
 if __name__ == "__main__":
-    main()
+    process_page_test("ADB/SCR/sign11.png", visualize=True)  # 替换为你的大图路径
