@@ -174,7 +174,7 @@ def re_center():
 
 
 
-def scroll():
+def scroll(frequency=1):
     x = w * 0.5
     start_y = 1800
     end_y = 836
@@ -185,7 +185,7 @@ def scroll():
 
     global scroll_counter
     scroll_counter += 1
-    if scroll_counter % 2 == 0:
+    if scroll_counter % frequency == 0:
         re_center()
 
 
@@ -294,4 +294,4 @@ if __name__ == "__main__":
     elapsed_time = time.time() - start_time
     print(f"程序总执行耗时: {elapsed_time:.2f} 秒")
     print(f"平均每首歌耗时: {elapsed_time / (counter - 1):.2f} 秒")
-    print("启动OCR")
+
